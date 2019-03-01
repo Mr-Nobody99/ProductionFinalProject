@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0556c139c30eed74385c293384b02686
+guid: e7780737cfccb6647a1a0a7ab6918a6b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -119,7 +119,7 @@ ModelImporter:
     400112: Toe.R
     2100000: No Name
     4300000: Maniquen
-    7400000: Maniquen_Idle
+    7400000: Maniquen_WalkRight
     9500000: //RootNode
     13700000: Maniquen
   externalObjects: {}
@@ -151,10 +151,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Maniquen_Idle
+      name: Maniquen_WalkRight
       takeName: Armature|ArmatureAction
       firstFrame: 0
-      lastFrame: 24
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

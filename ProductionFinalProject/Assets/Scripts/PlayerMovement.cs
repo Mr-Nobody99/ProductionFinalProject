@@ -11,8 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float MoveSpeed = 6.0f;
     [SerializeField]
-    float RotationSpeed = 100.0f;
-    [SerializeField]
     float JumpSpeed = 10.0f;
     [SerializeField]
     float gravity = 20.0f;
@@ -29,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(Input.GetAxisRaw("Vertical"));
         if (cc.isGrounded)
         {
             AnimController.SetFloat("Speed", Input.GetAxisRaw("Vertical"));
+            AnimController.SetFloat("Direction", Input.GetAxisRaw("Horizontal"));
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDir = transform.TransformDirection(moveDir);
             moveDir = moveDir * MoveSpeed;
