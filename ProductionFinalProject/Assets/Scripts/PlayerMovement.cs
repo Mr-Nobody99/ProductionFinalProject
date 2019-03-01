@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController cc;
 
+    Animator AnimController;
+
     [SerializeField]
     float MoveSpeed = 6.0f;
     [SerializeField]
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
        cc = GetComponent<CharacterController>();
+        AnimController = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (cc.isGrounded)
         {
+            print(cc.velocity.magnitude);
+            AnimController.SetFloat("MoveBlend", cc.velocity.magnitude);
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDir = transform.TransformDirection(moveDir);
             moveDir = moveDir * MoveSpeed;
