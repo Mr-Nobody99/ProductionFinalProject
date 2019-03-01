@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cc: {fileID: 0}
-  MoveSpeed: 6
+  MoveSpeed: 10
   RotationSpeed: 100
   JumpSpeed: 10
   gravity: 20

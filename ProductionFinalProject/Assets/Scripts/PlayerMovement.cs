@@ -29,10 +29,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Input.GetAxisRaw("Vertical"));
         if (cc.isGrounded)
         {
-            print(cc.velocity.magnitude);
-            AnimController.SetFloat("MoveBlend", cc.velocity.magnitude);
+            AnimController.SetFloat("Speed", Input.GetAxisRaw("Vertical"));
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDir = transform.TransformDirection(moveDir);
             moveDir = moveDir * MoveSpeed;

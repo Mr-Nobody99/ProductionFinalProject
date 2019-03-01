@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: ManiquenAnimator
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: MoveBlend
+  - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -37,7 +37,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 17b74c7276f5b6043849e4a68b8cfa31, type: 3}
+    m_Motion: {fileID: 7400000, guid: 4b51a6080cd93f340b0bc8cc91b43a61, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -46,13 +46,21 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bee29c2e2949c5a41a48173a74bed380, type: 3}
-    m_Threshold: 1
+    m_Threshold: 0.5
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: MoveBlend
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: ef095347d632b074fb7914b5d8156a67, type: 3}
+    m_Threshold: 1
+    m_Position: {x: 0, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Speed
+    m_Mirror: 0
+  m_BlendParameter: Speed
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 1
