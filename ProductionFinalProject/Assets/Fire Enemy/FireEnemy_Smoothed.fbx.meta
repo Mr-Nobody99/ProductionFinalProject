@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e63a88b1c9e16224bb428ff4e2664b68
+guid: bd812d6ff0016a54499b974568027041
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -36,8 +36,9 @@ ModelImporter:
     400028: Spine.001
     400030: Spine.002
     2100000: Material
+    2100002: Material.001
+    2100004: Material.002
     4300000: EnemyMesh_Fire
-    7400000: FireEnemy_Run
     9500000: //RootNode
     13700000: EnemyMesh_Fire
   externalObjects: {}
@@ -67,35 +68,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: FireEnemy_Run
-      takeName: Armature|ArmatureAction
-      firstFrame: 0
-      lastFrame: 9
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -130,8 +103,8 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 1
-  copyAvatar: 1
+  importAnimation: 0
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -147,8 +120,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: bd812d6ff0016a54499b974568027041,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

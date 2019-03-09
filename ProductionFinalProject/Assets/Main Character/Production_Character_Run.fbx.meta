@@ -1,45 +1,133 @@
 fileFormatVersion: 2
-guid: e63a88b1c9e16224bb428ff4e2664b68
+guid: 017c19ddb1d28134d9bb6c1460ded136
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Arm.L
     100002: Arm.R
     100004: Armature
-    100006: EnemyMesh_Fire
-    100008: Foot.L
-    100010: Foot.R
-    100012: Forearm.L
-    100014: Forearm.R
-    100016: Gem
-    100018: Head
-    100020: //RootNode
-    100022: Root
-    100024: Shoulder.L
-    100026: Shoulder.R
-    100028: Spine.001
-    100030: Spine.002
+    100006: Character_Mesh
+    100008: Clavical.L
+    100010: Clavical.R
+    100012: Cloth.001
+    100014: Cloth.002
+    100016: Cloth.003
+    100018: Foot.L
+    100020: Foot.R
+    100022: Forearm.L
+    100024: Forearm.R
+    100026: Hand.L
+    100028: Hand.R
+    100030: Head
+    100032: Hip
+    100034: Index_Base.L
+    100036: Index_Base.R
+    100038: Index_Middle.L
+    100040: Index_Middle.R
+    100042: Index_Tip.L
+    100044: Index_Tip.R
+    100046: Leg.L
+    100048: Leg.R
+    100050: Middle_Base.L
+    100052: Middle_Base.R
+    100054: Middle_Middle.L
+    100056: Middle_Middle.R
+    100058: Middle_Tip.L
+    100060: Middle_Tip.R
+    100062: Neck.001
+    100064: Neck.002
+    100066: Pelvis.L
+    100068: Pelvis.R
+    100070: Pinky_Base.L
+    100072: Pinky_Base.R
+    100074: Pinky_Middle.L
+    100076: Pinky_Middle.R
+    100078: Pinky_Tip.L
+    100080: Pinky_Tip.R
+    100082: //RootNode
+    100084: Ring_Base.L
+    100086: Ring_Base.R
+    100088: Ring_Middle.L
+    100090: Ring_Middle.R
+    100092: Ring_Tip.L
+    100094: Ring_Tip.R
+    100096: Root
+    100098: Shin.L
+    100100: Shin.R
+    100102: Spine.001
+    100104: Spine.002
+    100106: Spine.003
+    100108: Thumb_Base.L
+    100110: Thumb_Base.R
+    100112: Thumb_Tip.L
+    100114: Thumb_Tip.R
+    100116: Toe.L
+    100118: Toe.R
     400000: Arm.L
     400002: Arm.R
     400004: Armature
-    400006: EnemyMesh_Fire
-    400008: Foot.L
-    400010: Foot.R
-    400012: Forearm.L
-    400014: Forearm.R
-    400016: Gem
-    400018: Head
-    400020: //RootNode
-    400022: Root
-    400024: Shoulder.L
-    400026: Shoulder.R
-    400028: Spine.001
-    400030: Spine.002
-    2100000: Material
-    4300000: EnemyMesh_Fire
-    7400000: FireEnemy_Run
+    400006: Character_Mesh
+    400008: Clavical.L
+    400010: Clavical.R
+    400012: Cloth.001
+    400014: Cloth.002
+    400016: Cloth.003
+    400018: Foot.L
+    400020: Foot.R
+    400022: Forearm.L
+    400024: Forearm.R
+    400026: Hand.L
+    400028: Hand.R
+    400030: Head
+    400032: Hip
+    400034: Index_Base.L
+    400036: Index_Base.R
+    400038: Index_Middle.L
+    400040: Index_Middle.R
+    400042: Index_Tip.L
+    400044: Index_Tip.R
+    400046: Leg.L
+    400048: Leg.R
+    400050: Middle_Base.L
+    400052: Middle_Base.R
+    400054: Middle_Middle.L
+    400056: Middle_Middle.R
+    400058: Middle_Tip.L
+    400060: Middle_Tip.R
+    400062: Neck.001
+    400064: Neck.002
+    400066: Pelvis.L
+    400068: Pelvis.R
+    400070: Pinky_Base.L
+    400072: Pinky_Base.R
+    400074: Pinky_Middle.L
+    400076: Pinky_Middle.R
+    400078: Pinky_Tip.L
+    400080: Pinky_Tip.R
+    400082: //RootNode
+    400084: Ring_Base.L
+    400086: Ring_Base.R
+    400088: Ring_Middle.L
+    400090: Ring_Middle.R
+    400092: Ring_Tip.L
+    400094: Ring_Tip.R
+    400096: Root
+    400098: Shin.L
+    400100: Shin.R
+    400102: Spine.001
+    400104: Spine.002
+    400106: Spine.003
+    400108: Thumb_Base.L
+    400110: Thumb_Base.R
+    400112: Thumb_Tip.L
+    400114: Thumb_Tip.R
+    400116: Toe.L
+    400118: Toe.R
+    2100000: Default OBJ
+    4300000: Character_Mesh
+    7400000: MainCharacter_Run
     9500000: //RootNode
-    13700000: EnemyMesh_Fire
+    13700000: Character_Mesh
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -69,10 +157,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FireEnemy_Run
+      name: MainCharacter_Run
       takeName: Armature|ArmatureAction
       firstFrame: 0
-      lastFrame: 9
+      lastFrame: 22
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -80,9 +168,9 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -147,7 +235,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: bd812d6ff0016a54499b974568027041,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 215797a4aa218c74fb73a3a4ddfcf1c3,
     type: 3}
   animationType: 2
   humanoidOversampling: 1

@@ -21,14 +21,18 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
        cc = GetComponent<CharacterController>();
-        AnimController = GetComponent<Animator>();
+       AnimController = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        AnimController.SetBool("Grounded", cc.isGrounded);
+
         if (cc.isGrounded)
         {
+            print("Grounded");
             AnimController.SetFloat("Speed", Input.GetAxisRaw("Vertical"));
             AnimController.SetFloat("Direction", Input.GetAxisRaw("Horizontal"));
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
@@ -37,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
+                AnimController.SetTrigger("Jump");
                 moveDir.y = JumpSpeed;
             }
         }

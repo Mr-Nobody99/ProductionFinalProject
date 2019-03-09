@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 676470135}
   - component: {fileID: 676470137}
   - component: {fileID: 3899846818830877838}
+  - component: {fileID: 2264961200612176277}
   m_Layer: 0
   m_Name: Fire Enemy
   m_TagString: Untagged
@@ -185,6 +186,19 @@ MonoBehaviour:
   eyes: {fileID: 7624856951997901335}
   patrolPoints: []
   directionSwitchProbability: 0.2
+--- !u!65 &2264961200612176277
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676470134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7030182, y: 0.81206155, z: 0.60798454}
+  m_Center: {x: -0.0059394836, y: 0.5288156, z: -0.013859749}
 --- !u!1 &962855436
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +302,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 4300000, guid: c388b6d3d32456547839ae7facc2eb0a, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 8d7844ec85439d24881db489bab4ab77, type: 3}
   m_Bones:
   - {fileID: 1307257309}
   - {fileID: 1756909361}

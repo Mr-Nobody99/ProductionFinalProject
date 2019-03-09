@@ -19,6 +19,11 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            PlayerPrefs.SetInt("highScore", 0);
+            PlayerScore.SetHighScore(0);
+        }
         if(PlayerScore.GetCurrentScore() > PlayerScore.GetHighScore())
         {
             PlayerScore.UpdateHighScore();

@@ -60,7 +60,7 @@ public class AI_Controller_Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(navMeshAgent.velocity.magnitude);
+        //print(navMeshAgent.velocity.magnitude);
 
         //Set animation bool for idle/walk
         if(navMeshAgent.velocity.magnitude <= 0.0f)

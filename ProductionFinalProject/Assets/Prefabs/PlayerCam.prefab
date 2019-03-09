@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3080373014473800909}
   - component: {fileID: 3080373014473800910}
   m_Layer: 0
-  m_Name: CameraBase
+  m_Name: PlayerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,5 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DollySmooth: 5
   MinDistance: 0.2
-  MaxDistance: 3
+  MaxDistance: 5
   Distance: 0

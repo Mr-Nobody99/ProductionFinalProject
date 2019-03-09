@@ -11,6 +11,11 @@ public static class PlayerScore
     {
         return highScore;
     }
+    
+    public static void SetHighScore(int x)
+    {
+        highScore = x;
+    }
 
     public static void UpdateHighScore()
     {
