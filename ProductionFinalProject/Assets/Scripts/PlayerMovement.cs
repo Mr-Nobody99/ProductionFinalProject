@@ -9,6 +9,11 @@ public class PlayerMovement : MonoBehaviour
     Animator AnimController;
 
     [SerializeField]
+    private GameObject projectile;
+    [SerializeField]
+    private GameObject shooter;
+
+    [SerializeField]
     float MoveSpeed = 6.0f;
     [SerializeField]
     float JumpSpeed = 10.0f;
@@ -29,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
     {
 
         AnimController.SetBool("Grounded", cc.isGrounded);
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(projectile, shooter.transform.position, shooter.transform.rotation);
+        }
 
         if (cc.isGrounded)
         {
