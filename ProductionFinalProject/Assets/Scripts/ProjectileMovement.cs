@@ -44,6 +44,11 @@ public class ProjectileMovement : MonoBehaviour
             var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
             Destroy(hitFX, hitFXChild.main.duration);
         }
+
+        if(collision.gameObject.tag == "FireEnemy")
+        {
+            collision.gameObject.GetComponent<AI_Controller_Fire>().Freeze();
+        }
         Destroy(gameObject);
     }
 }

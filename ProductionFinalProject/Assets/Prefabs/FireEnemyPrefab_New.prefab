@@ -292,8 +292,8 @@ GameObject:
   - component: {fileID: 1272354294}
   - component: {fileID: 1272354296}
   m_Layer: 0
-  m_Name: FireEnemy_Smoothed
-  m_TagString: Untagged
+  m_Name: FireEnemyPrefab_New
+  m_TagString: FireEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -364,6 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyes: {fileID: 1784802952}
+  iceBlockPrefab: {fileID: 469412186106711362, guid: 25655749d0ae11c478fa839dd0530e6b,
+    type: 3}
   patrolPoints:
   - {fileID: 89688971559957320}
   - {fileID: 1918055877510621356}
@@ -531,7 +533,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e393d0e1fb485964eb34bed82b4a9de6, type: 2}
+  - {fileID: 2100000, guid: 1cdedd7a0895ee14a9299fcec6e0e12a, type: 2}
   - {fileID: 2100000, guid: 5d9245164fca7314bb59a4196cba86d0, type: 2}
   - {fileID: 2100000, guid: ee25c5eef76c1784e8cee0bd1afe8627, type: 2}
   m_StaticBatchInfo:

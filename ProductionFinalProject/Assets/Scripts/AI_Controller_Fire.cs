@@ -9,6 +9,8 @@ public class AI_Controller_Fire : MonoBehaviour
     private GameObject playerRef;
     [SerializeField]
     private GameObject eyes;
+    [SerializeField]
+    private GameObject iceBlockPrefab;
 
     Animator animController;
     NavMeshAgent navMeshAgent;
@@ -24,6 +26,7 @@ public class AI_Controller_Fire : MonoBehaviour
 
     private bool isPatrolling;
     private bool persuePlayer;
+    private bool frozen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -120,5 +123,28 @@ public class AI_Controller_Fire : MonoBehaviour
 
         navMeshAgent.SetDestination(patrolPoints[currentPatrolIndex].transform.position);
 
+    }
+
+    public void Freeze()
+    {
+        if (frozen == false)
+        {
+            frozen = true;
+            animController.SetTrigger("Freeze");
+            navMeshAgent.isStopped = true;
+            StartCoroutine(FreezeDelay());
+        }
+    }
+
+    IEnumerator FreezeDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        animController.SetBool("Frozen", frozen);
+        var Ice = Instantiate(iceBlockPrefab, transform.position, transform.rotation);
+        yield return new WaitForSecondsRealtime(5);
+        Destroy(Ice);
+        navMeshAgent.isStopped = false;
+        frozen = false;
+        animController.SetBool("Frozen", frozen);
     }
 }

@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (cc.isGrounded)
         {
-            print("Grounded");
             AnimController.SetFloat("Speed", Input.GetAxisRaw("Vertical"));
             AnimController.SetFloat("Direction", Input.GetAxisRaw("Horizontal"));
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
