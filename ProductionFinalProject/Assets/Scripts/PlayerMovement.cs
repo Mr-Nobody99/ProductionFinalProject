@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
         AnimController.SetBool("Grounded", cc.isGrounded);
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(projectile, shooter.transform.position, shooter.transform.rotation);
         }

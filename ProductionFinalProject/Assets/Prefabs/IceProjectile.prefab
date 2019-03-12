@@ -49,7 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  maxLifetime: 10
   Hit_FX: {fileID: 3609645922700019031, guid: a957191d3a0d63d4695c1af67bb34fca, type: 3}
+  platformPrefab: {fileID: 1411117875343875774, guid: 72f50427fe1ad5e41a831bd5ac50a281,
+    type: 3}
 --- !u!65 &4554281247842385423
 BoxCollider:
   m_ObjectHideFlags: 0
