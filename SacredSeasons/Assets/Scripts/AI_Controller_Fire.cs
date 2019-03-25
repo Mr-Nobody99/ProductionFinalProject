@@ -13,6 +13,8 @@ public class AI_Controller_Fire : MonoBehaviour
     [SerializeField]
     private float maxHealth;
     private float currentHealth;
+    [SerializeField]
+    float persueDistance = 5.0f;
 
     private GameObject playerRef;
     [SerializeField]
@@ -90,7 +92,7 @@ public class AI_Controller_Fire : MonoBehaviour
             animController.SetBool("persuePlayer", true);
             navMeshAgent.SetDestination(playerRef.transform.position);
             navMeshAgent.speed = 5.5f;
-            navMeshAgent.stoppingDistance = 3.5f;
+            navMeshAgent.stoppingDistance = persueDistance;
         }
         else if(isPatrolling)
         {
