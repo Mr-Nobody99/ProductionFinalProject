@@ -12,7 +12,9 @@ public class AI_Controller_Fire : MonoBehaviour
 
     [SerializeField]
     private float maxHealth;
+    [SerializeField]
     private float currentHealth;
+    private bool blockDamage = false;
     [SerializeField]
     float persueDistance = 5.0f;
 
@@ -123,12 +125,16 @@ public class AI_Controller_Fire : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        currentHealth -= dmg;
-        healthBar.fillAmount = currentHealth / maxHealth;
-
-        if(currentHealth <= 0)
+        if (!blockDamage)
         {
-            Die();
+            if (frozen) blockDamage = true;
+            currentHealth -= dmg;
+            healthBar.fillAmount = currentHealth / maxHealth;
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
 
@@ -149,7 +155,7 @@ public class AI_Controller_Fire : MonoBehaviour
 
     public void Freeze()
     {
-        if (frozen == false)
+        if (!frozen)
         {
             frozen = true;
             animController.SetTrigger("Freeze");
@@ -168,6 +174,7 @@ public class AI_Controller_Fire : MonoBehaviour
         navMeshAgent.isStopped = false;
         frozen = false;
         animController.SetBool("Frozen", frozen);
+        blockDamage = false;
     }
 
     private void Die()

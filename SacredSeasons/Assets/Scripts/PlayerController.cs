@@ -53,13 +53,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool isGrounded;
 
+    [Header("Currently Equipped Element")]
+    [SerializeField]
+    private int equippedElementIndex = 0;
+    bool blockElementSwap = false;
+
     [Header("Projectiles")]
     [SerializeField]
     private GameObject Shooter;
     [SerializeField]
     List<GameObject> Projectiles;
+
+    [Header("Defense")]
     [SerializeField]
-    private int equippedProjectileIndex = 0;
+    List<GameObject> shields;
+    [SerializeField]
+    float shieldSpeed = 2f;
+    [SerializeField]
+    bool isDefending = false;
 
     private float verticalVelocity;
     private Vector3 movementVector;
@@ -71,6 +82,12 @@ public class PlayerController : MonoBehaviour
         animController = this.GetComponent<Animator>();
         cam = Camera.main;
         initalSpeed = MoveSpeed;
+
+        //deactivate shields at start
+        foreach(GameObject foo in shields)
+        {
+            foo.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -78,12 +95,22 @@ public class PlayerController : MonoBehaviour
     {
         blockRotation = false;
         CheckGrounded();
-        CalcInputMagnitude();
-        //UpdateAim();
-        if(Input.GetButtonDown("Shoot"))
+        isDefending = Input.GetButton("Block") ? true : false;
+        Defend(isDefending);
+        if (!isDefending)
         {
-            UpdateAim();
-            Shoot();
+            CalcInputMagnitude();
+            UpdateEquippedElement();
+            if (Input.GetButtonDown("Shoot"))
+            {
+                UpdateAim();
+                Shoot();
+            }
+        }
+        else
+        {
+            animController.SetFloat("Input X", 0f);
+            animController.SetFloat("Input Z", 0f);
         }
     }
 
@@ -95,7 +122,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && !isDefending)
             {
                 animController.SetTrigger("Jump");
                 MoveSpeed /= 2;
@@ -177,6 +204,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void UpdateEquippedElement()
+    {
+        if (Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap)
+        {
+            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
+            blockElementSwap = true;
+        }
+        else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
+        {
+            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
+            blockElementSwap = true;
+        }
+        else if (Input.GetAxis("SwitchProjectile") == 0)
+        {
+            blockElementSwap = false;
+        }
+    }
+
     void UpdateAim()
     {
         Vector3 AimDirection = Shooter.transform.position - cam.transform.position;
@@ -186,7 +231,28 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(Projectiles[equippedProjectileIndex], Shooter.transform.position, Shooter.transform.rotation);
+        Instantiate(Projectiles[equippedElementIndex], Shooter.transform.position, Shooter.transform.rotation);
+    }
+
+    void Defend(bool activate)
+    {
+        var shield = shields[equippedElementIndex];
+        if (activate)
+        {
+            if (!shield.activeSelf)
+            {
+                shield.SetActive(true);
+                shield.transform.localScale = new Vector3(1f, 0f, 1f);
+            }
+            else
+            {
+                shield.transform.localScale = Vector3.Lerp(shield.transform.localScale, Vector3.one, Time.deltaTime * shieldSpeed);
+            }
+        }
+        else
+        {
+            shield.SetActive(false);
+        }
     }
 
 }
