@@ -82,6 +82,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8188217188718300192, guid: 5e0544d9140de164794284ac1fc12045,
+        type: 3}
+      propertyPath: waterZone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8188217188718300192, guid: 5e0544d9140de164794284ac1fc12045,
+        type: 3}
+      propertyPath: fireZone
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4022539418874467796, guid: 5e0544d9140de164794284ac1fc12045,
         type: 3}
       propertyPath: m_CastShadows
@@ -91,6 +101,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0593f4c122d9bd84688e61bea85b2158, type: 2}
+      objectReference: {fileID: 2100000, guid: 289d225792695284e80a88ab4f0e0492, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e0544d9140de164794284ac1fc12045, type: 3}

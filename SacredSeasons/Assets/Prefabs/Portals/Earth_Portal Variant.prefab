@@ -71,7 +71,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1c697d2ee0af68d4485e789ad2003baf, type: 2}
+      objectReference: {fileID: 2100000, guid: 179d5b1ec431ede40916d225e0e85558, type: 2}
+    - target: {fileID: 5723954408378901352, guid: a188e57614956f94fa2d0698acc4cef5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
+    - target: {fileID: 4332976001671151648, guid: a188e57614956f94fa2d0698acc4cef5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
     - target: {fileID: 2796629997799476649, guid: a188e57614956f94fa2d0698acc4cef5,
         type: 3}
       propertyPath: waterZone
@@ -87,22 +97,12 @@ PrefabInstance:
       propertyPath: earthZone
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1076753531174106960, guid: a188e57614956f94fa2d0698acc4cef5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
-    - target: {fileID: 5723954408378901352, guid: a188e57614956f94fa2d0698acc4cef5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
-    - target: {fileID: 4332976001671151648, guid: a188e57614956f94fa2d0698acc4cef5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
     - target: {fileID: 1849722985471889811, guid: a188e57614956f94fa2d0698acc4cef5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ee91b58b240092449e0ffb24fd5ef81, type: 2}
+    - target: {fileID: 1076753531174106960, guid: a188e57614956f94fa2d0698acc4cef5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

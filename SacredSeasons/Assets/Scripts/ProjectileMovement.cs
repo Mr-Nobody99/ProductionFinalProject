@@ -6,16 +6,16 @@ public class ProjectileMovement : MonoBehaviour
 {
 
     [SerializeField]
-    float speed;
+    public float speed;
     [SerializeField]
     float maxLifetime;
-    [SerializeField]
-    float damageValue;
+    //[SerializeField]
+    //float damageValue;
 
     [SerializeField]
-    GameObject Hit_FX;
-    [SerializeField]
-    GameObject platformPrefab;
+    public GameObject Hit_FX;
+    //[SerializeField]
+    //GameObject platformPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -51,36 +51,36 @@ public class ProjectileMovement : MonoBehaviour
             Destroy(hitFX, hitFXChild.main.duration);
         }
 
-        if(collision.gameObject.tag == "FireEnemy")
-        {
-            collision.gameObject.GetComponent<AI_Controller_Fire>().Freeze();
-            collision.gameObject.GetComponent<AI_Controller_Fire>().TakeDamage(damageValue);
-        }
+        //if(collision.gameObject.tag == "FireEnemy")
+        //{
+        //    collision.gameObject.GetComponent<AI_Controller_Fire>().Freeze();
+        //    collision.gameObject.GetComponent<AI_Controller_Fire>().TakeDamage(damageValue);
+        //}
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "Water")
-        {
-            speed = 0;
-            var hitFX = Instantiate(Hit_FX, transform.position, Quaternion.identity);
-            var hit_PS = hitFX.GetComponent<ParticleSystem>();
-            if (hit_PS != null)
-            {
-                Destroy(hitFX, hit_PS.main.duration);
-            }
-            else
-            {
-                var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
-                Destroy(hitFX, hitFXChild.main.duration);
-            }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.gameObject.tag == "Water")
+    //    {
+    //        speed = 0;
+    //        var hitFX = Instantiate(Hit_FX, transform.position, Quaternion.identity);
+    //        var hit_PS = hitFX.GetComponent<ParticleSystem>();
+    //        if (hit_PS != null)
+    //        {
+    //            Destroy(hitFX, hit_PS.main.duration);
+    //        }
+    //        else
+    //        {
+    //            var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
+    //            Destroy(hitFX, hitFXChild.main.duration);
+    //        }
 
-            print("Hit Water");
-            var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
-            platform.GetComponent<FloatingMovement>().water = other.gameObject;
-            platform.transform.parent = other.transform;
-            Destroy(gameObject);
-        }
-    }
+    //        print("Hit Water");
+    //        var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
+    //        platform.GetComponent<FloatingMovement>().water = other.gameObject;
+    //        platform.transform.parent = other.transform;
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

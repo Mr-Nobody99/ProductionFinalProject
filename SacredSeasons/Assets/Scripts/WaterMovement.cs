@@ -8,6 +8,8 @@ public class WaterMovement : MonoBehaviour
     Vector3 initalPos;
 
     [SerializeField]
+    GameObject respawn;
+    [SerializeField]
     float maxUp;
     [SerializeField]
     float smooth;
@@ -52,4 +54,13 @@ public class WaterMovement : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag.Equals("Player"))
+        {
+            other.transform.position = respawn.transform.position;
+        }
+    }
+
 }
