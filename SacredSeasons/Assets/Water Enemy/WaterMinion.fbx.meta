@@ -11,7 +11,22 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: pPyramid3
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Waterhead
+    second: {fileID: 2100000, guid: f02effd903e7d344b886038baad6a4ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: waterbody
+    second: {fileID: 2100000, guid: 4573bcc579a0e354dab52d4bbdf66ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: watercrystal
+    second: {fileID: 2100000, guid: 6b92cb914cdf6c74f8a5ce59b7df9617, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -45,7 +60,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
+    useSRGBMaterialColor: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
