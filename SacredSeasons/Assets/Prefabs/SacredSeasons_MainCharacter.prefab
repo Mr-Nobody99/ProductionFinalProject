@@ -340,6 +340,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.35, y: 3.22, z: 0.18}
   m_Center: {x: 1.175, y: 1.61, z: -0.09}
+--- !u!1 &3728640464952206513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8372582938027039574}
+  m_Layer: 0
+  m_Name: PlayerTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8372582938027039574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728640464952206513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7935316714360750303}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4597523233780085624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,12 +2865,15 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   blockRotation: 0
   isGrounded: 0
+  equippedElementIndex: 0
   Shooter: {fileID: 7935316715429508051}
   Projectiles:
   - {fileID: 1498496821244542722, guid: d8fa27058e14db14cb543492c32f12b1, type: 3}
   - {fileID: 4013774590028668352, guid: 82b82bcd3ae145843bba146658381932, type: 3}
   - {fileID: 3208896452635846841, guid: 9ed704ce433948344bec46a5b2e5292c, type: 3}
-  equippedProjectileIndex: 0
+  shields: []
+  shieldSpeed: 2
+  isDefending: 0
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +3028,7 @@ Transform:
   - {fileID: 7935316714360750269}
   - {fileID: 7935316714360750271}
   - {fileID: 7935316714360750219}
+  - {fileID: 8372582938027039574}
   m_Father: {fileID: 7935316714360750301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
