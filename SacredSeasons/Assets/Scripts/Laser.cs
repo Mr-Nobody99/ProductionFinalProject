@@ -8,20 +8,26 @@ public class Laser : MonoBehaviour
     Transform targetBone;
     Vector3 dir;
 
+    public int ElementIndex = 0;
     [SerializeField]
-    ParticleSystem Orb;
+    List<ParticleSystem> Orbs;
     [SerializeField]
-    LineRenderer Beam;
+    List<LineRenderer> Beams;
 
     public bool Activated;
 
     // Start is called before the first frame update
     void Start()
     {
-        targetBone = GameObject.Find("PlayerTarget").transform;
         Activated = false;
-        Beam.useWorldSpace = true;
-        Beam.enabled = false;
+        targetBone = GameObject.Find("PlayerTarget").transform;
+
+        foreach(LineRenderer line in Beams)
+        {
+            line.useWorldSpace = true;
+            line.enabled = false;
+        }
+
     }
 
     private void OnDrawGizmos()
@@ -35,13 +41,13 @@ public class Laser : MonoBehaviour
     {
         if (Activated)
         {
-            Beam.enabled = true;
+            Beams[ElementIndex].enabled = true;
             RotateToPlayer();
             UpdateBeam();
         }
         else
         {
-            Beam.enabled = false;
+            Beams[ElementIndex].enabled = false;
         }
     }
 
@@ -49,12 +55,12 @@ public class Laser : MonoBehaviour
     {
         if (play)
         {
-            Orb.Play();
+            Orbs[ElementIndex].Play();
         }
         else
         {
-            Orb.Stop();
-            Orb.Clear();
+            Orbs[ElementIndex].Stop();
+            Orbs[ElementIndex].Clear();
         }
     }
 
@@ -66,9 +72,45 @@ public class Laser : MonoBehaviour
 
     void UpdateBeam()
     {
-        Beam.SetPosition(0, transform.position);
+        Beams[ElementIndex].SetPosition(0, transform.position);
         RaycastHit hit;
         Physics.SphereCast(transform.position, 1.0f, dir, out hit);
-        Beam.SetPosition(1, hit.point);
+        
+        switch (ElementIndex)
+        {
+            case 0:
+                if(hit.collider.tag.Equals("Earth"))
+                {
+                    Beams[ElementIndex].SetPosition(1, hit.point);
+                }
+                else
+                {
+                    Beams[ElementIndex].SetPosition(1, targetBone.position);
+                }
+                break;
+
+            case 1:
+                if (hit.collider.tag.Equals("Ice"))
+                {
+                    Beams[ElementIndex].SetPosition(1, hit.point);
+                }
+                else
+                {
+                    Beams[ElementIndex].SetPosition(1, targetBone.position);
+                }
+                break;
+
+            case 2:
+                if (hit.collider.tag.Equals("Fire"))
+                {
+                    Beams[ElementIndex].SetPosition(1, hit.point);
+                }
+                else
+                {
+                    Beams[ElementIndex].SetPosition(1, targetBone.position);
+                }
+                break;
+        }
+        //Beams[ElementIndex].SetPosition(1, hit.point);
     }
 }
