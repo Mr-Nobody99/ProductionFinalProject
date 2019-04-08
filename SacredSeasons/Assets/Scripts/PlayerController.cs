@@ -313,6 +313,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         UIManager.instance.ShowScreen("Pause Menu");
         menuUp = true;
+        paused = true;
     }
 
     public void UnPause()
