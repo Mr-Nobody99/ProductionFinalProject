@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 262489542}
   - component: {fileID: 2094430331563000003}
   - component: {fileID: 1661299967252366470}
+  - component: {fileID: 3855945551036712350}
   m_Layer: 0
   m_Name: Production_Boss2
   m_TagString: Untagged
@@ -212,8 +213,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dcdea845e749c408daa879142bd5d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Waypoints: []
   Laser: {fileID: 5400596146259706455}
-  Orb: {fileID: 5400596146656473559}
+--- !u!65 &3855945551036712350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262489541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4045519, y: 1.1668181, z: 1.0108682}
+  m_Center: {x: -0.041993387, y: 0.6017339, z: 0.11953963}
 --- !u!1 &266601898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2317,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7382504952670963742, guid: 4ecda2760a6edd244a16bffe77a59604,
+        type: 3}
+      propertyPath: m_Positions.Array.data[1].z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382504952670963742, guid: 4ecda2760a6edd244a16bffe77a59604,
+        type: 3}
+      propertyPath: m_Parameters.numCapVertices
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7382504951965460051, guid: 4ecda2760a6edd244a16bffe77a59604,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2318,33 +2342,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7382504952670963742, guid: 4ecda2760a6edd244a16bffe77a59604,
-        type: 3}
-      propertyPath: m_Positions.Array.data[1].z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382504952670963742, guid: 4ecda2760a6edd244a16bffe77a59604,
-        type: 3}
-      propertyPath: m_Parameters.numCapVertices
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ecda2760a6edd244a16bffe77a59604, type: 3}
---- !u!1 &5400596146259706455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7382504951313634769, guid: 4ecda2760a6edd244a16bffe77a59604,
-    type: 3}
-  m_PrefabInstance: {fileID: 3206889177429563270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5400596146259706448 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7382504951313634774, guid: 4ecda2760a6edd244a16bffe77a59604,
     type: 3}
   m_PrefabInstance: {fileID: 3206889177429563270}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &5400596146656473559 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7382504951965460049, guid: 4ecda2760a6edd244a16bffe77a59604,
+--- !u!1 &5400596146259706455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7382504951313634769, guid: 4ecda2760a6edd244a16bffe77a59604,
     type: 3}
   m_PrefabInstance: {fileID: 3206889177429563270}
   m_PrefabAsset: {fileID: 0}
