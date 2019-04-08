@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(Projectiles[equippedElementIndex], Shooter.transform.position, Shooter.transform.rotation);
+        Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
     }
 
     void Defend(bool activate)
