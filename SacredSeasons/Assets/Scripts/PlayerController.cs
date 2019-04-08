@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -76,15 +75,6 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private Vector3 movementVector;
 
-    public static int maxHealth = 100;
-    public static int currentHealth;
-    
-    [SerializeField]
-    public Slider healthBar;
-
-    private bool paused = false;
-    public static bool menuUp = true;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -93,12 +83,8 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         initalSpeed = MoveSpeed;
 
-        currentHealth = maxHealth;
-
-        // Get current scene, store in variable for pause loading
-
         //deactivate shields at start
-        foreach (GameObject foo in shields)
+        foreach(GameObject foo in shields)
         {
             foo.SetActive(false);
         }
@@ -107,48 +93,25 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (menuUp == false)
+        blockRotation = false;
+        CheckGrounded();
+        isDefending = Input.GetButton("Block") ? true : false;
+        Defend(isDefending);
+        if (!isDefending)
         {
-            blockRotation = false;
-            CheckGrounded();
-            isDefending = Input.GetButton("Block") ? true : false;
-            Defend(isDefending);
-            if (!isDefending)
+            CalcInputMagnitude();
+            UpdateEquippedElement();
+            if (Input.GetButtonDown("Shoot"))
             {
-                CalcInputMagnitude();
-                UpdateEquippedElement();
-                if (Input.GetButtonDown("Shoot"))
-                {
-                    UpdateAim();
-                    Shoot();
-                }
-            }
-            else
-            {
-                animController.SetFloat("Input X", 0f);
-                animController.SetFloat("Input Z", 0f);
-            }
-        } // End if (menuUp)
-
-        // Opens pause menu or closes if it's currently up
-        if (Input.GetButtonDown("Pause"))
-        {
-            if (paused)
-            {
-                UnPause();
-            }
-            else
-            {
-                Pause();
+                UpdateAim();
+                Shoot();
             }
         }
-
-        // REMOVE ME
-        if (Input.GetKeyDown(KeyCode.F))
+        else
         {
-            TakeDamage(10);
+            animController.SetFloat("Input X", 0f);
+            animController.SetFloat("Input Z", 0f);
         }
-
     }
 
     void CheckGrounded()
@@ -208,7 +171,7 @@ public class PlayerController : MonoBehaviour
             MoveAndRotation();
             controller.Move(moveDirection * MoveSpeed * Time.deltaTime);
         }
-        else if (L_inputMagnitude > 0.0f && L_inputMagnitude < rotationBuildUp && R_inputMagnitude == 0.0f)
+        else if(L_inputMagnitude > 0.0f && L_inputMagnitude < rotationBuildUp && R_inputMagnitude == 0.0f)
         {
             blockRotation = true;
             animController.SetFloat("Input X", L_InputX);
@@ -235,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
         moveDirection = (forward * L_InputZ) + (right * L_InputX);
 
-        if (!blockRotation)
+        if(!blockRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), rotationSpeed);
         }
@@ -290,38 +253,6 @@ public class PlayerController : MonoBehaviour
         {
             shield.SetActive(false);
         }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-        healthBar.value = currentHealth;
-
-        if (currentHealth <= 0)
-        {
-            Time.timeScale = 0;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            UIManager.instance.ShowScreen("Defeat Screen");
-        }
-    }
-
-    public void Pause()
-    {
-        Time.timeScale = 0;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        UIManager.instance.ShowScreen("Pause Menu");
-        menuUp = true;
-    }
-
-    public void UnPause()
-    {
-        Time.timeScale = 1;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        UIManager.instance.Play();
-        menuUp = false;
     }
 
 }
