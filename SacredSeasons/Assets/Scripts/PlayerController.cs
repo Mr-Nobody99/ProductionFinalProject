@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     public Slider healthBar;
 
     private bool paused = false;
-    public static bool menuUp = false;
+    public static bool menuUp = true;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = maxHealth;
 
+        // Get current scene, store in variable for pause loading
+
         //deactivate shields at start
         foreach (GameObject foo in shields)
         {
@@ -105,7 +107,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (menuUp != false)
+        if (menuUp == false)
         {
             blockRotation = false;
             CheckGrounded();
