@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -75,6 +76,15 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private Vector3 movementVector;
 
+    public static int maxHealth = 100;
+    public static int currentHealth;
+
+    [SerializeField]
+    public Image healthBar;
+
+    private bool paused = false;
+    public static bool menuUp = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +92,7 @@ public class PlayerController : MonoBehaviour
         animController = this.GetComponent<Animator>();
         cam = Camera.main;
         initalSpeed = MoveSpeed;
-
+        currentHealth = maxHealth;
         //deactivate shields at start
         foreach(GameObject foo in shields)
         {
@@ -93,24 +103,43 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        blockRotation = false;
-        CheckGrounded();
-        isDefending = Input.GetButton("Block") ? true : false;
-        Defend(isDefending);
-        if (!isDefending)
+        if (!menuUp)
         {
-            CalcInputMagnitude();
-            UpdateEquippedElement();
-            if (Input.GetButtonDown("Shoot"))
+            blockRotation = false;
+            CheckGrounded();
+            isDefending = Input.GetButton("Block") ? true : false;
+            Defend(isDefending);
+            if (!isDefending)
             {
-                UpdateAim();
-                Shoot();
+                CalcInputMagnitude();
+                UpdateEquippedElement();
+                if (Input.GetButtonDown("Shoot"))
+                {
+                    UpdateAim();
+                    Shoot();
+                }
+            }
+            else
+            {
+                animController.SetFloat("Input X", 0f);
+                animController.SetFloat("Input Z", 0f);
             }
         }
-        else
+        if(Input.GetButtonDown("Pause"))
         {
-            animController.SetFloat("Input X", 0f);
-            animController.SetFloat("Input Z", 0f);
+            if(paused)
+            {
+                UnPause();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+        // REMOVE ME
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(10);
         }
     }
 
@@ -255,4 +284,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.fillAmount = currentHealth/maxHealth;
+
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            UIManager.instance.ShowScreen("Defeat Screen");
+        }
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        UIManager.instance.ShowScreen("Pause Menu");
+        menuUp = true;
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        UIManager.instance.Play();
+        menuUp = false;
+    }
 }
