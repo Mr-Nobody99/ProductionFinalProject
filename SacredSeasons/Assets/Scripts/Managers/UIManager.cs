@@ -20,12 +20,60 @@ public class UIManager : MonoBehaviour
     public List<Screen> screens = new List<Screen>();
     public int curScreen;
 
+    public string currentSeason;
+
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
         PlayerController.menuUp = true;
+
+        // Checks which season is currently active and changes the pause and options menu shown
+        if (name.Equals("Pause Menu"))
+        {
+            if (currentSeason.Contains("Autumn") || currentSeason.Contains("Fall"))
+            {
+                name = "Fall Pause Menu";
+            } else if (currentSeason.Contains("Spring"))
+            {
+                name = "Spring Pause Menu";
+            } else if (currentSeason.Contains("Summer"))
+            {
+                name = "Summer Pause Menu";
+            } else if (currentSeason.Contains("Winter"))
+            {
+                name = "Winter Pause Menu";
+            }
+            else
+            {
+                // Default case
+                name = "Fall Pause Menu";
+            }
+        } else if (name.Equals("Options Menu"))
+        {
+            if (currentSeason.Contains("Autumn") || currentSeason.Contains("Fall"))
+            {
+                name = "Fall Options Menu";
+            }
+            else if (currentSeason.Contains("Spring"))
+            {
+                name = "Spring Options Menu";
+            }
+            else if (currentSeason.Contains("Summer"))
+            {
+                name = "Summer Options Menu";
+            }
+            else if (currentSeason.Contains("Winter"))
+            {
+                name = "Winter Options Menu";
+            }
+            else
+            {
+                // Default case
+                name = "Fall Options Menu";
+            }
+        }
 
         for (int i = 0; i < screens.Count; i++)
         {
@@ -47,6 +95,12 @@ public class UIManager : MonoBehaviour
             screens[curScreen].screenAnimator.SetTrigger("Close");
             yield return new WaitForSeconds(1.0f);
         }
+    }
+
+    private void Start()
+    {
+        Scene curScene = SceneManager.GetActiveScene();
+        currentSeason = curScene.name;
     }
 
     private void Awake()

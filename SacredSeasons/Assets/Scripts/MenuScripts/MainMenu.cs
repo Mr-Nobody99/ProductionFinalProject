@@ -16,7 +16,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        UIManager.instance.PlayGame();
+        UIManager.instance.Play();
+        //UIManager.instance.PlayGame();
     }
 
     public void Controls()
