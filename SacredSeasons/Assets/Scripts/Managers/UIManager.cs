@@ -50,6 +50,10 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
+        //DontDestroyOnLoad(this.gameObject);
+
+        
+
         if (instance == null)
         {
             instance = this;
@@ -58,9 +62,13 @@ public class UIManager : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
         }
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 0;
+
+        if (PlayerController.menuUp == false)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+        }
     }
 
     public void Play()
@@ -71,9 +79,28 @@ public class UIManager : MonoBehaviour
         screens[curScreen].screen.SetActive(false);
     }
 
+    public void PlayGame()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("Removing menu from screen");
+        screens[curScreen].screen.SetActive(false);
+        Debug.Log("Loading Scene1");
+        SceneManager.LoadScene("Scene1");
+    }
+
     public void Quit()
     {
         Application.Quit();
         Debug.Log("Quitting Game");
+    }
+
+    public void Restart()
+    {
+        PlayerController.currentHealth = 100;
+        //PlayerController.healthBar.value = 100;
+        SceneManager.LoadScene("Fire");
+        Debug.Log("Loading Main Menu Scene");
     }
 }

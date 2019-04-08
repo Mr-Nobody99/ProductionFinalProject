@@ -13,4 +13,9 @@ public class VictoryScreen : MonoBehaviour
     {
         UIManager.instance.Quit();
     }
+    
+    public void Restart()
+    {
+        UIManager.instance.Restart();
+    }
 }
