@@ -5276,7 +5276,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235206572}
-  m_LocalRotation: {x: -0.018114593, y: 0.09063468, z: 0.0016489443, w: 0.9957181}
+  m_LocalRotation: {x: -0.018114593, y: 0.09063468, z: 0.0016489441, w: 0.9957181}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5338,7 +5338,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh11530
+  m_Name: pb_Mesh22106
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -5659,7 +5659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586896620}
-  m_LocalRotation: {x: -0.03617539, y: 0.09058986, z: 0.00329292, w: 0.9952256}
+  m_LocalRotation: {x: -0.03617539, y: 0.09058985, z: 0.0032929198, w: 0.9952256}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5735,7 +5735,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602833138}
-  m_LocalRotation: {x: 0.01575167, y: 0.097112544, z: -0.001537224, w: 0.9951476}
+  m_LocalRotation: {x: 0.01575167, y: 0.097112544, z: -0.0015372243, w: 0.9951476}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5870,6 +5870,21 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7976621632094465729, guid: 637c1e857d458c444aecaeed3aba35bd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.2100067
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903253298693014131, guid: 637c1e857d458c444aecaeed3aba35bd,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903253298693014131, guid: 637c1e857d458c444aecaeed3aba35bd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
 --- !u!43 &661212648
@@ -5878,7 +5893,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh18928
+  m_Name: pb_Mesh21984
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6301,7 +6316,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh11534
+  m_Name: pb_Mesh22110
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -6755,6 +6770,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1318798531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2086477429367299677, guid: 637c1e857d458c444aecaeed3aba35bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 632337116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324935826
 GameObject:
   m_ObjectHideFlags: 3
@@ -7279,6 +7306,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6379274854787495375, guid: f679e30c51bc1a647bebad8ba2a3277f,
         type: 3}
+    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1318798531}
     - target: {fileID: 7734804693698281218, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
         type: 3}
       propertyPath: m_Mesh
@@ -7437,7 +7469,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh11532
+  m_Name: pb_Mesh22108
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
