@@ -2871,9 +2871,20 @@ MonoBehaviour:
   - {fileID: 1498496821244542722, guid: d8fa27058e14db14cb543492c32f12b1, type: 3}
   - {fileID: 4013774590028668352, guid: 82b82bcd3ae145843bba146658381932, type: 3}
   - {fileID: 3208896452635846841, guid: 9ed704ce433948344bec46a5b2e5292c, type: 3}
+<<<<<<< HEAD
   shields: []
   shieldSpeed: 2
   isDefending: 0
+=======
+  shields:
+  - {fileID: 4597523233780085624}
+  - {fileID: 6008612005605692607}
+  - {fileID: 2235631421241589486}
+  shieldSpeed: 2
+  isDefending: 0
+  healthBar: {fileID: 0}
+  menuUp: 0
+>>>>>>> master
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0
