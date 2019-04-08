@@ -60,8 +60,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projectiles")]
     [SerializeField]
-    private GameObject Shooter;
-    [SerializeField]
     List<GameObject> Projectiles;
 
     [Header("Defense")]
@@ -103,7 +101,6 @@ public class PlayerController : MonoBehaviour
             UpdateEquippedElement();
             if (Input.GetButtonDown("Shoot"))
             {
-                UpdateAim();
                 Shoot();
             }
         }
@@ -220,13 +217,6 @@ public class PlayerController : MonoBehaviour
         {
             blockElementSwap = false;
         }
-    }
-
-    void UpdateAim()
-    {
-        Vector3 AimDirection = Shooter.transform.position - cam.transform.position;
-        Shooter.transform.LookAt(AimDirection * 100.0f, Shooter.transform.up);
-        Debug.DrawRay(Shooter.transform.position, AimDirection);
     }
 
     void Shoot()
