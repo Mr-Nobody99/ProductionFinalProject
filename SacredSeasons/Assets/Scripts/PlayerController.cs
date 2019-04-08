@@ -76,8 +76,8 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private Vector3 movementVector;
 
-    public static int maxHealth = 100;
-    public static int currentHealth;
+    public static float maxHealth = 100;
+    public static float currentHealth;
 
     [SerializeField]
     public Image healthBar;
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         // REMOVE ME
         if (Input.GetKeyDown(KeyCode.F))
         {
-            TakeDamage(10);
+            TakeDamage(1.0f);
         }
     }
 
@@ -284,7 +284,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         healthBar.fillAmount = currentHealth/maxHealth;
@@ -300,6 +300,7 @@ public class PlayerController : MonoBehaviour
 
     public void Pause()
     {
+        paused = true;
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
