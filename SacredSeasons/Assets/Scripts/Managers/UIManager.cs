@@ -131,6 +131,8 @@ public class UIManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
+        PlayerController.paused = false;
+        PlayerController.menuUp = false;
     }
 
     public void PlayGame()

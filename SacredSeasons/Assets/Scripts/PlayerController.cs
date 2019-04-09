@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Image healthBar;
 
-    private bool paused = false;
+    public static bool paused = false;
     public static bool menuUp = false;
 
     // Start is called before the first frame update
@@ -316,5 +316,6 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         UIManager.instance.Play();
         menuUp = false;
+        paused = false;
     }
 }

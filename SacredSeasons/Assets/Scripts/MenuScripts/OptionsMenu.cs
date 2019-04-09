@@ -17,14 +17,15 @@ public class OptionsMenu : MonoBehaviour
         UIManager.instance.ShowScreen("Graphics Menu");
     }
 
-    public void SetAudioVolume(float x)
+    public void SetAudioVolume()
     {
-        Debug.Log("Setting Audio Volume to: " + x);
-        GameManager.instance.audioVolume = x;
+        //Debug.Log("Setting Audio Volume to: " + x);
+        GameManager.instance.audioVolume = Sound.value;
     }
 
     void Start()
     {
-        Sound.value = GameManager.instance.audioVolume;
+        //Sound.value = GameManager.instance.audioVolume;
+        Sound.value = 1;
     }
 }
