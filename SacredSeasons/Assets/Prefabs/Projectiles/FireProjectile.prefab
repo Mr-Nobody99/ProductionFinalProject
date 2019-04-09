@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 7862680161741577962}
   m_Layer: 0
   m_Name: FireProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87086b987fbfde4a9a5d77d23851d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 40
   maxLifetime: 10
   Hit_FX: {fileID: 7184177573971367844, guid: 1d5cadda29474d048a5a1c916e56541e, type: 3}
 --- !u!65 &157666800165777630

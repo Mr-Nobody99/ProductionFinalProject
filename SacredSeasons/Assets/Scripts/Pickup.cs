@@ -16,4 +16,12 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag.Equals("Player"))
+        {
+            PlayerScore.AddToCurrentScore(value);
+            Destroy(gameObject);
+        }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEngine;
 
@@ -10,6 +11,13 @@ public class MonsterBossController : MonoBehaviour
     NavMeshAgent NavAgent;
     Animator AnimController;
     GameObject PlayerRef;
+
+    [SerializeField]
+    GameObject uiComp;
+    [SerializeField]
+    Image HealthBar;
+    float MaxHealth = 100;
+    float CurrentHealth;
 
     [SerializeField]
     List<AI_Waypoint> Waypoints;
@@ -28,9 +36,17 @@ public class MonsterBossController : MonoBehaviour
     bool beamActivated = false;
     bool usingNavLink = false;
 
+    public bool isStunned = false;
+    [SerializeField]
+    int StunDuration;
+
+    public bool IsDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        uiComp.SetActive(false);
+        CurrentHealth = MaxHealth;
         NavAgent = this.GetComponent<NavMeshAgent>();
         AnimController = this.GetComponent<Animator>();
         PlayerRef = GameObject.FindGameObjectWithTag("Player");
@@ -38,25 +54,52 @@ public class MonsterBossController : MonoBehaviour
         assignWaypoint = true;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag.Equals("Projectile"))
+        {
+            CurrentHealth -= 1f;
+            HealthBar.fillAmount = CurrentHealth / MaxHealth;
+            if(CurrentHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        CheckOffMeshLink();
-        if(assignWaypoint)
+        print("Is Stunned = "+isStunned);
+        if (!isStunned)
         {
-            AssignWaypoint();
+            CheckOffMeshLink();
+            if (assignWaypoint)
+            {
+                AssignWaypoint();
+            }
+            else if (moveToWaypoint)
+            {
+                MoveToWaypoint();
+            }
+            else if (persuePlayer)
+            {
+                PersuePlayer();
+            }
+            else if (doLaserAttack)
+            {
+                LaserAttack();
+            }
         }
-        else if(moveToWaypoint)
+        else if(isStunned)
         {
-            MoveToWaypoint();
-        }
-        else if(persuePlayer)
-        {
-            PersuePlayer();
-        }
-        else if(doLaserAttack)
-        {
-            LaserAttack();
+            AnimController.SetBool("Stunned", true);
+            uiComp.SetActive(true);
+            if (!corutineActive)
+            {
+                EndAttack();
+                StartCoroutine(StopIsStunned());
+            }
         }
     }
 
@@ -95,8 +138,9 @@ public class MonsterBossController : MonoBehaviour
 
     void LaserAttack()
     {
-        Vector3 dir = PlayerRef.transform.position -transform.position;
-        transform.rotation = Quaternion.LookRotation(dir);
+        transform.LookAt(PlayerRef.transform.position);
+        //Vector3 dir = PlayerRef.transform.position -transform.position;
+        //transform.rotation = Quaternion.LookRotation(dir);
         if (!blockTrigger)
         {
             AnimController.SetTrigger("Laser");
@@ -121,9 +165,10 @@ public class MonsterBossController : MonoBehaviour
     void PersuePlayer()
     {
         NavAgent.SetDestination(PlayerRef.transform.position);
-        if(Vector3.Distance(transform.position, PlayerRef.transform.position) <= 10)
+        if (Vector3.Distance(transform.position, PlayerRef.transform.position) <= 8.5f)
         {
             AnimController.SetTrigger("Melee");
+            PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
         }
         if(!corutineActive)
         {
@@ -138,6 +183,22 @@ public class MonsterBossController : MonoBehaviour
         persuePlayer = false;
         assignWaypoint = true;
         corutineActive = false;
+    }
+
+    IEnumerator StopIsStunned()
+    {
+        corutineActive = true;
+        yield return new WaitForSecondsRealtime(StunDuration);
+        AnimController.SetBool("Stunned", false);
+        uiComp.SetActive(false);
+        isStunned = false;
+        corutineActive = false;
+    }
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        print("Boss Defeated!");
     }
 
     public void BeginAttack()

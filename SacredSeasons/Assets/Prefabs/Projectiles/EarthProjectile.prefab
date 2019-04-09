@@ -9545,7 +9545,7 @@ GameObject:
   - component: {fileID: 7046675278009123119}
   m_Layer: 0
   m_Name: EarthProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9579,11 +9579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87086b987fbfde4a9a5d77d23851d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 40
   maxLifetime: 10
-  damageValue: 25
   Hit_FX: {fileID: 1882736722444777751, guid: eedb906334b4693409494ba616dea885, type: 3}
-  platformPrefab: {fileID: 0}
 --- !u!65 &538178039324207540
 BoxCollider:
   m_ObjectHideFlags: 0
