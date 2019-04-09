@@ -85,6 +85,8 @@ public class PlayerController : MonoBehaviour
     public static bool paused = false;
     public static bool menuUp = false;
 
+    public static string currentSpellName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -249,6 +251,7 @@ public class PlayerController : MonoBehaviour
         {
             blockElementSwap = false;
         }
+        currentSpellName = Projectiles[equippedElementIndex].name;
     }
 
     void UpdateAim()
