@@ -70,6 +70,11 @@ public class MonsterBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CurrentHealth <= 0)
+        {
+            UIManager.instance.ShowScreen("Victory Screen");
+        }
+
         print("Is Stunned = "+isStunned);
         if (!isStunned)
         {
