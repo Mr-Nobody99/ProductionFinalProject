@@ -647,6 +647,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.35, y: 3.22, z: 0.18}
   m_Center: {x: 1.175, y: 1.61, z: -0.09}
+--- !u!1 &5876823248037360632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6446073093458137371}
+  m_Layer: 0
+  m_Name: PlayerTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6446073093458137371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876823248037360632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7935316714360750303}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6008612005605692607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,6 +2874,7 @@ MonoBehaviour:
   shields: []
   shieldSpeed: 2
   isDefending: 0
+  healthBar: {fileID: 0}
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3029,7 @@ Transform:
   - {fileID: 7935316714360750269}
   - {fileID: 7935316714360750271}
   - {fileID: 7935316714360750219}
+  - {fileID: 6446073093458137371}
   m_Father: {fileID: 7935316714360750301}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

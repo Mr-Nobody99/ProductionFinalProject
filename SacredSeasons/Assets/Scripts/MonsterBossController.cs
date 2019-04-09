@@ -62,7 +62,8 @@ public class MonsterBossController : MonoBehaviour
             HealthBar.fillAmount = CurrentHealth / MaxHealth;
             if(CurrentHealth <= 0)
             {
-                Destroy(gameObject);
+                UIManager.instance.ShowScreen("Victory Screen");
+                //Destroy(gameObject);
             }
         }
     }
