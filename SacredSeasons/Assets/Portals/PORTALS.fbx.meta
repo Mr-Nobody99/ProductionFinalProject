@@ -150,67 +150,7 @@ ModelImporter:
     4300040: pCylinder20
     7400000: Take 001
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: floorunderportals
-    second: {fileID: 2100000, guid: e72f71d68a9a9954bacb14991e0475c7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glass
-    second: {fileID: 2100000, guid: af67dab328bb6ed4cafa56d3eb120a19, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pillar1
-    second: {fileID: 2100000, guid: a1ecb5f48da8b0a44ba8397476a42393, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pillar2
-    second: {fileID: 2100000, guid: d94c7e9231819f04885752efa0d7901c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: snowflake
-    second: {fileID: 2100000, guid: 13a5cc3daa5a78c45a218aa87c7ebc82, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: springleaf1
-    second: {fileID: 2100000, guid: 86878a2c92fb90c40a1954cd0654981f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: springportal
-    second: {fileID: 2100000, guid: 6ef148c0a314a7749a9a858608077a32, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: springportalbody1
-    second: {fileID: 2100000, guid: f165f5ac2ad56fe4fb269b7f42cc4e29, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: summerportal
-    second: {fileID: 2100000, guid: e1320b8767b005646988bc2521cf043e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: summerportalbody
-    second: {fileID: 2100000, guid: c1a52453afad48f4b98047d68a9bae98, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sun
-    second: {fileID: 2100000, guid: dbf368f9ea80e8f43bba76dcc1c92184, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: triangles
-    second: {fileID: 2100000, guid: 80fb7535400edf544be32727724f27a5, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -272,7 +212,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -287,10 +227,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
