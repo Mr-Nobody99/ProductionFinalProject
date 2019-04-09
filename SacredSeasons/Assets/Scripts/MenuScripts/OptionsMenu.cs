@@ -9,23 +9,26 @@ public class OptionsMenu : MonoBehaviour
 
     public void Back()
     {
+        AudioManager.instance.PlaySingle(UIManager.instance.back);
         UIManager.instance.ShowScreen("Main Menu");
     }
 
     public void Graphics()
     {
+        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.ShowScreen("Graphics Menu");
     }
 
     public void SetAudioVolume()
     {
-        //Debug.Log("Setting Audio Volume to: " + x);
+        Debug.Log("Setting Audio Volume to: " + Sound.value);
         GameManager.instance.audioVolume = Sound.value;
+        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
     }
 
     void Start()
     {
-        //Sound.value = GameManager.instance.audioVolume;
-        Sound.value = 1;
+        Sound.value = GameManager.instance.audioVolume;
+        //Sound.value = 1;
     }
 }

@@ -22,11 +22,21 @@ public class UIManager : MonoBehaviour
 
     public string currentSeason;
 
+    public bool paused = false;
+
+    public AudioClip confirm;
+    public AudioClip back;
+
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
+
+        if (name.Equals("Main Menu") && (paused))
+        {
+            name = "Pause Menu";
+        }
 
         // Checks which season is currently active and changes the pause and options menu shown
         if (name.Equals("Pause Menu"))
@@ -49,6 +59,9 @@ public class UIManager : MonoBehaviour
                 // Default case
                 name = "Fall Pause Menu";
             }
+
+            paused = true;
+
         } else if (name.Equals("Options Menu"))
         {
             if (currentSeason.Contains("Autumn") || currentSeason.Contains("Fall"))
@@ -72,6 +85,9 @@ public class UIManager : MonoBehaviour
                 // Default case
                 name = "Fall Options Menu";
             }
+        } else
+        {
+            paused = false;
         }
 
         for (int i = 0; i < screens.Count; i++)
@@ -104,10 +120,6 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject);
-
-        
-
         if (instance == null)
         {
             instance = this;
@@ -116,6 +128,8 @@ public class UIManager : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(this.gameObject);
 
         if (PlayerController.menuUp == false)
         {
@@ -140,14 +154,14 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        Debug.Log("Removing menu from screen");
         screens[curScreen].screen.SetActive(false);
-        Debug.Log("Loading Scene1");
+        AudioManager.instance.PlaySingle(confirm);
         SceneManager.LoadScene("Scene1");
     }
 
     public void Quit()
     {
+        AudioManager.instance.PlaySingle(confirm);
         Application.Quit();
         Debug.Log("Quitting Game");
     }
@@ -155,8 +169,9 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         PlayerController.currentHealth = 100;
+        AudioManager.instance.PlaySingle(confirm);
         //PlayerController.healthBar.value = 100;
-        SceneManager.LoadScene("Fire");
+        SceneManager.LoadScene("Boss Fight");
         Debug.Log("Loading Main Menu Scene");
     }
 }

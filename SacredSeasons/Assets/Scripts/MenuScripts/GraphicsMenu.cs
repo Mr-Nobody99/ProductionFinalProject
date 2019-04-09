@@ -10,7 +10,8 @@ public class GraphicsMenu : MonoBehaviour
 
     public void Back()
     {
-        UIManager.instance.ShowScreen("OptionsMenu");
+        AudioManager.instance.PlaySingle(UIManager.instance.back);
+        UIManager.instance.ShowScreen("Options Menu");
     }
 
     void Start()

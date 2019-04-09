@@ -6,11 +6,14 @@ public class PauseMenu : MonoBehaviour
 {
    public void Back()
     {
+        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
+        UIManager.instance.paused = false;
         UIManager.instance.Play();
     }
 
     public void Options()
     {
+        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.ShowScreen("Options Menu");
     }
 
