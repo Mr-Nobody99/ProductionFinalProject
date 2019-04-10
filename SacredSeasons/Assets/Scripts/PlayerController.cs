@@ -252,6 +252,18 @@ public class PlayerController : MonoBehaviour
             blockElementSwap = false;
         }
         currentSpellName = Projectiles[equippedElementIndex].name;
+
+        //KEYBOARD SUPPORT
+        if (Input.GetButtonUp("ProjectileForward") && !blockElementSwap)
+        {
+            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
+            blockElementSwap = true;
+        }
+        else if (Input.GetButtonUp("ProjectileBack") && !blockElementSwap)
+        {
+            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
+            blockElementSwap = true;
+        }
     }
 
     void UpdateAim()
