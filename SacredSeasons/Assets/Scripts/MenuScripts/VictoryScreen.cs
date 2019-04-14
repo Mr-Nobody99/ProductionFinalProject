@@ -7,7 +7,6 @@ public class VictoryScreen : MonoBehaviour
     public void MainMenu()
     {
         AudioManager.instance.PlaySingle(UIManager.instance.confirm);
-        UIManager.instance.ShowScreen("Main Menu");
         UIManager.instance.Restart();
     }
 

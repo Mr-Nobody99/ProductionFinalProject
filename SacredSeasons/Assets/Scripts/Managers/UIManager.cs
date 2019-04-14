@@ -171,6 +171,7 @@ public class UIManager : MonoBehaviour
         PlayerController.currentHealth = 100;
         AudioManager.instance.PlaySingle(confirm);
         //PlayerController.healthBar.value = 100;
+        UIManager.instance.ShowScreen("Main Menu");
         SceneManager.LoadScene("Boss Fight");
         Debug.Log("Loading Main Menu Scene");
     }

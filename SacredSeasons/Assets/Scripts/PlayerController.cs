@@ -105,6 +105,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            currentHealth = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.V))
+        {
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            UIManager.instance.ShowScreen("Victory Screen");
+        }
+
         if (!menuUp)
         {
             blockRotation = false;
