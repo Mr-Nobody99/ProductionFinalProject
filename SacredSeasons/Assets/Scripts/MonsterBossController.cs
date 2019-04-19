@@ -76,7 +76,7 @@ public class MonsterBossController : MonoBehaviour
             UIManager.instance.ShowScreen("Victory Screen");
         }
 
-        print("Is Stunned = "+isStunned);
+        //print("Is Stunned = "+isStunned);
         if (!isStunned)
         {
             CheckOffMeshLink();
@@ -113,7 +113,7 @@ public class MonsterBossController : MonoBehaviour
     {
         if (NavAgent.isOnOffMeshLink && !usingNavLink)
         {
-            print("Jump");
+            //print("Jump");
             usingNavLink = true;
             AnimController.SetTrigger("Jump");
         }
@@ -136,7 +136,7 @@ public class MonsterBossController : MonoBehaviour
         NavAgent.SetDestination(Waypoints[WaypointIndex].transform.position);
         if(Vector3.Distance(transform.position, Waypoints[WaypointIndex].transform.position) <= 1.0f)
         {
-            print("At Waypoint");
+            //print("At Waypoint");
             moveToWaypoint = false;
             doLaserAttack = true;
         }
@@ -204,12 +204,12 @@ public class MonsterBossController : MonoBehaviour
     IEnumerator Death()
     {
         yield return new WaitForSecondsRealtime(1);
-        print("Boss Defeated!");
+        //print("Boss Defeated!");
     }
 
     public void BeginAttack()
     {
-        print("Attack Triggered!");
+        //print("Attack Triggered!");
         laserScript.ElementIndex = Random.Range(0, 3);
         laserScript.PlayParticles(true);
     }
@@ -221,7 +221,7 @@ public class MonsterBossController : MonoBehaviour
 
     public void EndAttack()
     {
-        print("Attack End!");
+        //print("Attack End!");
         laserScript.Activated = false;
         laserScript.PlayParticles(false);
         doLaserAttack = false;
