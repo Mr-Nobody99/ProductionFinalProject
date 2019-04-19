@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3747866255181743315}
   m_Layer: 0
   m_Name: Earth Wall
-  m_TagString: Earth
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 6834368834294027681}
   m_Layer: 0
   m_Name: Ice Wall
-  m_TagString: Ice
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 7546659292127087806}
   m_Layer: 0
   m_Name: Fire Wall
-  m_TagString: Fire
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2871,11 +2871,8 @@ MonoBehaviour:
   - {fileID: 1498496821244542722, guid: d8fa27058e14db14cb543492c32f12b1, type: 3}
   - {fileID: 4013774590028668352, guid: 82b82bcd3ae145843bba146658381932, type: 3}
   - {fileID: 3208896452635846841, guid: 9ed704ce433948344bec46a5b2e5292c, type: 3}
-  shields:
-  - {fileID: 4597523233780085624}
-  - {fileID: 6008612005605692607}
-  - {fileID: 2235631421241589486}
-  shieldSpeed: 3
+  shields: []
+  shieldSpeed: 2
   isDefending: 0
   healthBar: {fileID: 0}
 --- !u!1 &7935316714361118007

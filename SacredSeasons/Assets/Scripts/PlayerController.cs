@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -86,9 +85,6 @@ public class PlayerController : MonoBehaviour
     public static bool paused = false;
     public static bool menuUp = false;
 
-    // Boolean to ignore jump for a half second after menu button is pressed
-    public static bool jumpOk = true;
-
     public static string currentSpellName;
 
     // Start is called before the first frame update
@@ -100,7 +96,6 @@ public class PlayerController : MonoBehaviour
         initalSpeed = MoveSpeed;
         currentHealth = maxHealth;
         //deactivate shields at start
-        //UIManager.instance.ShowScreen("Main Menu");
         foreach(GameObject foo in shields)
         {
             foo.SetActive(false);
@@ -110,7 +105,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            currentHealth = 0;
+        }
+
+        if (Input.GetKeyUp(KeyCode.V))
+        {
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            UIManager.instance.ShowScreen("Victory Screen");
+        }
+
+        if (!menuUp)
         {
             blockRotation = false;
             CheckGrounded();
@@ -118,10 +126,7 @@ public class PlayerController : MonoBehaviour
             Defend(isDefending);
             if (!isDefending)
             {
-                if (!paused)
-                {
-                    CalcInputMagnitude();
-                }
+                CalcInputMagnitude();
                 UpdateEquippedElement();
                 if (Input.GetButtonDown("Shoot"))
                 {
@@ -135,17 +140,21 @@ public class PlayerController : MonoBehaviour
                 animController.SetFloat("Input Z", 0f);
             }
         }
-
         if(Input.GetButtonDown("Pause"))
         {
             if(paused)
             {
                 UnPause();
             }
-            else if(!paused && !UIManager.instance.screens[UIManager.instance.curScreen].screen.activeSelf)
+            else
             {
                 Pause();
             }
+        }
+        // REMOVE ME
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TakeDamage(1.0f);
         }
     }
 
@@ -157,7 +166,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
-            if (Input.GetButtonUp("Jump") && !isDefending && jumpOk)
+            if (Input.GetButton("Jump") && !isDefending)
             {
                 animController.SetTrigger("Jump");
                 MoveSpeed /= 2;

@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
 
-        if (name.Equals("Main Menu") && (paused) && !screens[curScreen].name.Contains("Options"))
+        if (name.Equals("Main Menu") && (paused))
         {
             name = "Pause Menu";
         }
@@ -141,7 +141,6 @@ public class UIManager : MonoBehaviour
 
     public void Play()
     {
-        StartCoroutine(SetJumpNotOkCoroutine());
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -175,15 +174,5 @@ public class UIManager : MonoBehaviour
         UIManager.instance.ShowScreen("Main Menu");
         SceneManager.LoadScene("Boss Fight");
         Debug.Log("Loading Main Menu Scene");
-    }
-
-    public IEnumerator SetJumpNotOkCoroutine()
-    {
-        PlayerController.jumpOk = false;
-        print("Wait started...");
-        yield return new WaitForSeconds(0.5f);
-        print("Wait Done");
-        PlayerController.jumpOk = true;
-        
     }
 }
