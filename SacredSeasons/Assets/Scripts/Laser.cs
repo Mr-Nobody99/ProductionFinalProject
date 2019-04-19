@@ -125,7 +125,10 @@ public class Laser : MonoBehaviour
                     HitFX[ElementIndex].transform.position = Beams[ElementIndex].GetPosition(1);
                     HitFX[ElementIndex].transform.localScale = Vector3.one;
                     HitFX[ElementIndex].Play();
-                    PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    if (!PlayerController.paused)
+                    {
+                        PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    }
                 }
                 break;
 
@@ -155,7 +158,10 @@ public class Laser : MonoBehaviour
                     HitFX[ElementIndex].transform.position = Beams[ElementIndex].GetPosition(1);
                     HitFX[ElementIndex].transform.localScale = Vector3.one;
                     HitFX[ElementIndex].Play();
-                    PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    if (!PlayerController.paused)
+                    {
+                        PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    }
                 }
                 break;
 
@@ -185,7 +191,10 @@ public class Laser : MonoBehaviour
                     HitFX[ElementIndex].transform.position = Beams[ElementIndex].GetPosition(1);
                     HitFX[ElementIndex].transform.localScale = Vector3.one;
                     HitFX[ElementIndex].Play();
-                    PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    if (!PlayerController.paused)
+                    {
+                        PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+                    }
                 }
                 break;
         }

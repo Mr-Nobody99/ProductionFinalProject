@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
             GameObject.Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
 
