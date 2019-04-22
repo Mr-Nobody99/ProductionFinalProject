@@ -41,7 +41,7 @@ public class IceProjectile : MonoBehaviour
         {
             moveComponent.speed = 0;
 
-            if (other.name.Equals("FlatWater"))
+            if (other.name.Contains("Water"))
             {
                 Quaternion rotation = Quaternion.Euler(90, 0, 0);
 
