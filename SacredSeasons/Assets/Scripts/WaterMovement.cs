@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaterMovement : MonoBehaviour
 {
@@ -55,11 +56,14 @@ public class WaterMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag.Equals("Player"))
         {
-            other.transform.position = respawn.transform.position;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            //other.transform.position = respawn.transform.position;
+            //Debug.Log("Post Teleport");
         }
     }
 
