@@ -45,12 +45,8 @@ public class IceProjectile : MonoBehaviour
             {
                 Quaternion rotation = Quaternion.Euler(90, 0, 0);
 
-                print("Hit Water");
                 var platform = Instantiate(platformPrefab, transform.position, rotation);
-                //platform.GetComponent<FloatingMovement>().water = other.gameObject;
-                //platform.transform.Rotate(0, 0, 90);
                 //platform.transform.parent = other.transform;
-                Debug.Log("Transform.rotation: " + platform.transform.rotation.eulerAngles.ToString());
                 Destroy(gameObject);
             }
             else
