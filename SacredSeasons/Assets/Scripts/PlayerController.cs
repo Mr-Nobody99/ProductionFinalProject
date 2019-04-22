@@ -89,11 +89,6 @@ public class PlayerController : MonoBehaviour
 
     public static string currentSpellName;
 
-    public GameObject ShieldSpawn;
-    //GameObject CurrentShield;
-    GameObject cloneShield;
-    public List<InventoryManager.Shield> localShields = new List<InventoryManager.Shield>();
-
     // Start is called before the first frame update
     void Start()
     {
@@ -108,22 +103,6 @@ public class PlayerController : MonoBehaviour
         {
             foo.SetActive(false);
         }
-
-        Transform[] Children = this.GetComponentsInChildren<Transform>();
-
-        foreach(Transform c in Children)
-        {
-            if (c.gameObject.name == "Shields")
-            {
-                ShieldSpawn = c.gameObject;
-            }
-        }
-
-        foreach(InventoryManager.Shield s in InventoryManager.instance.PlayerShields)
-        {
-            localShields.Add(s);
-        }
-
     }
 
     // Update is called once per frame
@@ -348,7 +327,7 @@ public class PlayerController : MonoBehaviour
 
     void Defend(bool activate)
     {
-        var shield = shields[InventoryManager.instance.currentSpellIndex];
+        GameObject shield = shields[InventoryManager.instance.currentSpellIndex];
 
         if (activate)
         {

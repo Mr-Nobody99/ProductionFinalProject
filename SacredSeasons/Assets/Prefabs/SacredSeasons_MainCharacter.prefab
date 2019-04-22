@@ -1953,8 +1953,6 @@ MonoBehaviour:
   shieldSpeed: 3
   isDefending: 0
   healthBar: {fileID: 0}
-  ShieldSpawn: {fileID: 0}
-  localShields: []
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0

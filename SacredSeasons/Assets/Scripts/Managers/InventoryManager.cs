@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager instance;
 
     [System.Serializable]
-    public struct Spell
+    public class Spell
     {
         public string name;
         public GameObject projectile;
@@ -16,7 +16,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     [System.Serializable]
-    public struct Shield
+    public class Shield
     {
         public string name;
         public GameObject shield;

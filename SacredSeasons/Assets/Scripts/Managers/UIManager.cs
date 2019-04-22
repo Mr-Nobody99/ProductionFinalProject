@@ -138,12 +138,12 @@ public class UIManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
 
-        if (PlayerController.menuUp == false)
+        /*if (PlayerController.menuUp == false)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
-        }
+        }*/
     }
 
     public void Play()
