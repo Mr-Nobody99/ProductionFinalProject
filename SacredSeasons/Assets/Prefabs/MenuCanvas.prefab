@@ -85,7 +85,7 @@ MonoBehaviour:
   - name: Fire Spell
     projectile: {fileID: 4013774590028668352, guid: 82b82bcd3ae145843bba146658381932,
       type: 3}
-    available: 1
+    available: 0
   PlayerShields:
   - name: Ice Wall
     shield: {fileID: 661757089419472932, guid: 4cd2003be482dc74790c9963d5711ad7, type: 3}
@@ -93,11 +93,11 @@ MonoBehaviour:
   - name: Earth Wall
     shield: {fileID: 2608385742352329251, guid: 01b957f048c4d7d439dc5ce2d56da119,
       type: 3}
-    available: 1
+    available: 0
   - name: Fire Wall
     shield: {fileID: 5072957500558679988, guid: 2ba266898b8dac144afb66ba563609bc,
       type: 3}
-    available: 1
+    available: 0
 --- !u!1 &1188456875
 GameObject:
   m_ObjectHideFlags: 0
