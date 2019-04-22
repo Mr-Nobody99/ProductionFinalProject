@@ -27,30 +27,34 @@ public class UIManager : MonoBehaviour
     public AudioClip confirm;
     public AudioClip back;
 
+    public string previousScreenName = "Main Menu";
+
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
 
-        if (name.Equals("Main Menu") && (paused) && !screens[curScreen].name.Contains("Options"))
+        if (name.Equals("Main Menu") && (paused) && screens[curScreen].name.Contains("Options"))
         {
-            name = "Pause Menu";
+            //name = "Pause Menu";
         }
+
+        //Debug.Log("Current Season: " + currentSeason);
 
         // Checks which season is currently active and changes the pause and options menu shown
         if (name.Equals("Pause Menu"))
         {
-            if (currentSeason.Contains("Autumn") || currentSeason.Contains("Fall"))
+            if (currentSeason.Contains("HUb"))
             {
                 name = "Fall Pause Menu";
-            } else if (currentSeason.Contains("Spring"))
+            } else if (currentSeason.Contains("Earth"))
             {
                 name = "Spring Pause Menu";
-            } else if (currentSeason.Contains("Summer"))
+            } else if (currentSeason.Contains("Fire"))
             {
                 name = "Summer Pause Menu";
-            } else if (currentSeason.Contains("Winter"))
+            } else if (currentSeason.Contains("Water"))
             {
                 name = "Winter Pause Menu";
             }
@@ -64,19 +68,19 @@ public class UIManager : MonoBehaviour
 
         } else if (name.Equals("Options Menu"))
         {
-            if (currentSeason.Contains("Autumn") || currentSeason.Contains("Fall"))
+            if (currentSeason.Contains("HUb"))
             {
                 name = "Fall Options Menu";
             }
-            else if (currentSeason.Contains("Spring"))
+            else if (currentSeason.Contains("Earth"))
             {
                 name = "Spring Options Menu";
             }
-            else if (currentSeason.Contains("Summer"))
+            else if (currentSeason.Contains("Fire"))
             {
                 name = "Summer Options Menu";
             }
-            else if (currentSeason.Contains("Winter"))
+            else if (currentSeason.Contains("Water"))
             {
                 name = "Winter Options Menu";
             }
@@ -89,6 +93,9 @@ public class UIManager : MonoBehaviour
         {
             paused = false;
         }
+
+        // Change previous screen to be current screen
+        previousScreenName = screens[curScreen].name;
 
         for (int i = 0; i < screens.Count; i++)
         {
@@ -170,19 +177,15 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         PlayerController.currentHealth = 100;
-        AudioManager.instance.PlaySingle(confirm);
-        //PlayerController.healthBar.value = 100;
+        //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
         SceneManager.LoadScene("Boss Fight");
-        Debug.Log("Loading Main Menu Scene");
     }
 
     public IEnumerator SetJumpNotOkCoroutine()
     {
         PlayerController.jumpOk = false;
-        print("Wait started...");
         yield return new WaitForSeconds(0.5f);
-        print("Wait Done");
         PlayerController.jumpOk = true;
         
     }

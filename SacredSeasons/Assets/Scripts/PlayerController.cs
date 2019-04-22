@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject Shooter;
     [SerializeField]
-    List<GameObject> Projectiles;
+    public static List<GameObject> Projectiles;
 
     [Header("Defense")]
     [SerializeField]
@@ -110,6 +110,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.V))
+        {
+            UIManager.instance.ShowScreen("Victory Screen");
+        }
+
         if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
         {
             blockRotation = false;
@@ -261,11 +267,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonUp("ProjectileForward") && !blockElementSwap)
         {
             equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
-            blockElementSwap = true;
-        }
-        else if (Input.GetButtonUp("ProjectileBack") && !blockElementSwap)
-        {
-            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
             blockElementSwap = true;
         }
     }
