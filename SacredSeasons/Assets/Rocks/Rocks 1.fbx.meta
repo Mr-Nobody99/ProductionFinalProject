@@ -53,6 +53,14 @@ ModelImporter:
     4300010: Rock6
     4300012: Rock7
     4300014: Rock8
+    6400000: Rock1
+    6400002: Rock2
+    6400004: Rock3
+    6400006: Rock4
+    6400008: Rock5
+    6400010: Rock6
+    6400012: Rock7
+    6400014: Rock8
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +94,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 55
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
