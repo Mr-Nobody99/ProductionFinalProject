@@ -5351,6 +5351,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &254070885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1026591711, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1727667173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &254070889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254070885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5a10cf0cf799b4b8143459defb74b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSpellIndex: 0
+  PlayerSpells:
+  - name: Ice Spell
+    projectile: {fileID: 1498496821244542722, guid: d8fa27058e14db14cb543492c32f12b1,
+      type: 3}
+    available: 1
+  - name: Earth Spell
+    projectile: {fileID: 3208896452635846841, guid: 9ed704ce433948344bec46a5b2e5292c,
+      type: 3}
+    available: 0
+  - name: Fire Spell
+    projectile: {fileID: 4013774590028668352, guid: 82b82bcd3ae145843bba146658381932,
+      type: 3}
+    available: 1
+  PlayerShields:
+  - name: Ice Wall
+    shield: {fileID: 661757089419472932, guid: 4cd2003be482dc74790c9963d5711ad7, type: 3}
+    available: 1
+  - name: Earth Wall
+    shield: {fileID: 2608385742352329251, guid: 01b957f048c4d7d439dc5ce2d56da119,
+      type: 3}
+    available: 1
+  - name: Fire Wall
+    shield: {fileID: 5072957500558679988, guid: 2ba266898b8dac144afb66ba563609bc,
+      type: 3}
+    available: 1
 --- !u!1 &413168885
 GameObject:
   m_ObjectHideFlags: 3
@@ -6539,7 +6583,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72556
+  m_Name: pb_Mesh-2974
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7411,7 +7455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72554
+  m_Name: pb_Mesh-2972
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7893,7 +7937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-72564
+  m_Name: pb_Mesh-2982
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -8072,7 +8116,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-71332
+  m_Name: pb_Mesh-1750
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

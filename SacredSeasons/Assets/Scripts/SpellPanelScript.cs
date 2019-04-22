@@ -29,17 +29,17 @@ public class SpellPanelScript : MonoBehaviour
     {
         switch (PlayerController.currentSpellName)
         {
-            case "IceProjectile":
+            case "Ice Spell":
                 //currentSpellText.text = "Ice";
                 currentSpellIcon.texture = spells[0].spellTexture;
                 break;
 
-            case "FireProjectile":
+            case "Fire Spell":
                 //currentSpellText.text = "Fire";
                 currentSpellIcon.texture = spells[1].spellTexture;
                 break;
                 
-            case "EarthProjectile":
+            case "Earth Spell":
                 //currentSpellText.text = "Earth";
                 currentSpellIcon.texture = spells[2].spellTexture;
                 break;

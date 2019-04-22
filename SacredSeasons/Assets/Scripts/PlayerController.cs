@@ -63,8 +63,6 @@ public class PlayerController : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField]
     private GameObject Shooter;
-    [SerializeField]
-    public static List<GameObject> Projectiles;
 
     [Header("Defense")]
     [SerializeField]
@@ -91,6 +89,11 @@ public class PlayerController : MonoBehaviour
 
     public static string currentSpellName;
 
+    public GameObject ShieldSpawn;
+    //GameObject CurrentShield;
+    GameObject cloneShield;
+    public List<InventoryManager.Shield> localShields = new List<InventoryManager.Shield>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -105,17 +108,27 @@ public class PlayerController : MonoBehaviour
         {
             foo.SetActive(false);
         }
+
+        Transform[] Children = this.GetComponentsInChildren<Transform>();
+
+        foreach(Transform c in Children)
+        {
+            if (c.gameObject.name == "Shields")
+            {
+                ShieldSpawn = c.gameObject;
+            }
+        }
+
+        foreach(InventoryManager.Shield s in InventoryManager.instance.PlayerShields)
+        {
+            localShields.Add(s);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.V))
-        {
-            UIManager.instance.ShowScreen("Victory Screen");
-        }
-
         if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
         {
             blockRotation = false;
@@ -247,26 +260,76 @@ public class PlayerController : MonoBehaviour
 
     void UpdateEquippedElement()
     {
+        // Gamepad support section
         if (Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap)
         {
-            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
+            ++InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == 3)
+            {
+                InventoryManager.instance.currentSpellIndex = 0;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+                ++InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == 3)
+                {
+                    InventoryManager.instance.currentSpellIndex = 0;
+                }
+            }
+
             blockElementSwap = true;
         }
         else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
         {
-            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
+            --InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == -1)
+            {
+                InventoryManager.instance.currentSpellIndex = 2;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+
+                --InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == -1)
+                {
+                    InventoryManager.instance.currentSpellIndex = 2;
+                }
+            }
+
             blockElementSwap = true;
         }
         else if (Input.GetAxis("SwitchProjectile") == 0)
         {
             blockElementSwap = false;
         }
-        currentSpellName = Projectiles[equippedElementIndex].name;
+        currentSpellName = InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].name;
 
-        //KEYBOARD SUPPORT
+        // Keyboard support section
         if (Input.GetButtonUp("ProjectileForward") && !blockElementSwap)
         {
-            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
+            ++InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == 3)
+            {
+                InventoryManager.instance.currentSpellIndex = 0;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+                ++InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == 3)
+                {
+                    InventoryManager.instance.currentSpellIndex = 0;
+                }
+            }
+
             blockElementSwap = true;
         }
     }
@@ -280,12 +343,13 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+        Instantiate(InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].projectile, cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
     }
 
     void Defend(bool activate)
     {
-        var shield = shields[equippedElementIndex];
+        var shield = shields[InventoryManager.instance.currentSpellIndex];
+
         if (activate)
         {
             if (!shield.activeSelf)
