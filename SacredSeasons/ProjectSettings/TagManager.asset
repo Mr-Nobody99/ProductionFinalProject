@@ -7,6 +7,11 @@ TagManager:
   - Water
   - FireEnemy
   - Plant
+  - Ice
+  - Fire
+  - Earth
+  - Monster
+  - Projectile
   layers:
   - Default
   - TransparentFX

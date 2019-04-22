@@ -40,23 +40,35 @@ public class IceProjectile : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             moveComponent.speed = 0;
-            var hitFX = Instantiate(moveComponent.Hit_FX, transform.position, Quaternion.identity);
-            var hit_PS = hitFX.GetComponent<ParticleSystem>();
-            if (hit_PS != null)
+
+            if (other.name.Equals("FlatWater"))
             {
-                Destroy(hitFX, hit_PS.main.duration);
+                Quaternion rotation = Quaternion.Euler(90, 0, 0);
+
+                var platform = Instantiate(platformPrefab, transform.position, rotation);
+                //platform.transform.parent = other.transform;
+                Destroy(gameObject);
             }
             else
             {
-                var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
-                Destroy(hitFX, hitFXChild.main.duration);
-            }
+                var hitFX = Instantiate(moveComponent.Hit_FX, transform.position, Quaternion.identity);
+                var hit_PS = hitFX.GetComponent<ParticleSystem>();
+                if (hit_PS != null)
+                {
+                    Destroy(hitFX, hit_PS.main.duration);
+                }
+                else
+                {
+                    var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
+                    Destroy(hitFX, hitFXChild.main.duration);
+                }
 
-            print("Hit Water");
-            var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
-            platform.GetComponent<FloatingMovement>().water = other.gameObject;
-            platform.transform.parent = other.transform;
-            Destroy(gameObject);
+                print("Hit Water");
+                var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
+                platform.GetComponent<FloatingMovement>().water = other.gameObject;
+                platform.transform.parent = other.transform;
+                Destroy(gameObject);
+            }
         }
     }
 }

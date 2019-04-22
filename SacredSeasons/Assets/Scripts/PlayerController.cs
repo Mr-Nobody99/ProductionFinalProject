@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -61,8 +63,6 @@ public class PlayerController : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField]
     private GameObject Shooter;
-    [SerializeField]
-    List<GameObject> Projectiles;
 
     [Header("Defense")]
     [SerializeField]
@@ -75,6 +75,20 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private Vector3 movementVector;
 
+    public static float maxHealth = 100;
+    public static float currentHealth;
+
+    [SerializeField]
+    public Image healthBar;
+
+    public static bool paused = false;
+    public static bool menuUp = false;
+
+    // Boolean to ignore jump for a half second after menu button is pressed
+    public static bool jumpOk = true;
+
+    public static string currentSpellName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,8 +96,9 @@ public class PlayerController : MonoBehaviour
         animController = this.GetComponent<Animator>();
         cam = Camera.main;
         initalSpeed = MoveSpeed;
-
+        currentHealth = maxHealth;
         //deactivate shields at start
+        //UIManager.instance.ShowScreen("Main Menu");
         foreach(GameObject foo in shields)
         {
             foo.SetActive(false);
@@ -93,24 +108,42 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        blockRotation = false;
-        CheckGrounded();
-        isDefending = Input.GetButton("Block") ? true : false;
-        Defend(isDefending);
-        if (!isDefending)
+        if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
         {
-            CalcInputMagnitude();
-            UpdateEquippedElement();
-            if (Input.GetButtonDown("Shoot"))
+            blockRotation = false;
+            CheckGrounded();
+            isDefending = Input.GetButton("Block") ? true : false;
+            Defend(isDefending);
+            if (!isDefending)
             {
-                UpdateAim();
-                Shoot();
+                if (!paused)
+                {
+                    CalcInputMagnitude();
+                }
+                UpdateEquippedElement();
+                if (Input.GetButtonDown("Shoot"))
+                {
+                    UpdateAim();
+                    Shoot();
+                }
+            }
+            else
+            {
+                animController.SetFloat("Input X", 0f);
+                animController.SetFloat("Input Z", 0f);
             }
         }
-        else
+
+        if(Input.GetButtonDown("Pause"))
         {
-            animController.SetFloat("Input X", 0f);
-            animController.SetFloat("Input Z", 0f);
+            if(paused)
+            {
+                UnPause();
+            }
+            else if(!paused && !UIManager.instance.screens[UIManager.instance.curScreen].screen.activeSelf)
+            {
+                Pause();
+            }
         }
     }
 
@@ -122,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
-            if (Input.GetButton("Jump") && !isDefending)
+            if (Input.GetButtonDown("Jump") && !isDefending && jumpOk)
             {
                 animController.SetTrigger("Jump");
                 MoveSpeed /= 2;
@@ -206,19 +239,77 @@ public class PlayerController : MonoBehaviour
 
     void UpdateEquippedElement()
     {
+        // Gamepad support section
         if (Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap)
         {
-            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
+            ++InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == 3)
+            {
+                InventoryManager.instance.currentSpellIndex = 0;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+                ++InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == 3)
+                {
+                    InventoryManager.instance.currentSpellIndex = 0;
+                }
+            }
+
             blockElementSwap = true;
         }
         else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
         {
-            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
+            --InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == -1)
+            {
+                InventoryManager.instance.currentSpellIndex = 2;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+
+                --InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == -1)
+                {
+                    InventoryManager.instance.currentSpellIndex = 2;
+                }
+            }
+
             blockElementSwap = true;
         }
         else if (Input.GetAxis("SwitchProjectile") == 0)
         {
             blockElementSwap = false;
+        }
+        currentSpellName = InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].name;
+
+        // Keyboard support section
+        if (Input.GetButtonUp("ProjectileForward") && !blockElementSwap)
+        {
+            ++InventoryManager.instance.currentSpellIndex;
+
+            if (InventoryManager.instance.currentSpellIndex == 3)
+            {
+                InventoryManager.instance.currentSpellIndex = 0;
+            }
+
+            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
+            {
+                ++InventoryManager.instance.currentSpellIndex;
+
+                if (InventoryManager.instance.currentSpellIndex == 3)
+                {
+                    InventoryManager.instance.currentSpellIndex = 0;
+                }
+            }
+
+            blockElementSwap = true;
         }
     }
 
@@ -231,12 +322,13 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(Projectiles[equippedElementIndex], Shooter.transform.position, Shooter.transform.rotation);
+        Instantiate(InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].projectile, cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
     }
 
     void Defend(bool activate)
     {
-        var shield = shields[equippedElementIndex];
+        GameObject shield = shields[InventoryManager.instance.currentSpellIndex];
+
         if (activate)
         {
             if (!shield.activeSelf)
@@ -255,4 +347,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        healthBar.fillAmount = currentHealth/maxHealth;
+
+        if (currentHealth <= 0)
+        {
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            UIManager.instance.ShowScreen("Defeat Screen");
+        }
+    }
+
+    public void Pause()
+    {
+        paused = true;
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        UIManager.instance.ShowScreen("Pause Menu");
+        menuUp = true;
+        paused = true;
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        UIManager.instance.Play();
+        menuUp = false;
+        paused = false;
+    }
 }

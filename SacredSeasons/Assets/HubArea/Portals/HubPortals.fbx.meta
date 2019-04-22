@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: fee72b5f941f8d440bc6a2a93267a66c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Glass
+    100002: Ground
+    100004: //RootNode
+    100006: Pillar1
+    100008: Pillar2
+    100010: Pillar3
+    100012: Pillar4
+    100014: SpringPortal
+    100016: SpringPortal 1
+    100018: SpringPortalBase
+    100020: SpringPortalInside
+    100022: SpringSymbol
+    100024: SpringTriangle
+    100026: SummerPortal
+    100028: SummerPortal 1
+    100030: SummerPortalBase
+    100032: SummerPortalInside
+    100034: SummerSymbol
+    100036: SummerTriangle
+    100038: WinterPortal
+    100040: WinterPortal 1
+    100042: WinterPortalBase
+    100044: WinterPortalInside
+    100046: WinterSymbol
+    100048: WinterTriangle
+    400000: Glass
+    400002: Ground
+    400004: //RootNode
+    400006: Pillar1
+    400008: Pillar2
+    400010: Pillar3
+    400012: Pillar4
+    400014: SpringPortal
+    400016: SpringPortal 1
+    400018: SpringPortalBase
+    400020: SpringPortalInside
+    400022: SpringSymbol
+    400024: SpringTriangle
+    400026: SummerPortal
+    400028: SummerPortal 1
+    400030: SummerPortalBase
+    400032: SummerPortalInside
+    400034: SummerSymbol
+    400036: SummerTriangle
+    400038: WinterPortal
+    400040: WinterPortal 1
+    400042: WinterPortalBase
+    400044: WinterPortalInside
+    400046: WinterSymbol
+    400048: WinterTriangle
+    2100000: sun
+    2100002: summerportal
+    2100004: summerportalinside
+    2100006: summerportalbody
+    2100008: springleaf1
+    2100010: springportalbody
+    2100012: springportalinside
+    2100014: springportal
+    2100016: snowflake
+    2100018: Springportal
+    2100020: winterportalinside
+    2100022: springportalbody1
+    2100024: pillar1
+    2100026: pillar2
+    2100028: glass
+    2100030: triangles
+    2100032: floorunderportals
+    2300000: Glass
+    2300002: Ground
+    2300004: Pillar1
+    2300006: Pillar2
+    2300008: Pillar3
+    2300010: Pillar4
+    2300012: SpringPortal 1
+    2300014: SpringPortalBase
+    2300016: SpringPortalInside
+    2300018: SpringSymbol
+    2300020: SpringTriangle
+    2300022: SummerPortal 1
+    2300024: SummerPortalBase
+    2300026: SummerPortalInside
+    2300028: SummerSymbol
+    2300030: SummerTriangle
+    2300032: WinterPortal 1
+    2300034: WinterPortalBase
+    2300036: WinterPortalInside
+    2300038: WinterSymbol
+    2300040: WinterTriangle
+    3300000: Glass
+    3300002: Ground
+    3300004: Pillar1
+    3300006: Pillar2
+    3300008: Pillar3
+    3300010: Pillar4
+    3300012: SpringPortal 1
+    3300014: SpringPortalBase
+    3300016: SpringPortalInside
+    3300018: SpringSymbol
+    3300020: SpringTriangle
+    3300022: SummerPortal 1
+    3300024: SummerPortalBase
+    3300026: SummerPortalInside
+    3300028: SummerSymbol
+    3300030: SummerTriangle
+    3300032: WinterPortal 1
+    3300034: WinterPortalBase
+    3300036: WinterPortalInside
+    3300038: WinterSymbol
+    3300040: WinterTriangle
+    4300000: SummerSymbol
+    4300002: SummerPortal
+    4300004: SummerPortalInside
+    4300006: SummerPortalBase
+    4300008: SpringSymbol
+    4300010: SpringPortalBase
+    4300012: SpringPortalInside
+    4300014: SpringPortal
+    4300016: WinterSymbol
+    4300018: WinterPortal
+    4300020: WinterPortalInside
+    4300022: WinterPortalBase
+    4300024: Pillar1
+    4300026: Pillar2
+    4300028: Pillar3
+    4300030: Pillar4
+    4300032: Glass
+    4300034: SummerTriangle
+    4300036: SpringTriangle
+    4300038: WinterTriangle
+    4300040: Ground
+    6400000: Glass
+    6400002: Ground
+    6400004: Pillar1
+    6400006: Pillar2
+    6400008: Pillar3
+    6400010: Pillar4
+    6400012: SpringPortal 1
+    6400014: SpringPortalBase
+    6400016: SpringPortalInside
+    6400018: SpringSymbol
+    6400020: SpringTriangle
+    6400022: SummerPortal 1
+    6400024: SummerPortalBase
+    6400026: SummerPortalInside
+    6400028: SummerSymbol
+    6400030: SummerTriangle
+    6400032: WinterPortal 1
+    6400034: WinterPortalBase
+    6400036: WinterPortalInside
+    6400038: WinterSymbol
+    6400040: WinterTriangle
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 52
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

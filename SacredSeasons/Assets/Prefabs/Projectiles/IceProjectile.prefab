@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3954115178586905783}
   m_Layer: 0
   m_Name: IceProjectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,9 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4035964854f144d9b83eaf6f6d0ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
-  platformPrefab: {fileID: 6545536944631818709, guid: 907a597d1918d64489921f231447e48e,
+  platformPrefab: {fileID: 6545536944631818709, guid: b02f442e7419dda4fab46cbecf1721d3,
     type: 3}
+  damage: 25
 --- !u!114 &3954115178586905783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b87086b987fbfde4a9a5d77d23851d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 40
   maxLifetime: 10
   Hit_FX: {fileID: 3609645922700019031, guid: a957191d3a0d63d4695c1af67bb34fca, type: 3}
 --- !u!1 &2132200615623291602
