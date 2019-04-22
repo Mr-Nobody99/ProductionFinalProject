@@ -17,6 +17,12 @@ public class PauseMenu : MonoBehaviour
         UIManager.instance.ShowScreen("Options Menu");
     }
 
+    public void Controls()
+    {
+        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
+        UIManager.instance.ShowScreen("Controls Menu");
+    }
+
     public void Quit()
     {
         UIManager.instance.Quit();

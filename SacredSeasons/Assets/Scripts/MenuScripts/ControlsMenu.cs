@@ -7,6 +7,6 @@ public class ControlsMenu : MonoBehaviour
     public void Back()
     {
         AudioManager.instance.PlaySingle(UIManager.instance.back);
-        UIManager.instance.ShowScreen("Main Menu");
+        UIManager.instance.ShowScreen(UIManager.instance.previousScreenName);
     }
 }
