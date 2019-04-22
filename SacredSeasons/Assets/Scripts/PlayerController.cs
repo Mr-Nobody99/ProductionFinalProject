@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
-            if (Input.GetButtonUp("Jump") && !isDefending && jumpOk)
+            if (Input.GetButtonDown("Jump") && !isDefending && jumpOk)
             {
                 animController.SetTrigger("Jump");
                 MoveSpeed /= 2;
