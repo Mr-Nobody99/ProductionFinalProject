@@ -130,6 +130,27 @@ ModelImporter:
     4300036: Flytrap7Trap1
     4300038: Flytrap7Trap2
     4300040: Flytrap7Stem
+    6400000: Flytrap1Stem
+    6400002: Flytrap1Trap1
+    6400004: Flytrap1Trap2
+    6400006: Flytrap2Stem
+    6400008: Flytrap2Trap1
+    6400010: Flytrap2Trap2
+    6400012: Flytrap3Stem
+    6400014: Flytrap3Trap1
+    6400016: Flytrap3Trap2
+    6400018: Flytrap4Stem
+    6400020: Flytrap4Trap1
+    6400022: Flytrap4Trap2
+    6400024: Flytrap5Stem
+    6400026: Flytrap5Trap1
+    6400028: Flytrap5Trap2
+    6400030: Flytrap6Stem
+    6400032: Flytrap6Trap1
+    6400034: Flytrap6Trap2
+    6400036: Flytrap7Stem
+    6400038: Flytrap7Trap1
+    6400040: Flytrap7Trap2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -163,7 +184,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 14
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
