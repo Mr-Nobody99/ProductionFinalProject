@@ -26,6 +26,7 @@ public class LevelCollectible : MonoBehaviour
         {
             InventoryManager.instance.PlayerSpells[ListIndex].available = true;
             InventoryManager.instance.PlayerShields[ListIndex].available = true;
+            SceneManager.LoadScene("HUb Scene");
             Destroy(gameObject);
         }
     }
