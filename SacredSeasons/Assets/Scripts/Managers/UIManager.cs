@@ -185,7 +185,7 @@ public class UIManager : MonoBehaviour
     public IEnumerator SetJumpNotOkCoroutine()
     {
         PlayerController.jumpOk = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         PlayerController.jumpOk = true;
         
     }
