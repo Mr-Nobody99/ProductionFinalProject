@@ -1938,7 +1938,7 @@ MonoBehaviour:
   MoveSpeed: 10
   rotationSpeed: 0.5
   rotationBuildUp: 0.95
-  jumpForce: 3
+  jumpForce: 3.75
   gravity: 5
   fallDamping: 0.125
   moveDirection: {x: 0, y: 0, z: 0}
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   Shooter: {fileID: 7935316715429508051}
   shields:
   - {fileID: 4597523233780085624}
-  - {fileID: 2608385742352329251, guid: 01b957f048c4d7d439dc5ce2d56da119, type: 3}
+  - {fileID: 2235631421241589486}
   - {fileID: 6008612005605692607}
   shieldSpeed: 3
   isDefending: 0
@@ -2377,6 +2377,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b957f048c4d7d439dc5ce2d56da119, type: 3}
+--- !u!1 &2235631421241589486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2608385742352329251, guid: 01b957f048c4d7d439dc5ce2d56da119,
+    type: 3}
+  m_PrefabInstance: {fileID: 4266131424825103565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2841987971568325077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2036914478630012184, guid: 01b957f048c4d7d439dc5ce2d56da119,
