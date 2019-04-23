@@ -14,16 +14,25 @@ public class ShootMe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (beenShot)
+        if (beenShot && Input.GetButton("Block"))
         {
-            // LOOK FOR SHIELD THEN PUT AWAY TUTORIAL SCREEN
+            UIManager.instance.tutorialScreen.SetActive(false);
+            GameManager.instance.shootTutorialDone = true;
+            GameManager.instance.tutorialOver = true;
+            gameObject.SetActive(false);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.Contains("Ice") && !beenShot)
+        if (other.tag == "Projectile")
         {
+            Debug.Log("Projectile");
+        }
+
+        if (other.tag == "Projectile" && !beenShot)
+        {
+            Debug.Log("Went through");
             beenShot = true;
             UIManager.instance.shootText.SetActive(false);
             UIManager.instance.finalText.SetActive(true);

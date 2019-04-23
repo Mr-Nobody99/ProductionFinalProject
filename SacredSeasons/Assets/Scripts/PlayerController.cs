@@ -139,10 +139,18 @@ public class PlayerController : MonoBehaviour
             if(paused)
             {
                 UnPause();
+                if (!GameManager.instance.tutorialOver)
+                {
+                    UIManager.instance.tutorialScreen.SetActive(true);
+                }
             }
             else if(!paused && !UIManager.instance.screens[UIManager.instance.curScreen].screen.activeSelf)
             {
                 Pause();
+                if (!GameManager.instance.tutorialOver)
+                {
+                    UIManager.instance.tutorialScreen.SetActive(false);
+                }
             }
         }
     }
