@@ -95,6 +95,13 @@ public class AI_Controller_Fire : MonoBehaviour
             navMeshAgent.SetDestination(playerRef.transform.position);
             navMeshAgent.speed = 5.5f;
             navMeshAgent.stoppingDistance = persueDistance;
+
+            // Lose health on collision with spirit
+            if(Vector3.Distance(transform.position, playerRef.transform.position) <= 3.0f)
+            {
+              print("Collision with player");
+              playerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+            }
         }
         else if(isPatrolling)
         {
@@ -102,6 +109,7 @@ public class AI_Controller_Fire : MonoBehaviour
             navMeshAgent.speed = 2f;
             navMeshAgent.stoppingDistance = 1f;
         }
+
 
         if(isPatrolling && navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
@@ -176,6 +184,8 @@ public class AI_Controller_Fire : MonoBehaviour
         animController.SetBool("Frozen", frozen);
         blockDamage = false;
     }
+
+
 
     private void Die()
     {
