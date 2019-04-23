@@ -497,8 +497,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: 0.23966092, y: 0.017187096, z: -0.0042434284, w: 0.97069526}
-  m_LocalPosition: {x: -34.896656, y: -2.92, z: 52.75675}
+  m_LocalRotation: {x: 0.13036443, y: 0.82469034, z: -0.21161564, w: 0.50804514}
+  m_LocalPosition: {x: -69.77391, y: -2.92, z: 113.61328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1283982638}
-  m_PathPosition: 0
+  m_PathPosition: 2.671556
   m_PositionUnits: 0
   m_PathOffset: {x: -0.14329338, y: 0, z: 0}
   m_XDamping: 0
@@ -1190,6 +1190,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1970775076}
+    - target: {fileID: 8785382770560696682, guid: 1a993e1e51f7080499f9b3c6a94d5d39,
+        type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785382770560696682, guid: 1a993e1e51f7080499f9b3c6a94d5d39,
+        type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
     - target: {fileID: 3913346176053744241, guid: 1a993e1e51f7080499f9b3c6a94d5d39,
         type: 3}
       propertyPath: m_IsActive
@@ -2026,7 +2036,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400458099}
-  m_LocalRotation: {x: 0.23966092, y: 0.017187096, z: -0.0042434284, w: 0.97069526}
+  m_LocalRotation: {x: 0.13036443, y: 0.82469034, z: -0.21161564, w: 0.50804514}
   m_LocalPosition: {x: -27.56, y: 14.257103, z: 46.599606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3187,7 +3197,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-113066
+  m_Name: pb_Mesh-4348
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
