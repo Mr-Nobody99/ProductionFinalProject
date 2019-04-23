@@ -159,12 +159,13 @@ public class UIManager : MonoBehaviour
 
     public void PlayGame()
     {
+        Debug.Log("Play Button Pressed");
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
         AudioManager.instance.PlaySingle(confirm);
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Tutorial Scene");
     }
 
     public void Quit()
