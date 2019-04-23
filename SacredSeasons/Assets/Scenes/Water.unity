@@ -99,8 +99,8 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: 0.4
+    agentSlope: 40
+    agentClimb: 0.3
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9e017d0ef698e104db08d1151fb73812, type: 2}
 --- !u!1001 &6346137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2328,13 +2328,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2960,8 +2984,8 @@ GameObject:
   m_Name: Rock10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &406907016
 Transform:
@@ -4137,13 +4161,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4764,9 +4812,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinterLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
       value: Step1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
@@ -4828,6 +4888,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 100034, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
       value: Ceiling
@@ -4844,17 +4912,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hill1
       objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100040, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
       value: Hill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100042, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100032, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_Name
       value: WinterLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: f549c1784da80a74d94ff47b48dbca07, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5922,7 +6010,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658905419}
-  m_LocalRotation: {x: 0.015957462, y: 0.08993939, z: -0.0014413104, w: 0.9958184}
+  m_LocalRotation: {x: 0.015966544, y: 0.08342763, z: -0.0013369627, w: 0.9963851}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6010,8 +6098,8 @@ GameObject:
   m_Name: crystals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &692856663
 GameObject:
@@ -8392,13 +8480,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock2
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8704,7 +8816,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027233196}
-  m_LocalRotation: {x: -0.018122379, y: 0.08580635, z: 0.001561045, w: 0.99614584}
+  m_LocalRotation: {x: -0.018129129, y: 0.08138464, z: 0.0014806031, w: 0.9965168}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10073,6 +10185,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillars
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400012, guid: 54169f5dd2037eb45a284a57d497e6d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 205
@@ -11073,13 +11241,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11926,8 +12118,72 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
+      propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2989bbdd54081904f8982de839fc1a03, type: 3}
@@ -12784,7 +13040,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38316
+  m_Name: pb_Mesh85246
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -13290,7 +13546,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624688322}
-  m_LocalRotation: {x: -0.018122382, y: 0.085806355, z: 0.0015610321, w: 0.9961458}
+  m_LocalRotation: {x: -0.01812913, y: 0.08138464, z: 0.0014805901, w: 0.99651676}
   m_LocalPosition: {x: 174.56, y: 6.38, z: 19.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -13462,7 +13718,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695199510}
-  m_LocalRotation: {x: -0.03619093, y: 0.08576391, z: 0.003117512, w: 0.9956531}
+  m_LocalRotation: {x: -0.036204405, y: 0.08134439, z: 0.0029568672, w: 0.99602395}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14081,13 +14337,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -98770,7 +99050,7 @@ GameObject:
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1884944793
 MeshCollider:
@@ -98941,13 +99221,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalRock2
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_Name
       value: CrystalShard2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b2551c53b9e87694aabd156da1d0d4fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99354,8 +99658,8 @@ GameObject:
   m_Name: Rock9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2026674149
 Transform:
