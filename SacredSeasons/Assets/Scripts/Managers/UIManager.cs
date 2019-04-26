@@ -29,16 +29,18 @@ public class UIManager : MonoBehaviour
 
     public string previousScreenName = "Main Menu";
 
-    public GameObject tutorialScreen;
-    public GameObject moveText;
-    public GameObject shootText;
-    public GameObject finalText;
-
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
+
+        if (name.Equals("Main Menu") && (paused) && screens[curScreen].name.Contains("Options"))
+        {
+            //name = "Pause Menu";
+        }
+
+        //Debug.Log("Current Season: " + currentSeason);
 
         // Checks which season is currently active and changes the pause and options menu shown
         if (name.Equals("Pause Menu"))
@@ -121,11 +123,6 @@ public class UIManager : MonoBehaviour
     {
         Scene curScene = SceneManager.GetActiveScene();
         currentSeason = curScene.name;
-
-        if (currentSeason.Equals("Tutorial Scene"))
-        {
-            tutorialScreen.SetActive(true);
-        }
     }
 
     private void Awake()
@@ -140,6 +137,13 @@ public class UIManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+
+        /*if (PlayerController.menuUp == false)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+        }*/
     }
 
     public void Play()
@@ -155,13 +159,12 @@ public class UIManager : MonoBehaviour
 
     public void PlayGame()
     {
-        Debug.Log("Play Button Pressed");
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
         AudioManager.instance.PlaySingle(confirm);
-        SceneManager.LoadScene("Tutorial Scene");
+        SceneManager.LoadScene("Scene1");
     }
 
     public void Quit()

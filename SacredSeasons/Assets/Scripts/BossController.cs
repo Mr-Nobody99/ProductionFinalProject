@@ -19,17 +19,15 @@ public class BossController : MonoBehaviour
     {
         animController = GetComponent<Animator>();
         smokeFX.Stop();
-
-        StartCoroutine(TrasformDelay());
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             StartCoroutine(TrasformDelay());
-        }*/
+        }
 
         if(growMonster)
         {
@@ -44,7 +42,6 @@ public class BossController : MonoBehaviour
         smokeFX.Play();
         yield return new WaitForSecondsRealtime(5f);
         monsterForm = Instantiate(monsterPrefab, transform.position, transform.rotation);
-        monsterForm.SetActive(true);
         monsterForm.transform.localScale = Vector3.zero;
         growMonster = true;
     }

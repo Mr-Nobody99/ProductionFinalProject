@@ -59,16 +59,6 @@ ModelImporter:
     4300014: pSphere5
     4300016: pSphere6
     4300018: pSphere7
-    6400000: pCylinder40
-    6400002: pCylinder41
-    6400004: pPipe1
-    6400006: pSphere1
-    6400008: pSphere2
-    6400010: pSphere3
-    6400012: pSphere4
-    6400014: pSphere5
-    6400016: pSphere6
-    6400018: pSphere7
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -100,9 +90,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2.5
+    globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
