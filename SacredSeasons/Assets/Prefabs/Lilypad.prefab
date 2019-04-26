@@ -28,9 +28,10 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.030730285, y: 0.2802136, z: -0.22085975}
   m_LocalScale: {x: 0.60672003, y: 1.1254812, z: 0.60672003}
-  m_Children: []
+  m_Children:
+  - {fileID: 6313578287307507751}
   m_Father: {fileID: 6313578287307507809}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6313578287308277763
 MeshFilter:
@@ -104,12 +105,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6313578287307346951}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.004372697, y: 0.6013311, z: -0.23376924}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.043442752, y: 0.28531575, z: -0.021277502}
+  m_LocalScale: {x: 1.6482067, y: 0.88850886, z: 1.6482067}
   m_Children:
   - {fileID: 7337096196488654282}
-  m_Father: {fileID: 6313578287307507809}
+  m_Father: {fileID: 6313578287307507749}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6313578287308277821
@@ -211,7 +212,6 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6313578287307507751}
   - {fileID: 6313578287307507749}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -223,11 +223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6313578287307507751}
     m_Modifications:
-    - target: {fileID: 972149893600205762, guid: c4c09d7bfe6d5d14d9148cd159fb3d6b,
-        type: 3}
-      propertyPath: m_Name
-      value: Particle System
-      objectReference: {fileID: 0}
     - target: {fileID: 972149893600205761, guid: c4c09d7bfe6d5d14d9148cd159fb3d6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,6 +277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972149893600205762, guid: c4c09d7bfe6d5d14d9148cd159fb3d6b,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4c09d7bfe6d5d14d9148cd159fb3d6b, type: 3}
