@@ -7,6 +7,7 @@ public class TurretTargetingSystem : MonoBehaviour
     public float speed = 3.0f;
 
     public GameObject m_target = null;
+    public int spellIndex = 0;
     Vector3 m_lastKnownPosition = Vector3.zero;
     Quaternion m_lookAtRotation;
     Quaternion m_targetLocation;
@@ -23,7 +24,7 @@ public class TurretTargetingSystem : MonoBehaviour
                 m_lastKnownPosition = m_target.transform.position;
                 m_targetLocation = Quaternion.LookRotation(m_target.transform.position);
                 m_lookAtRotation = Quaternion.LookRotation(m_lastKnownPosition - transform.position);
-                Shoot(1);
+                Shoot(spellIndex);
                 //DelayNextShot(1);
             }
 
@@ -51,11 +52,11 @@ public class TurretTargetingSystem : MonoBehaviour
         if (canShoot)
         {
             Instantiate(InventoryManager.instance.PlayerSpells[index].projectile, gameObject.transform.position, m_lookAtRotation);
-            StartCoroutine(DelayNextShot(1));
+            StartCoroutine(DelayNextShot());
         }
     }
 
-    public IEnumerator DelayNextShot(int index)
+    public IEnumerator DelayNextShot()
     {
         //Instantiate(InventoryManager.instance.PlayerSpells[index].projectile, gameObject.transform.position + gameObject.transform.up * 2.0f, m_lookAtRotation);
         canShoot = false;

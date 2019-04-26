@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
         initalSpeed = MoveSpeed;
         currentHealth = maxHealth;
+        healthBar = GameObject.Find("Health Bar").GetComponent<Image>();
         //deactivate shields at start
         //UIManager.instance.ShowScreen("Main Menu");
         foreach(GameObject foo in shields)
@@ -139,10 +140,18 @@ public class PlayerController : MonoBehaviour
             if(paused)
             {
                 UnPause();
+                if (!GameManager.instance.tutorialOver)
+                {
+                    UIManager.instance.tutorialScreen.SetActive(true);
+                }
             }
             else if(!paused && !UIManager.instance.screens[UIManager.instance.curScreen].screen.activeSelf)
             {
                 Pause();
+                if (!GameManager.instance.tutorialOver)
+                {
+                    UIManager.instance.tutorialScreen.SetActive(false);
+                }
             }
         }
     }
