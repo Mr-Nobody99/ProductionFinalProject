@@ -6,13 +6,7 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public AudioMixer mixer;
-
-    // Tutorial status booleans
-    public bool tutorialOver = false;
-    public bool moveTutorialDone = false;
-    public bool shootTutorialDone = false;
 
     float _audioVolume;
     public float audioVolume

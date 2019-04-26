@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 1272354294}
   - component: {fileID: 1272354296}
   m_Layer: 0
-  m_Name: FireEnemy
+  m_Name: FireEnemyPrefab_New
   m_TagString: FireEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,8 +366,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5972150369901391012}
   maxHealth: 100
-  currentHealth: 0
-  persueDistance: 5
   eyes: {fileID: 1784802952}
   iceBlockPrefab: {fileID: 469412186106711362, guid: 25655749d0ae11c478fa839dd0530e6b,
     type: 3}
