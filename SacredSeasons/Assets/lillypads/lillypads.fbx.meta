@@ -203,6 +203,44 @@ ModelImporter:
     4300070: pCylinder37
     4300072: pCylinder39
     4300074: pCylinder38
+    6400000: pCylinder1
+    6400002: pCylinder10
+    6400004: pCylinder11
+    6400006: pCylinder12
+    6400008: pCylinder13
+    6400010: pCylinder14
+    6400012: pCylinder15
+    6400014: pCylinder16
+    6400016: pCylinder17
+    6400018: pCylinder18
+    6400020: pCylinder19
+    6400022: pCylinder2
+    6400024: pCylinder20
+    6400026: pCylinder21
+    6400028: pCylinder22
+    6400030: pCylinder23
+    6400032: pCylinder24
+    6400034: pCylinder25
+    6400036: pCylinder26
+    6400038: pCylinder27
+    6400040: pCylinder28
+    6400042: pCylinder29
+    6400044: pCylinder3
+    6400046: pCylinder30
+    6400048: pCylinder31
+    6400050: pCylinder32
+    6400052: pCylinder33
+    6400054: pCylinder34
+    6400056: pCylinder35
+    6400058: pCylinder36
+    6400060: pCylinder37
+    6400062: pCylinder38
+    6400064: pCylinder39
+    6400066: pCylinder4
+    6400068: pCylinder5
+    6400070: pCylinder7
+    6400072: pCylinder8
+    6400074: pCylinder9
     7400000: Take 001
     9500000: //RootNode
   externalObjects: {}
@@ -238,7 +276,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1

@@ -26,9 +26,13 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && GameManager.instance.tutorialOver)
         {
             SceneManager.LoadScene(TargetScene);
+        }
+        else if (other.tag == "Player" && !GameManager.instance.tutorialOver)
+        {
+            //UIManager.instance
         }
     }
 
