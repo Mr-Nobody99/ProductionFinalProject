@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -355,7 +355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: -0.018123474, y: 0.08510641, z: 0.0015482983, w: 0.9962058}
+  m_LocalRotation: {x: -0.018129192, y: 0.08134477, z: 0.0014798647, w: 0.99652004}
   m_LocalPosition: {x: -33.67, y: -27.39, z: 62.769997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -430,7 +430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117284538}
-  m_LocalRotation: {x: -0.018123472, y: 0.0851064, z: 0.0015483231, w: 0.99620587}
+  m_LocalRotation: {x: -0.018129187, y: 0.08134475, z: 0.0014798893, w: 0.99652004}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -635,7 +635,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413168885}
-  m_LocalRotation: {x: 0.015977206, y: 0.08892951, z: -0.0014267082, w: 0.9959088}
+  m_LocalRotation: {x: 0.015984895, y: 0.08338803, z: -0.0013378072, w: 0.9963881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -836,7 +836,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: -0.036193117, y: 0.0850643, z: 0.0030919458, w: 0.9957132}
+  m_LocalRotation: {x: -0.03620453, y: 0.08130453, z: 0.002955282, w: 0.9960272}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
