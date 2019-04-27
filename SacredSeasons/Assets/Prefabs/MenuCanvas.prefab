@@ -14677,7 +14677,7 @@ GameObject:
   - component: {fileID: 1976334290431725508}
   - component: {fileID: 4431195522014031120}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14710,9 +14710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixer: {fileID: 24100000, guid: af366ff601072294c93148d1320b08f7, type: 2}
-  tutorialOver: 0
-  moveTutorialDone: 0
-  shootTutorialDone: 0
 --- !u!114 &4431195522014031120
 MonoBehaviour:
   m_ObjectHideFlags: 0

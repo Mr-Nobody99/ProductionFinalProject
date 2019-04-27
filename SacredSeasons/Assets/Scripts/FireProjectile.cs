@@ -36,6 +36,10 @@ public class FireProjectile : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        else if(other.tag.Equals("EarthEnemy"))
+        {
+            other.gameObject.GetComponent<AI_Controller_Earth>().TakeDamage(dmg);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
