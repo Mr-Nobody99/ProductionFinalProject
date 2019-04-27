@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class AI_Controller_Fire : MonoBehaviour
 {
 
@@ -107,11 +108,11 @@ public class AI_Controller_Fire : MonoBehaviour
             navMeshAgent.stoppingDistance = persueDistance;
 
             // Lose health on collision with spirit
-            if(Vector3.Distance(transform.position, playerRef.transform.position) <= 3.0f)
-            {
-              print("Collision with player");
-              playerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
-            }
+            //if(Vector3.Distance(transform.position, playerRef.transform.position) <= 3.0f)
+            //{
+            //  print("Collision with player");
+            //  playerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+            //}
         }
         else if(isPatrolling)
         {
@@ -141,20 +142,20 @@ public class AI_Controller_Fire : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg)
-    {
-        if (!blockDamage)
+        public void TakeDamage(float dmg)
         {
-            if (frozen) blockDamage = true;
-            currentHealth -= dmg;
-            healthBar.fillAmount = currentHealth / maxHealth;
-
-            if (currentHealth <= 0)
+            if (!blockDamage)
             {
-                Die();
+                if (frozen) blockDamage = true;
+                currentHealth -= dmg;
+                healthBar.fillAmount = currentHealth / maxHealth;
+
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
             }
         }
-    }
 
     private void ChangePatrolPoint()
     {

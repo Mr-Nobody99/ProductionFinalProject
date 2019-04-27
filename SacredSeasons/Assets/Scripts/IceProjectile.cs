@@ -33,6 +33,10 @@ public class IceProjectile : MonoBehaviour
             collision.gameObject.GetComponent<AI_Controller_Fire>().Freeze();
             collision.gameObject.GetComponent<AI_Controller_Fire>().TakeDamage(damage);
         }
+        else if(collision.gameObject.tag.Equals("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
