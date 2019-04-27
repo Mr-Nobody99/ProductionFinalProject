@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 7182030393517396028}
   ps: {fileID: 7182030393308318783}
+  platformText: {fileID: 7182030393325695794}
   growSpeed: 1
   growHeight: 10
   doGrow: 0

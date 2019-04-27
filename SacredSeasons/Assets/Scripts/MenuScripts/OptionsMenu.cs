@@ -22,13 +22,11 @@ public class OptionsMenu : MonoBehaviour
     public void SetAudioVolume()
     {
         Debug.Log("Setting Audio Volume to: " + Sound.value);
-        GameManager.instance.audioVolume = Sound.value;
         AudioManager.instance.PlaySingle(UIManager.instance.confirm);
     }
 
     void Start()
     {
-        Sound.value = GameManager.instance.audioVolume;
         //Sound.value = 1;
     }
 }
