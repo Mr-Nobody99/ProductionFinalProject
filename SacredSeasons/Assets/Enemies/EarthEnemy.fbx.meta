@@ -1,22 +1,43 @@
 fileFormatVersion: 2
-guid: 75cdde3bb6296ff41a347f1abdf84024
+guid: f018f5c5509abf74fb8ef73991d3f64b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: eyes
-    2100002: earthbody
-    2100004: eyeballandwings
-    2100006: leaves
-    2100008: horns
-    2100010: earthcrystal
-    2100012: bubble
-    2100014: flower
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pSphere13
-    2186277476908879412: ImportLogs
+    100000: Armature
+    100002: Clavical.L
+    100004: Clavical.R
+    100006: //RootNode
+    100008: pSphere13.002
+    100010: Shoulder.L
+    100012: Shoulder.R
+    100014: Spine.001
+    100016: Spine.002
+    100018: Wing.L
+    100020: Wing.R
+    400000: Armature
+    400002: Clavical.L
+    400004: Clavical.R
+    400006: //RootNode
+    400008: pSphere13.002
+    400010: Shoulder.L
+    400012: Shoulder.R
+    400014: Spine.001
+    400016: Spine.002
+    400018: Wing.L
+    400020: Wing.R
+    2100000: earthbody
+    2100002: eyeballandwings
+    2100004: leaves
+    2100006: horns
+    2100008: earthcrystal
+    2100010: bubble
+    2100012: flower
+    2100014: eyes
+    4300000: pSphere13.002
+    7400000: ArmatureAction
+    7400002: Armature|Flying
+    9500000: //RootNode
+    13700000: pSphere13.002
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -37,7 +58,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: eyes
-    second: {fileID: 2100000, guid: 1f9e2d1ee807f334cbc534242ea97f96, type: 2}
+    second: {fileID: 2100000, guid: 5d3da6437e55841499aead4e1bcaed2a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -79,7 +100,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Flying
+      takeName: Armature|Flying
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -104,8 +153,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -114,7 +163,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -132,7 +181,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
