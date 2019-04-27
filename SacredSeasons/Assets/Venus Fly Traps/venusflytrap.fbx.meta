@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 23d758c831835c645acc47bc557a9832
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: venusflytrap:pCube1
+    100004: venusflytrap:pCube1 1
+    100006: venusflytrap:pCube1 2
+    100008: venusflytrap:pCube2
+    100010: venusflytrap:pCube2 1
+    100012: venusflytrap:pCube2 2
+    100014: venusflytrap:pCube3
+    100016: venusflytrap:pCube3 1
+    100018: venusflytrap:pCube3 2
+    100020: venusflytrap:pCube3 3
+    100022: venusflytrap:pCube4
+    100024: venusflytrap:pCube4 1
+    100026: venusflytrap:pCube4 2
+    100028: venusflytrap:pCube4 3
+    100030: venusflytrap:pCylinder1
+    100032: venusflytrap:pCylinder2
+    100034: venusflytrap:pCylinder3
+    100036: venusflytrap:pCylinder4
+    100038: venusflytrap:pCylinder5
+    100040: venusflytrap:pCylinder6
+    100042: venusflytrap:pCylinder7
+    100044: venusflytrap:trap1
+    100046: venusflytrap:trap2
+    100048: venusflytrap:trap3
+    100050: venusflytrap:trap4
+    100052: venusflytrap:trap5
+    100054: venusflytrap:trap6
+    100056: venusflytrap:trap7
+    400000: //RootNode
+    400002: venusflytrap:pCube1
+    400004: venusflytrap:pCube1 1
+    400006: venusflytrap:pCube1 2
+    400008: venusflytrap:pCube2
+    400010: venusflytrap:pCube2 1
+    400012: venusflytrap:pCube2 2
+    400014: venusflytrap:pCube3
+    400016: venusflytrap:pCube3 1
+    400018: venusflytrap:pCube3 2
+    400020: venusflytrap:pCube3 3
+    400022: venusflytrap:pCube4
+    400024: venusflytrap:pCube4 1
+    400026: venusflytrap:pCube4 2
+    400028: venusflytrap:pCube4 3
+    400030: venusflytrap:pCylinder1
+    400032: venusflytrap:pCylinder2
+    400034: venusflytrap:pCylinder3
+    400036: venusflytrap:pCylinder4
+    400038: venusflytrap:pCylinder5
+    400040: venusflytrap:pCylinder6
+    400042: venusflytrap:pCylinder7
+    400044: venusflytrap:trap1
+    400046: venusflytrap:trap2
+    400048: venusflytrap:trap3
+    400050: venusflytrap:trap4
+    400052: venusflytrap:trap5
+    400054: venusflytrap:trap6
+    400056: venusflytrap:trap7
+    2100000: venusflytrap_venustrapleaf
+    2100002: venusflytrap_stem
+    2100004: venusflytrap_stem2
+    2100006: venusflytrap_stem3
+    2100008: venusflytrap_stem5
+    2100010: venusflytrap_stem6
+    2300000: venusflytrap:pCube1
+    2300002: venusflytrap:pCube1 1
+    2300004: venusflytrap:pCube1 2
+    2300006: venusflytrap:pCube2
+    2300008: venusflytrap:pCube2 1
+    2300010: venusflytrap:pCube2 2
+    2300012: venusflytrap:pCube3
+    2300014: venusflytrap:pCube3 1
+    2300016: venusflytrap:pCube3 2
+    2300018: venusflytrap:pCube3 3
+    2300020: venusflytrap:pCube4
+    2300022: venusflytrap:pCube4 1
+    2300024: venusflytrap:pCube4 2
+    2300026: venusflytrap:pCube4 3
+    2300028: venusflytrap:pCylinder1
+    2300030: venusflytrap:pCylinder2
+    2300032: venusflytrap:pCylinder3
+    2300034: venusflytrap:pCylinder4
+    2300036: venusflytrap:pCylinder5
+    2300038: venusflytrap:pCylinder6
+    2300040: venusflytrap:pCylinder7
+    3300000: venusflytrap:pCube1
+    3300002: venusflytrap:pCube1 1
+    3300004: venusflytrap:pCube1 2
+    3300006: venusflytrap:pCube2
+    3300008: venusflytrap:pCube2 1
+    3300010: venusflytrap:pCube2 2
+    3300012: venusflytrap:pCube3
+    3300014: venusflytrap:pCube3 1
+    3300016: venusflytrap:pCube3 2
+    3300018: venusflytrap:pCube3 3
+    3300020: venusflytrap:pCube4
+    3300022: venusflytrap:pCube4 1
+    3300024: venusflytrap:pCube4 2
+    3300026: venusflytrap:pCube4 3
+    3300028: venusflytrap:pCylinder1
+    3300030: venusflytrap:pCylinder2
+    3300032: venusflytrap:pCylinder3
+    3300034: venusflytrap:pCylinder4
+    3300036: venusflytrap:pCylinder5
+    3300038: venusflytrap:pCylinder6
+    3300040: venusflytrap:pCylinder7
+    4300000: venusflytrap:pCube3
+    4300002: venusflytrap:pCube4
+    4300004: venusflytrap:pCube1
+    4300006: venusflytrap:pCube2
+    4300008: venusflytrap:pCube3
+    4300010: venusflytrap:pCube4
+    4300012: venusflytrap:pCube1
+    4300014: venusflytrap:pCube2
+    4300016: venusflytrap:pCube1
+    4300018: venusflytrap:pCube2
+    4300020: venusflytrap:pCube3
+    4300022: venusflytrap:pCube4
+    4300024: venusflytrap:pCube3
+    4300026: venusflytrap:pCube4
+    4300028: venusflytrap:pCylinder1
+    4300030: venusflytrap:pCylinder2
+    4300032: venusflytrap:pCylinder3
+    4300034: venusflytrap:pCylinder4
+    4300036: venusflytrap:pCylinder5
+    4300038: venusflytrap:pCylinder6
+    4300040: venusflytrap:pCylinder7
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

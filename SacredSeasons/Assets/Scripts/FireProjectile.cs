@@ -7,6 +7,9 @@ public class FireProjectile : MonoBehaviour
 {
     ProjectileMovement moveComponent;
 
+    [SerializeField]
+    float dmg = 10;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,15 @@ public class FireProjectile : MonoBehaviour
             }
             Destroy(other.gameObject);
             Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag.Equals("Player"))
+        {
+            print("Player shot");
+            collision.gameObject.GetComponent<PlayerController>().TakeDamage(dmg);
         }
     }
 

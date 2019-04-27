@@ -59,6 +59,14 @@ public class ProjectileMovement : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            other.GetComponent<PlayerController>().TakeDamage(5);
+        }
+    }
+
     //private void OnTriggerEnter(Collider other)
     //{
     //    if(other.gameObject.tag == "Water")

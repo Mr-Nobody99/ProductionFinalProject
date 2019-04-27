@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine.AI;
 using UnityEngine;
 
@@ -10,6 +11,13 @@ public class MonsterBossController : MonoBehaviour
     NavMeshAgent NavAgent;
     Animator AnimController;
     GameObject PlayerRef;
+
+    [SerializeField]
+    GameObject uiComp;
+    [SerializeField]
+    Image HealthBar;
+    float MaxHealth = 100;
+    float CurrentHealth;
 
     [SerializeField]
     List<AI_Waypoint> Waypoints;
@@ -28,9 +36,17 @@ public class MonsterBossController : MonoBehaviour
     bool beamActivated = false;
     bool usingNavLink = false;
 
+    public bool isStunned = false;
+    [SerializeField]
+    int StunDuration;
+
+    public bool IsDead = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        uiComp.SetActive(false);
+        CurrentHealth = MaxHealth;
         NavAgent = this.GetComponent<NavMeshAgent>();
         AnimController = this.GetComponent<Animator>();
         PlayerRef = GameObject.FindGameObjectWithTag("Player");
@@ -38,25 +54,58 @@ public class MonsterBossController : MonoBehaviour
         assignWaypoint = true;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag.Equals("Projectile"))
+        {
+            CurrentHealth -= 1f;
+            HealthBar.fillAmount = CurrentHealth / MaxHealth;
+            if(CurrentHealth <= 0)
+            {
+                UIManager.instance.ShowScreen("Victory Screen");
+                //Destroy(gameObject);
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        CheckOffMeshLink();
-        if(assignWaypoint)
+        if (CurrentHealth <= 0)
         {
-            AssignWaypoint();
+            UIManager.instance.ShowScreen("Victory Screen");
         }
-        else if(moveToWaypoint)
+
+        //print("Is Stunned = "+isStunned);
+        if (!isStunned)
         {
-            MoveToWaypoint();
+            CheckOffMeshLink();
+            if (assignWaypoint)
+            {
+                AssignWaypoint();
+            }
+            else if (moveToWaypoint)
+            {
+                MoveToWaypoint();
+            }
+            else if (persuePlayer)
+            {
+                PersuePlayer();
+            }
+            else if (doLaserAttack)
+            {
+                LaserAttack();
+            }
         }
-        else if(persuePlayer)
+        else if(isStunned)
         {
-            PersuePlayer();
-        }
-        else if(doLaserAttack)
-        {
-            LaserAttack();
+            AnimController.SetBool("Stunned", true);
+            uiComp.SetActive(true);
+            if (!corutineActive)
+            {
+                EndAttack();
+                StartCoroutine(StopIsStunned());
+            }
         }
     }
 
@@ -64,7 +113,7 @@ public class MonsterBossController : MonoBehaviour
     {
         if (NavAgent.isOnOffMeshLink && !usingNavLink)
         {
-            print("Jump");
+            //print("Jump");
             usingNavLink = true;
             AnimController.SetTrigger("Jump");
         }
@@ -87,7 +136,7 @@ public class MonsterBossController : MonoBehaviour
         NavAgent.SetDestination(Waypoints[WaypointIndex].transform.position);
         if(Vector3.Distance(transform.position, Waypoints[WaypointIndex].transform.position) <= 1.0f)
         {
-            print("At Waypoint");
+            //print("At Waypoint");
             moveToWaypoint = false;
             doLaserAttack = true;
         }
@@ -95,8 +144,9 @@ public class MonsterBossController : MonoBehaviour
 
     void LaserAttack()
     {
-        Vector3 dir = PlayerRef.transform.position -transform.position;
-        transform.rotation = Quaternion.LookRotation(dir);
+        transform.LookAt(PlayerRef.transform.position);
+        //Vector3 dir = PlayerRef.transform.position -transform.position;
+        //transform.rotation = Quaternion.LookRotation(dir);
         if (!blockTrigger)
         {
             AnimController.SetTrigger("Laser");
@@ -121,9 +171,10 @@ public class MonsterBossController : MonoBehaviour
     void PersuePlayer()
     {
         NavAgent.SetDestination(PlayerRef.transform.position);
-        if(Vector3.Distance(transform.position, PlayerRef.transform.position) <= 10)
+        if (Vector3.Distance(transform.position, PlayerRef.transform.position) <= 8.5f)
         {
             AnimController.SetTrigger("Melee");
+            PlayerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
         }
         if(!corutineActive)
         {
@@ -140,9 +191,25 @@ public class MonsterBossController : MonoBehaviour
         corutineActive = false;
     }
 
+    IEnumerator StopIsStunned()
+    {
+        corutineActive = true;
+        yield return new WaitForSecondsRealtime(StunDuration);
+        AnimController.SetBool("Stunned", false);
+        uiComp.SetActive(false);
+        isStunned = false;
+        corutineActive = false;
+    }
+
+    IEnumerator Death()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        //print("Boss Defeated!");
+    }
+
     public void BeginAttack()
     {
-        print("Attack Triggered!");
+        //print("Attack Triggered!");
         laserScript.ElementIndex = Random.Range(0, 3);
         laserScript.PlayParticles(true);
     }
@@ -154,7 +221,7 @@ public class MonsterBossController : MonoBehaviour
 
     public void EndAttack()
     {
-        print("Attack End!");
+        //print("Attack End!");
         laserScript.Activated = false;
         laserScript.PlayParticles(false);
         doLaserAttack = false;

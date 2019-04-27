@@ -40,6 +40,15 @@ public class IceProjectile : MonoBehaviour
         if (other.gameObject.tag == "Water")
         {
             moveComponent.speed = 0;
+
+            Quaternion rotation = Quaternion.Euler(90, 0, 0);
+
+            print("Hit Water");
+            var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
+            platform.GetComponent<FloatingMovement>().water = other.gameObject;
+            //platform.transform.parent = other.transform;
+            Destroy(gameObject);
+
             var hitFX = Instantiate(moveComponent.Hit_FX, transform.position, Quaternion.identity);
             var hit_PS = hitFX.GetComponent<ParticleSystem>();
             if (hit_PS != null)
@@ -51,12 +60,6 @@ public class IceProjectile : MonoBehaviour
                 var hitFXChild = hitFX.transform.GetChild(0).GetComponent<ParticleSystem>();
                 Destroy(hitFX, hitFXChild.main.duration);
             }
-
-            print("Hit Water");
-            var platform = Instantiate(platformPrefab, transform.position, Quaternion.identity);
-            platform.GetComponent<FloatingMovement>().water = other.gameObject;
-            platform.transform.parent = other.transform;
-            Destroy(gameObject);
         }
     }
 }

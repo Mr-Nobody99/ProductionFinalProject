@@ -21,11 +21,10 @@ public class FloatingMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //WaterTransform = GameObject.FindGameObjectWithTag("Water").transform;
         WaterTransform = water.transform;
         transform.SetParent(WaterTransform);
         waterMesh = WaterTransform.GetComponent<Cloth>();
-        //Destroy(gameObject, duration);
+        Destroy(gameObject, duration);
     }
 
     // Update is called once per frame
