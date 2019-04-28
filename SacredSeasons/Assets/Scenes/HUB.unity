@@ -2092,5 +2092,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: af366ff601072294c93148d1320b08f7,
+        type: 2}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.030555556
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: MinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283ec60e28e0c254483dfac95e4d4956, type: 3}
