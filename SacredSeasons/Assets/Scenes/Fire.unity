@@ -1626,6 +1626,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152937498}
   m_Mesh: {fileID: 4300000, guid: 0a642e2947e15e54eb20702887d27f6f, type: 3}
+--- !u!1 &171615041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2235631421241589486, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 410654471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &186394551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3303,6 +3309,16 @@ PrefabInstance:
       propertyPath: bounceForce
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+        type: 3}
+      propertyPath: shields.Array.data[1]
+      value: 
+      objectReference: {fileID: 171615041}
+    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+        type: 3}
+      propertyPath: shields.Array.data[2]
+      value: 
+      objectReference: {fileID: 1512114893}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb86587f6eec434d8cbaa402de4cbd0, type: 3}
 --- !u!4 &410654472 stripped
@@ -3456,7 +3472,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443335632}
-  m_LocalRotation: {x: 0.02546381, y: -0.00012822682, z: 0.0000032149467, w: 0.99967575}
+  m_LocalRotation: {x: 0.025463793, y: -0.00012822168, z: 0.0000032148112, w: 0.99967575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5888,8 +5904,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0
-  m_VerticalDamping: 0
+  m_HorizontalDamping: 1
+  m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
@@ -5933,8 +5949,8 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
-    m_AccelTime: 0.1
+    m_MaxSpeed: 200
+    m_AccelTime: 0.25
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
@@ -10334,7 +10350,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156491102}
-  m_LocalRotation: {x: 0.02546381, y: -0.00012819452, z: 0.0000032909968, w: 0.99967575}
+  m_LocalRotation: {x: 0.025463793, y: -0.00012822365, z: 0.0000032917342, w: 0.99967575}
   m_LocalPosition: {x: 65.03186, y: 3.5607946, z: 13.412157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11465,7 +11481,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254448931}
-  m_LocalRotation: {x: 0.02546381, y: -0.00012819452, z: 0.0000032909968, w: 0.99967575}
+  m_LocalRotation: {x: 0.025463793, y: -0.0001282342, z: 0.000003292003, w: 0.99967575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11874,7 +11890,7 @@ MonoBehaviour:
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
-  m_VerticalDamping: 0
+  m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
@@ -11918,8 +11934,8 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
-    m_AccelTime: 0.1
+    m_MaxSpeed: 200
+    m_AccelTime: 0.25
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
@@ -12795,10 +12811,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1561082189684541233}
     m_Modifications:
-    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
-      propertyPath: m_Name
-      value: FirePortal_Plane
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -12846,6 +12858,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
+      propertyPath: m_Name
+      value: FirePortal_Plane
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12943,6 +12959,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0d73012cb3c954791597c3eb0ec960, type: 3}
+--- !u!1 &1512114893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6008612005605692607, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 410654471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516143793
 GameObject:
   m_ObjectHideFlags: 0
@@ -13044,8 +13066,8 @@ MonoBehaviour:
   m_LegacyBlendHint: 0
   m_YAxis:
     Value: 0.5
-    m_MaxSpeed: 2
-    m_AccelTime: 0.2
+    m_MaxSpeed: 1
+    m_AccelTime: 0.25
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
@@ -13067,8 +13089,8 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
-    m_AccelTime: 0.1
+    m_MaxSpeed: 200
+    m_AccelTime: 0.25
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
@@ -13093,13 +13115,13 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_BindingMode: 4
-  m_SplineCurvature: 0.5
+  m_SplineCurvature: 0
   m_Orbits:
   - m_Height: 10
     m_Radius: 3
   - m_Height: 3
     m_Radius: 10
-  - m_Height: 0
+  - m_Height: 0.001
     m_Radius: 2
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
@@ -16933,8 +16955,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956705078}
-  m_LocalRotation: {x: 0.02546381, y: -0.00012822748, z: 0.000003240374, w: 0.99967575}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.16452245, y: -0.00012649143, z: 0.000021071975, w: 0.98637336}
+  m_LocalPosition: {x: 0, y: 2.4372714, z: 1.2726364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2040114616}
@@ -17609,8 +17631,8 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0
-  m_VerticalDamping: 0
+  m_HorizontalDamping: 1
+  m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
@@ -17654,8 +17676,8 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_XAxis:
     Value: 0
-    m_MaxSpeed: 300
-    m_AccelTime: 0.1
+    m_MaxSpeed: 200
+    m_AccelTime: 0.25
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
     m_InputAxisValue: 0
@@ -17938,7 +17960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 1
-  shadowResolution: 512
+  shadowResolution: 2048
   shadowDimmer: 1
   volumetricShadowDimmer: 1
   shadowFadeDistance: 10000
