@@ -1994,9 +1994,9 @@ MonoBehaviour:
   MoveSpeed: 10
   rotationSpeed: 0.5
   rotationBuildUp: 0.95
-  jumpForce: 15
-  airControl: 0.7
-  bounceForce: 33
+  jumpForce: 25
+  airControl: 0.5
+  bounceForce: 34
   L_InputX: 0
   L_InputZ: 0
   L_inputMagnitude: 0
@@ -2011,8 +2011,8 @@ MonoBehaviour:
   shooter: {fileID: 976368807077689760}
   shields:
   - {fileID: 4597523233780085624}
-  - {fileID: 6008612005605692607}
   - {fileID: 2235631421241589486}
+  - {fileID: 6008612005605692607}
   shieldSpeed: 3
   isDefending: 0
   moveDirection: {x: 0, y: 0, z: 0}
