@@ -2095,7 +2095,7 @@ PrefabInstance:
     - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
         type: 3}
       propertyPath: MaxDistance
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
         type: 3}
@@ -2111,16 +2111,21 @@ PrefabInstance:
     - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
         type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0.030555556
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
         type: 3}
       propertyPath: MinDistance
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480912896977913159, guid: 283ec60e28e0c254483dfac95e4d4956,
+        type: 3}
+      propertyPath: rolloffMode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
