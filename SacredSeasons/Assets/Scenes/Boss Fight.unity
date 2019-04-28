@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -459,7 +459,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: 0.00083072286, y: 0.9987913, z: 0.018170511, w: -0.045662925}
+  m_LocalRotation: {x: 0.0014798645, y: 0.99652004, z: 0.01812919, w: -0.08134476}
   m_LocalPosition: {x: -28.814594, y: -47.5, z: -112.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -579,7 +579,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117284538}
-  m_LocalRotation: {x: -0.00083075435, y: -0.99879134, z: -0.018170513, w: 0.04566294}
+  m_LocalRotation: {x: -0.0014798959, y: -0.9965201, z: -0.01812919, w: 0.08134477}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5832,7 +5832,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413168885}
-  m_LocalRotation: {x: 0.0004765507, y: -0.9994215, z: 0.015819242, w: 0.030105272}
+  m_LocalRotation: {x: 0.0013210942, y: -0.99638534, z: 0.015771186, w: 0.083461486}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6033,7 +6033,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: -0.0016590271, y: -0.99829733, z: -0.03628705, w: 0.045640357}
+  m_LocalRotation: {x: -0.002955382, y: -0.9960272, z: -0.03620453, w: 0.081304535}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8557,6 +8557,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 475634907663891550, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
         type: 3}
       propertyPath: m_Mesh
@@ -8572,11 +8577,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1735986589}
-    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb86587f6eec434d8cbaa402de4cbd0, type: 3}
 --- !u!4 &1654649681 stripped
