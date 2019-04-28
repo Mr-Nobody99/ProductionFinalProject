@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField]
     List<GameObject> Projectiles;
+    [SerializeField]
+    Transform shooter;
 
     [Header("Defense")]
     [SerializeField]
@@ -137,7 +139,8 @@ public class PlayerController : MonoBehaviour
                 UpdateEquippedElement();
                 if (Input.GetButtonDown("Shoot"))
                 {
-                    Shoot();
+                    animController.SetTrigger("Throw");
+                    //Shoot();
                 }
             }
             else
@@ -271,9 +274,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+        RaycastHit Hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out Hit, 100000.0f))
+        {
+            shooter.LookAt(Hit.point);
+            Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
+        }
+        else
+        {
+            Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+        }
     }
 
     void Defend(bool activate)
