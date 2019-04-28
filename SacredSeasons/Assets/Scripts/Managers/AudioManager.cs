@@ -65,9 +65,6 @@ public class AudioManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Level Loaded");
-        Debug.Log(scene.name);
-
         sceneName = SceneManager.GetActiveScene().name;
 
         switch (scene.name)
