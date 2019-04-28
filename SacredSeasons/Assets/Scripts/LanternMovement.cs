@@ -64,6 +64,6 @@ public class LanternMovement : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delay);
         active = true;
-        print("Activate");
+        //print("Activate");
     }
 }

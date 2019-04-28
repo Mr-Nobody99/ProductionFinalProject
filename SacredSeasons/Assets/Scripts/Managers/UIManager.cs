@@ -64,6 +64,8 @@ public class UIManager : MonoBehaviour
 
             paused = true;
 
+            Debug.Log("Current Season: " + currentSeason);
+
         } else if (name.Equals("Options Menu"))
         {
             if (currentSeason.Contains("HUB"))
