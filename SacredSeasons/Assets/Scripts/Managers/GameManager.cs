@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public AudioMixer mixer;
 
-    /*float _audioVolume;
+    float _audioVolume;
     public float audioVolume
     {
         get
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
             _audioVolume = value;
             mixer.SetFloat("MasterVolume", _audioVolume);
         }
-    }*/
+    }
 
     private void Awake()
     {
