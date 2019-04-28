@@ -3799,12 +3799,12 @@ PrefabInstance:
     - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
         type: 3}
       propertyPath: airControl
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
         type: 3}
       propertyPath: bounceForce
-      value: 40
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb86587f6eec434d8cbaa402de4cbd0, type: 3}
@@ -18642,7 +18642,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956705078}
-  m_LocalRotation: {x: 0.02546383, y: -0.0001281929, z: 0.000003239496, w: 0.99967575}
+  m_LocalRotation: {x: 0.02546381, y: -0.00012822748, z: 0.000003240374, w: 0.99967575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
