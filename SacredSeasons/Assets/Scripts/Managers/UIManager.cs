@@ -66,8 +66,6 @@ public class UIManager : MonoBehaviour
 
             paused = true;
 
-            Debug.Log("Current Season: " + currentSeason);
-
         } else if (name.Equals("Options Menu"))
         {
             if (currentSeason.Contains("HUB"))
@@ -176,7 +174,7 @@ public class UIManager : MonoBehaviour
         PlayerController.currentHealth = 100;
         //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
-        SceneManager.LoadScene("Boss Fight");
+        SceneManager.LoadScene("Main Menu Scene");
     }
 
     /*Scene curScene = SceneManager.GetActiveScene();
