@@ -937,6 +937,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243185534764568968, guid: af366ff601072294c93148d1320b08f7,
+        type: 2}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066596eddfbcbcb488c4a4a2d3a943ab, type: 3}
 --- !u!4 &9131623320276444716 stripped
@@ -1012,6 +1038,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3365334327063092554, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243185534764568968, guid: af366ff601072294c93148d1320b08f7,
+        type: 2}
+    - target: {fileID: 3365334327063092554, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365334327063092554, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365334327063092554, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365334327063092554, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6f8632a73703b4aa2d546bd7958866, type: 3}
 --- !u!4 &9131623320276444728 stripped
@@ -1086,6 +1138,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498270301442493201, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243185534764568968, guid: af366ff601072294c93148d1320b08f7,
+        type: 2}
+    - target: {fileID: 7498270301442493201, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498270301442493201, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498270301442493201, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498270301442493201, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e1125062f4e1749a5cdcc73bc19626, type: 3}
