@@ -1,0 +1,1667 @@
+mdl 1.3;
+
+import ::adobe::mtl::standard;
+import ::anno::*;
+import ::base::file_texture;
+import ::base::mono_mode;
+import ::base::rotation_translation_scale;
+import ::base::tangent_space_normal_texture;
+import ::base::texture_coordinate_info;
+import ::base::texture_return;
+import ::base::transform_coordinate;
+import ::state::texture_coordinate;
+import ::state::texture_tangent_u;
+import ::state::texture_tangent_v;
+import ::tex::gamma_mode;
+import ::tex::wrap_mode;
+import ::state::normal;
+
+
+export material MATERIAL_FLOORUNDERPORTALS(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("floorunderportals_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("floorunderportals_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("floorunderportals_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("floorunderportals_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("floorunderportals_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("floorunderportals_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_GLASS(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("glass_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("glass_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("glass_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("glass_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("glass_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("glass_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_PILLAR1(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("pillar1_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("pillar1_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("pillar1_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("pillar1_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("pillar1_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("pillar1_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_PILLAR2(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("pillar2_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("pillar2_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("pillar2_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("pillar2_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("pillar2_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("pillar2_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SNOWFLAKE(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("snowflake_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("snowflake_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("snowflake_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("snowflake_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("snowflake_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("snowflake_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SPRINGLEAF1(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("springleaf1_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("springleaf1_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("springleaf1_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("springleaf1_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("springleaf1_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("springleaf1_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SPRINGPORTAL(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("springportal_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("springportal_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("springportal_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("springportal_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("springportal_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("springportal_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SPRINGPORTALBODY(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("springportalbody_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("springportalbody_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("springportalbody_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("springportalbody_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("springportalbody_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("springportalbody_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SPRINGPORTALINSIDE(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("springportalinside_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("springportalinside_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("springportalinside_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("springportalinside_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("springportalinside_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("springportalinside_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SUMMERPORTAL(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("summerportal_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("summerportal_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("summerportal_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("summerportal_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("summerportal_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("summerportal_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SUMMERPORTALBODY(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("summerportalbody_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("summerportalbody_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("summerportalbody_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("summerportalbody_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("summerportalbody_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("summerportalbody_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SUMMERPORTALINSIDE(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("summerportalinside_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("summerportalinside_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("summerportalinside_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("summerportalinside_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("summerportalinside_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("summerportalinside_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_SUN(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("sun_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("sun_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("sun_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("sun_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("sun_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("sun_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_TRIANGLES(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("triangles_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("triangles_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("triangles_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("triangles_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("triangles_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("triangles_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_WINTERPORTAL(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("Winterportal_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("Winterportal_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("Winterportal_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("Winterportal_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("Winterportal_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("Winterportal_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_WINTERPORTALBODY(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("winterportalbody_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("winterportalbody_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("winterportalbody_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("winterportalbody_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("winterportalbody_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("winterportalbody_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+
+
+export material MATERIAL_WINTERPORTALINSIDE(*)
+= ::adobe::mtl::standard(
+	baseColor: ::base::file_texture(
+	texture: texture_2d("winterportalinside_baseColor.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).tint,
+roughness: ::base::file_texture(
+	texture: texture_2d("winterportalinside_roughness.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+metallic: ::base::file_texture(
+	texture: texture_2d("winterportalinside_metallic.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+opacity: ::base::file_texture(
+	texture: texture_2d("winterportalinside_opacity.png", ::tex::gamma_linear),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+glow: ::base::file_texture(
+	texture: texture_2d("winterportalinside_glow.png", ::tex::gamma_srgb),
+	color_offset: color(0.f, 0.f, 0.f),
+	color_scale: color(1.f, 1.f, 1.f),
+	mono_source: ::base::mono_average,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false
+).mono,
+normal: ::base::tangent_space_normal_texture(
+	texture: texture_2d("winterportalinside_normal.png", ::tex::gamma_linear),
+	factor: 1.f,
+	flip_tangent_u: false,
+	flip_tangent_v: false,
+	uvw: ::base::transform_coordinate(
+		::base::rotation_translation_scale(float3(0.f), float3(0.f), float3(1.f)),
+		::base::texture_coordinate_info(::state::texture_coordinate(0), ::state::texture_tangent_u(0), ::state::texture_tangent_v(0))
+	),
+	crop_u: float2(0.f, 1.f),
+	crop_v: float2(0.f, 1.f),
+	wrap_u: ::tex::wrap_repeat,
+	wrap_v: ::tex::wrap_repeat,
+	clip: false,
+	scale: 1.f,
+	offset: 1.f
+)
+);
+

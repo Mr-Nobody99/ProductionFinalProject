@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class PauseMenu : MonoBehaviour
     {
         AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.paused = false;
+        if (SceneManager.GetActiveScene().name.Equals("Tutorial Scene"))
+        {
+            UIManager.instance.tutorialScreen.SetActive(true);
+        }
         UIManager.instance.Play();
     }
 
