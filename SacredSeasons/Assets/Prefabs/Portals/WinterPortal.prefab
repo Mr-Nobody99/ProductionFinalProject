@@ -43,7 +43,8 @@ AudioSource:
   m_GameObject: {fileID: 1925835075941159269}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243185534764568968, guid: af366ff601072294c93148d1320b08f7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: e74945417c0b40248b6e640c901e7611, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
@@ -54,8 +55,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 10
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -90,7 +91,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -105,7 +106,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -443,10 +444,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1925835075940928779}
     m_Modifications:
-    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
-      propertyPath: m_Name
-      value: WaterPortal_Plane
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -490,6 +487,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
+      propertyPath: m_Name
+      value: WaterPortal_Plane
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_Materials.Array.data[0]
