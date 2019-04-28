@@ -1995,8 +1995,8 @@ MonoBehaviour:
   rotationSpeed: 0.5
   rotationBuildUp: 0.95
   jumpForce: 15
-  airControl: 0.7
-  bounceForce: 33
+  airControl: 0.5
+  bounceForce: 1
   L_InputX: 0
   L_InputZ: 0
   L_inputMagnitude: 0
