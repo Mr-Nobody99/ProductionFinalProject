@@ -17,6 +17,23 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     [SerializeField]
     Animator animController;
+    [SerializeField]
+    Image healthBar;
+
+    [Header("Movement Settings")]
+    [SerializeField]
+    float MoveSpeed = 10.0f;
+    float initalSpeed;
+    [SerializeField]
+    float rotationSpeed = 0.1f;
+    [SerializeField]
+    float rotationBuildUp = 0.1f;
+    [SerializeField]
+    float jumpForce = 1.0f;
+    [SerializeField]
+    float airControl = 0.5f;
+    [SerializeField]
+    float bounceForce = 1.0f;
 
     [Header("Inputs")]
     [SerializeField]
@@ -32,29 +49,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float R_inputMagnitude;
 
-    [Header("Movement Controls")]
-    [SerializeField]
-    float MoveSpeed = 10.0f;
-    float initalSpeed;
-    [SerializeField]
-    float rotationSpeed = 0.1f;
-    [SerializeField]
-    float rotationBuildUp = 0.1f;
-    [SerializeField]
-    float jumpForce = 1.0f;
-    [SerializeField]
-    float gravity = 1.0f;
-    [SerializeField]
-    float fallDamping = 0.1f;
-
-    [Header("Movement Debugs")]
-    [SerializeField]
-    Vector3 moveDirection;
-    [SerializeField]
-    bool blockRotation;
-    [SerializeField]
-    bool isGrounded;
-
     [Header("Currently Equipped Element")]
     [SerializeField]
     private int equippedElementIndex = 0;
@@ -62,7 +56,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projectiles")]
     [SerializeField]
-    private GameObject Shooter;
+    List<GameObject> Projectiles;
+    [SerializeField]
+    Transform shooter;
 
     [Header("Defense")]
     [SerializeField]
@@ -72,22 +68,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool isDefending = false;
 
+    [Header("Movement Debugs")]
+    [SerializeField]
+    Vector3 moveDirection;
+    [SerializeField]
+    bool blockRotation;
+    [SerializeField]
+    bool isGrounded;
+
     private float verticalVelocity;
     private Vector3 movementVector;
 
     public static float maxHealth = 100;
     public static float currentHealth;
 
-    [SerializeField]
-    public Image healthBar;
-
     public static bool paused = false;
     public static bool menuUp = false;
 
-    // Boolean to ignore jump for a half second after menu button is pressed
-    public static bool jumpOk = true;
-
     public static string currentSpellName;
+
+    public bool doBounce = false;
 
     // Start is called before the first frame update
     void Start()
@@ -96,10 +96,14 @@ public class PlayerController : MonoBehaviour
         animController = this.GetComponent<Animator>();
         cam = Camera.main;
         initalSpeed = MoveSpeed;
+
         currentHealth = maxHealth;
         healthBar = GameObject.Find("Health Bar").GetComponent<Image>();
+<<<<<<< HEAD
+=======
+        
+>>>>>>> master
         //deactivate shields at start
-        //UIManager.instance.ShowScreen("Main Menu");
         foreach(GameObject foo in shields)
         {
             foo.SetActive(false);
@@ -109,23 +113,37 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Pause"))
+        {
+            if (paused)
+            {
+                UnPause();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+
         if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
         {
             blockRotation = false;
-            CheckGrounded();
             isDefending = Input.GetButton("Block") ? true : false;
             Defend(isDefending);
-            if (!isDefending)
+
+            if (!isDefending && !paused)
             {
-                if (!paused)
-                {
-                    CalcInputMagnitude();
-                }
+                isGrounded = controller.isGrounded;
+                animController.SetBool("Grounded", isGrounded);
+                CheckGrounded();
+                CalcInputMagnitude();
+                CalcMoveAndRotation();
+                ApplyMove();
                 UpdateEquippedElement();
                 if (Input.GetButtonDown("Shoot"))
                 {
-                    UpdateAim();
-                    Shoot();
+                    animController.SetTrigger("Throw");
+                    //Shoot();
                 }
             }
             else
@@ -134,41 +152,25 @@ public class PlayerController : MonoBehaviour
                 animController.SetFloat("Input Z", 0f);
             }
         }
-
-        if(Input.GetButtonDown("Pause"))
-        {
-            if(paused)
-            {
-                UnPause();
-                if (!GameManager.instance.tutorialOver)
-                {
-                    UIManager.instance.tutorialScreen.SetActive(true);
-                }
-            }
-            else if(!paused && !UIManager.instance.screens[UIManager.instance.curScreen].screen.activeSelf)
-            {
-                Pause();
-                if (!GameManager.instance.tutorialOver)
-                {
-                    UIManager.instance.tutorialScreen.SetActive(false);
-                }
-            }
-        }
     }
 
     void CheckGrounded()
     {
-        isGrounded = controller.isGrounded;
-        animController.SetBool("Grounded", isGrounded);
-
         if (isGrounded)
         {
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
-            if (Input.GetButtonDown("Jump") && !isDefending && jumpOk)
+            if (Input.GetButtonDown("Jump") || doBounce && !isDefending)
             {
                 animController.SetTrigger("Jump");
-                MoveSpeed /= 2;
-                verticalVelocity = jumpForce;
+                MoveSpeed *= airControl;
+                if(doBounce)
+                {
+                    verticalVelocity = bounceForce;
+                }
+                else
+                {
+                    verticalVelocity = jumpForce;
+                }
             }
             else
             {
@@ -177,12 +179,10 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            verticalVelocity -= fallDamping;
+            verticalVelocity -= 1;
         }
 
         movementVector = new Vector3(0, verticalVelocity, 0);
-        controller.Move(movementVector * gravity * Time.deltaTime);
-
     }
 
     void CalcInputMagnitude()
@@ -195,10 +195,6 @@ public class PlayerController : MonoBehaviour
         R_InputZ = Input.GetAxis("Mouse Y");
         R_inputMagnitude = new Vector2(R_InputX, R_InputZ).sqrMagnitude;
 
-        //animController.SetFloat("Speed", L_inputMagnitude);
-        //animController.SetFloat("Input Z", inputMagnitude);
-        //animController.SetFloat("Input X", InputX);
-
         if (L_inputMagnitude == 0.0f)
         {
             blockRotation = true;
@@ -210,20 +206,16 @@ public class PlayerController : MonoBehaviour
             blockRotation = false;
             animController.SetFloat("Input Z", L_inputMagnitude);
             animController.SetFloat("Input X", 0.0f);
-            MoveAndRotation();
-            controller.Move(moveDirection * MoveSpeed * Time.deltaTime);
         }
         else if(L_inputMagnitude > 0.0f && L_inputMagnitude < rotationBuildUp && R_inputMagnitude == 0.0f)
         {
             blockRotation = true;
             animController.SetFloat("Input X", L_InputX);
             animController.SetFloat("Input Z", L_InputZ);
-            MoveAndRotation();
-            controller.Move(moveDirection * MoveSpeed * Time.deltaTime);
         }
     }
 
-    void MoveAndRotation()
+    void CalcMoveAndRotation()
     {
         L_InputX = Input.GetAxis("Horizontal");
         L_InputZ = Input.GetAxis("Vertical");
@@ -239,104 +231,69 @@ public class PlayerController : MonoBehaviour
         right.Normalize();
 
         moveDirection = (forward * L_InputZ) + (right * L_InputX);
+        moveDirection *= MoveSpeed;
 
-        if(!blockRotation)
+        if (!blockRotation)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection), rotationSpeed);
         }
     }
 
+    void ApplyMove()
+    {
+        movementVector.x = moveDirection.x;
+        movementVector.z = moveDirection.z;
+        controller.Move(movementVector * Time.deltaTime);
+    }
+
     void UpdateEquippedElement()
     {
-        // Gamepad support section
-        if (Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap)
+        if (Input.GetAxis("SwitchProjectile") == 1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
-            ++InventoryManager.instance.currentSpellIndex;
-
-            if (InventoryManager.instance.currentSpellIndex == 3)
-            {
-                InventoryManager.instance.currentSpellIndex = 0;
-            }
-
-            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
-            {
-                ++InventoryManager.instance.currentSpellIndex;
-
-                if (InventoryManager.instance.currentSpellIndex == 3)
-                {
-                    InventoryManager.instance.currentSpellIndex = 0;
-                }
-            }
-
+            equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
+        else if (Input.GetAxis("SwitchProjectile") == -1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
-            --InventoryManager.instance.currentSpellIndex;
-
-            if (InventoryManager.instance.currentSpellIndex == -1)
-            {
-                InventoryManager.instance.currentSpellIndex = 2;
-            }
-
-            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
-            {
-
-                --InventoryManager.instance.currentSpellIndex;
-
-                if (InventoryManager.instance.currentSpellIndex == -1)
-                {
-                    InventoryManager.instance.currentSpellIndex = 2;
-                }
-            }
-
+            equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == 0)
+        else if (Input.GetAxis("SwitchProjectile") == 0 || Input.GetKeyUp(KeyCode.Tab))
         {
             blockElementSwap = false;
         }
-        currentSpellName = InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].name;
 
-        // Keyboard support section
-        if (Input.GetButtonUp("ProjectileForward") && !blockElementSwap)
+        switch (equippedElementIndex)
         {
-            ++InventoryManager.instance.currentSpellIndex;
-
-            if (InventoryManager.instance.currentSpellIndex == 3)
-            {
-                InventoryManager.instance.currentSpellIndex = 0;
-            }
-
-            while (!InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].available)
-            {
-                ++InventoryManager.instance.currentSpellIndex;
-
-                if (InventoryManager.instance.currentSpellIndex == 3)
-                {
-                    InventoryManager.instance.currentSpellIndex = 0;
-                }
-            }
-
-            blockElementSwap = true;
+            case 0:
+                currentSpellName = "Ice Spell";
+                break;
+            case 1:
+                currentSpellName = "Earth Spell";
+                break;
+            case 2:
+                currentSpellName = "Fire Spell";
+                break;
         }
     }
 
-    void UpdateAim()
+    public void Shoot()
     {
-        Vector3 AimDirection = Shooter.transform.position - cam.transform.position;
-        Shooter.transform.LookAt(AimDirection * 100.0f, Shooter.transform.up);
-        Debug.DrawRay(Shooter.transform.position, AimDirection);
-    }
-
-    void Shoot()
-    {
-        Instantiate(InventoryManager.instance.PlayerSpells[InventoryManager.instance.currentSpellIndex].projectile, cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+        RaycastHit Hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out Hit, 100000.0f))
+        {
+            shooter.LookAt(Hit.point);
+            Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
+        }
+        else
+        {
+            Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+        }
     }
 
     void Defend(bool activate)
     {
-        GameObject shield = shields[InventoryManager.instance.currentSpellIndex];
+        var shield = shields[equippedElementIndex];
 
         if (activate)
         {
@@ -390,4 +347,5 @@ public class PlayerController : MonoBehaviour
         menuUp = false;
         paused = false;
     }
+
 }

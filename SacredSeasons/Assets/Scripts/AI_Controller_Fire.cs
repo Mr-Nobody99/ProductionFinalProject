@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class AI_Controller_Fire : MonoBehaviour
 {
 
@@ -19,6 +20,11 @@ public class AI_Controller_Fire : MonoBehaviour
     float persueDistance = 5.0f;
 
     private GameObject playerRef;
+    [SerializeField]
+    GameObject projectile;
+    [SerializeField]
+    Transform projectileSpawner;
+    bool shootActive = false;
     [SerializeField]
     private GameObject eyes;
     [SerializeField]
@@ -82,6 +88,7 @@ public class AI_Controller_Fire : MonoBehaviour
         if(navMeshAgent.velocity.magnitude <= 0.0f)
         {
             animController.SetBool("isStopped", true);
+            transform.LookAt(playerRef.transform.position, Vector3.up);
         }
         else
         {
@@ -91,17 +98,21 @@ public class AI_Controller_Fire : MonoBehaviour
         //Change nav agent settings for patrol and persue behaviors
         if(persuePlayer)
         {
+            if (!shootActive && !frozen)
+            {
+                StartCoroutine(Shoot());
+            }
             animController.SetBool("persuePlayer", true);
             navMeshAgent.SetDestination(playerRef.transform.position);
             navMeshAgent.speed = 5.5f;
             navMeshAgent.stoppingDistance = persueDistance;
 
             // Lose health on collision with spirit
-            if(Vector3.Distance(transform.position, playerRef.transform.position) <= 3.0f)
-            {
-              print("Collision with player");
-              playerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
-            }
+            //if(Vector3.Distance(transform.position, playerRef.transform.position) <= 3.0f)
+            //{
+            //  print("Collision with player");
+            //  playerRef.GetComponent<PlayerController>().TakeDamage(0.1f);
+            //}
         }
         else if(isPatrolling)
         {
@@ -131,20 +142,20 @@ public class AI_Controller_Fire : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg)
-    {
-        if (!blockDamage)
+        public void TakeDamage(float dmg)
         {
-            if (frozen) blockDamage = true;
-            currentHealth -= dmg;
-            healthBar.fillAmount = currentHealth / maxHealth;
-
-            if (currentHealth <= 0)
+            if (!blockDamage)
             {
-                Die();
+                if (frozen) blockDamage = true;
+                currentHealth -= dmg;
+                healthBar.fillAmount = currentHealth / maxHealth;
+
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
             }
         }
-    }
 
     private void ChangePatrolPoint()
     {
@@ -159,6 +170,20 @@ public class AI_Controller_Fire : MonoBehaviour
 
         navMeshAgent.SetDestination(patrolPoints[currentPatrolIndex].transform.position);
 
+    }
+
+    IEnumerator Shoot()
+    {
+        if (!frozen)
+        {
+            shootActive = true;
+            Vector3 target = playerRef.transform.position;
+            target.y += 1;
+            projectileSpawner.LookAt(target);
+            Instantiate(projectile, projectileSpawner.position, projectileSpawner.rotation);
+        }
+        yield return new WaitForSecondsRealtime(Random.Range(1.0f, 2.0f));
+        shootActive = false;
     }
 
     public void Freeze()

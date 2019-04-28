@@ -9545,6 +9545,10 @@ GameObject:
   - component: {fileID: 7046675278009123119}
   - component: {fileID: 499147008121345986}
   - component: {fileID: 8148437640280049503}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1213390016224566444}
+>>>>>>> master
   m_Layer: 0
   m_Name: EarthProjectile
   m_TagString: Projectile
@@ -9722,3 +9726,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
+=======
+--- !u!114 &1213390016224566444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208896452635846841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5e3a6fd17d2d543b45f742b086c1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
+>>>>>>> master

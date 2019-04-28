@@ -9,12 +9,7 @@ public class GameManager : MonoBehaviour
 
     public AudioMixer mixer;
 
-    // Tutorial status booleans
-    public bool tutorialOver = false;
-    public bool moveTutorialDone = false;
-    public bool shootTutorialDone = false;
-
-    float _audioVolume;
+    /*float _audioVolume;
     public float audioVolume
     {
         get
@@ -31,7 +26,7 @@ public class GameManager : MonoBehaviour
             _audioVolume = value;
             mixer.SetFloat("MasterVolume", _audioVolume);
         }
-    }
+    }*/
 
     private void Awake()
     {

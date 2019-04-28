@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
     public GameObject shootText;
     public GameObject finalText;
 
+    Scene currentScene;
+
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
@@ -66,7 +68,7 @@ public class UIManager : MonoBehaviour
 
         } else if (name.Equals("Options Menu"))
         {
-            if (currentSeason.Contains("HUb"))
+            if (currentSeason.Contains("HUB"))
             {
                 name = "Fall Options Menu";
             }
@@ -119,9 +121,6 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        Scene curScene = SceneManager.GetActiveScene();
-        currentSeason = curScene.name;
-
         if (currentSeason.Equals("Tutorial Scene"))
         {
             tutorialScreen.SetActive(true);
@@ -144,7 +143,6 @@ public class UIManager : MonoBehaviour
 
     public void Play()
     {
-        StartCoroutine(SetJumpNotOkCoroutine());
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -161,7 +159,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
         AudioManager.instance.PlaySingle(confirm);
-        SceneManager.LoadScene("Tutorial Scene");
+        SceneManager.LoadScene("HUB");
     }
 
     public void Quit()
@@ -176,14 +174,25 @@ public class UIManager : MonoBehaviour
         PlayerController.currentHealth = 100;
         //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
-        SceneManager.LoadScene("Boss Fight");
+        SceneManager.LoadScene("Main Menu Scene");
     }
 
-    public IEnumerator SetJumpNotOkCoroutine()
+    /*Scene curScene = SceneManager.GetActiveScene();
+    currentSeason = curScene.name;*/
+
+    void OnEnable()
     {
-        PlayerController.jumpOk = false;
-        yield return new WaitForSeconds(0.25f);
-        PlayerController.jumpOk = true;
-        
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        currentSeason = SceneManager.GetActiveScene().name;
+    }
+
 }

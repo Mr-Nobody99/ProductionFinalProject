@@ -51,7 +51,6 @@ public class TurretTargetingSystem : MonoBehaviour
     {
         if (canShoot)
         {
-            Instantiate(InventoryManager.instance.PlayerSpells[index].projectile, gameObject.transform.position, m_lookAtRotation);
             StartCoroutine(DelayNextShot());
         }
     }
