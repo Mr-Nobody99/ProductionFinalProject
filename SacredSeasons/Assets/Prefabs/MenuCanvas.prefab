@@ -10188,15 +10188,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 1549269974309121612}
   m_HandleRect: {fileID: 3383149315846940909}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5446534144742372993}
-        m_MethodName: SetAudioVolume
+        m_MethodName: SetBGMVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13935,15 +13935,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 2354258009853357596}
   m_HandleRect: {fileID: 3793109934481243587}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6035649319316335782}
-        m_MethodName: SetAudioVolume
+        m_MethodName: SetBGMVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14723,6 +14723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6877802c5fbe03e4887f911981f165fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: af366ff601072294c93148d1320b08f7, type: 2}
   fxSource: {fileID: 749322020}
   musicSource: {fileID: 5073054326680442173}
   mainMenuMusic: {fileID: 8300000, guid: ba1f6c2c06c703f43946a8d6fa4a220c, type: 3}
@@ -14740,7 +14741,7 @@ AudioSource:
   m_GameObject: {fileID: 8392049904368691333}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: af366ff601072294c93148d1320b08f7,
+  OutputAudioMixerGroup: {fileID: 243577985184389228, guid: af366ff601072294c93148d1320b08f7,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
@@ -15197,15 +15198,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 8968764390856586454}
   m_HandleRect: {fileID: 5183202770480580672}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4399292516105730956}
-        m_MethodName: SetAudioVolume
+        m_MethodName: SetBGMVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16865,15 +16866,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 9128109204715355623}
   m_HandleRect: {fileID: 9128109204718906118}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9128109202799505420}
-        m_MethodName: SetAudioVolume
+        m_MethodName: SetBGMVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

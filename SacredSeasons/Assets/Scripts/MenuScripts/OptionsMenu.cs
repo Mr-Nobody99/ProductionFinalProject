@@ -19,10 +19,11 @@ public class OptionsMenu : MonoBehaviour
         UIManager.instance.ShowScreen("Graphics Menu");
     }
 
-    public void SetAudioVolume()
+    public void SetBGMVolume()
     {
-        Debug.Log("Setting Audio Volume to: " + Sound.value);
-        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
+        Debug.Log("Setting BGM Volume to: " + Sound.value);
+        AudioManager.instance.mixer.SetFloat("bgmVolume", Sound.value);
+        //AudioManager.instance.PlaySingle(UIManager.instance.confirm);
     }
 
     void Start()
