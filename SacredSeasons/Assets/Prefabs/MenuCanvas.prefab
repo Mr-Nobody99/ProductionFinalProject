@@ -14723,7 +14723,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxSource: {fileID: 749322020}
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 749322020}
+  mainMenuMusic: {fileID: 0}
+  hubMusic: {fileID: 0}
+  winterMusic: {fileID: 0}
+  springMusic: {fileID: 0}
+  summerMusic: {fileID: 0}
+  bossMusic: {fileID: 0}
 --- !u!1 &8409166614939259786
 GameObject:
   m_ObjectHideFlags: 0
@@ -18246,7 +18252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9128109203792279321
 RectTransform:
   m_ObjectHideFlags: 0
