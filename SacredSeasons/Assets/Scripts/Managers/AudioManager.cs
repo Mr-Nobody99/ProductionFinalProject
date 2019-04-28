@@ -97,10 +97,4 @@ public class AudioManager : MonoBehaviour
                 break;
         }
     }
-
-    public void SetExposedParam()
-    {
-
-    }
-
 }

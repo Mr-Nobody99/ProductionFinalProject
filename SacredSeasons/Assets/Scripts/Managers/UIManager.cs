@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
     public GameObject shootText;
     public GameObject finalText;
 
+    Scene currentScene;
+
     public void ShowScreen(string name)
     {
         Cursor.visible = true;
@@ -121,9 +123,6 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        Scene curScene = SceneManager.GetActiveScene();
-        currentSeason = curScene.name;
-
         if (currentSeason.Equals("Tutorial Scene"))
         {
             tutorialScreen.SetActive(true);
@@ -179,4 +178,23 @@ public class UIManager : MonoBehaviour
         UIManager.instance.ShowScreen("Main Menu");
         SceneManager.LoadScene("Boss Fight");
     }
+
+    /*Scene curScene = SceneManager.GetActiveScene();
+    currentSeason = curScene.name;*/
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        currentSeason = SceneManager.GetActiveScene().name;
+    }
+
 }
