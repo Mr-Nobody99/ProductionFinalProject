@@ -30,7 +30,7 @@ MonoBehaviour:
   active: 1
   rotation:
     m_OverrideState: 1
-    m_Value: 104
+    m_Value: 0
     min: 0
     max: 360
   skyIntensityMode:
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Value: 0
   multiplier:
     m_OverrideState: 1
-    m_Value: 0.75
+    m_Value: 1
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 0
@@ -81,4 +81,4 @@ MonoBehaviour:
     m_Value: 1
   fogType:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
