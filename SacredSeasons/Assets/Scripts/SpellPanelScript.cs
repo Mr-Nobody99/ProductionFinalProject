@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class SpellPanelScript : MonoBehaviour
 {
-
     //public Text currentSpellText;
     public RawImage currentSpellIcon;
 

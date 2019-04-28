@@ -12,23 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Test scene.unity
     guid: 20100a3ce6838c84080a0691b765dbe4
   - enabled: 1
-    path: Assets/Scenes/Main Menu Scene.unity
-    guid: 41d1974f39dad3448b6767f407239c28
-  - enabled: 1
-    path: Assets/Scenes/Tutorial Scene.unity
-    guid: cd2370a32102620469d29036943ed02b
-  - enabled: 1
-    path: Assets/Scenes/HUB.unity
+    path: Assets/Scenes/HUB Scene.unity
     guid: 9de19c1ab1756e9499b4badf6ab911f0
+  - enabled: 1
+    path: Assets/Scenes/Fire.unity
+    guid: 2de188e21d38d884a847a1bd3e44630b
   - enabled: 1
     path: Assets/Scenes/Water.unity
     guid: 7e19bcaf741d346499bdc1664992b641
   - enabled: 1
     path: Assets/Scenes/Earth.unity
     guid: a8e7ea2f7e9ae254e93d7d8f021a2216
-  - enabled: 1
-    path: Assets/Scenes/Fire.unity
-    guid: 2de188e21d38d884a847a1bd3e44630b
   - enabled: 1
     path: Assets/Scenes/Boss Fight.unity
     guid: 195bf3e06c7831a4fabc1c3fd5f472c8

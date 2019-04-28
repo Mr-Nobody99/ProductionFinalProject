@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public AudioMixer mixer;
 
     float _audioVolume;
