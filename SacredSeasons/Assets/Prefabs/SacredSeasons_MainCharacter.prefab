@@ -1995,8 +1995,8 @@ MonoBehaviour:
   rotationSpeed: 0.5
   rotationBuildUp: 0.95
   jumpForce: 15
-  airControl: 0.5
-  bounceForce: 1
+  airControl: 0.7
+  bounceForce: 33
   L_InputX: 0
   L_InputZ: 0
   L_inputMagnitude: 0
@@ -2244,11 +2244,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6997917081513603369, guid: 2ba266898b8dac144afb66ba563609bc,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba266898b8dac144afb66ba563609bc, type: 3}
 --- !u!1 &6008612005605692607 stripped
@@ -2329,11 +2324,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6752352109960133726, guid: 4cd2003be482dc74790c9963d5711ad7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd2003be482dc74790c9963d5711ad7, type: 3}
@@ -2420,11 +2410,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.73418784
-      objectReference: {fileID: 0}
-    - target: {fileID: 4444380481923852435, guid: 01b957f048c4d7d439dc5ce2d56da119,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01b957f048c4d7d439dc5ce2d56da119, type: 3}
