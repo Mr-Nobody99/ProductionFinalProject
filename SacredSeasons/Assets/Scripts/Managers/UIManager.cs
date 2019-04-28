@@ -169,11 +169,19 @@ public class UIManager : MonoBehaviour
         Debug.Log("Quitting Game");
     }
 
+    // FINISH CONTNIUE BY ADDING IN HEALTH RESET AND POSSIBLE CHANGES IN DefeatScreen.cs
+    public void Continue()
+    {
+        AudioManager.instance.PlaySingle(confirm);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Restart()
     {
         PlayerController.currentHealth = 100;
         //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
+        LevelManager.ResetProgress();
         SceneManager.LoadScene("Main Menu Scene");
     }
 

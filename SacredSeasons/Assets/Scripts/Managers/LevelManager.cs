@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class LevelManager
 {
-    static bool tutorialComplete = false;
+    //static bool tutorialComplete = false;
 
     static bool fireLevelComplete = false;
     static bool waterLevelComplete = false;
@@ -40,7 +40,14 @@ public static class LevelManager
         }
     }
 
-    public static bool GetTutorialComplete()
+    public static void ResetProgress()
+    {
+        fireLevelComplete = false;
+        waterLevelComplete = false;
+        earthLevelComplete = false;
+    }
+
+    /*public static bool GetTutorialComplete()
     {
         return tutorialComplete;
     }
@@ -48,5 +55,5 @@ public static class LevelManager
     public static void SetTutorialComplete()
     {
         tutorialComplete = true;
-    }
+    }*/
 }

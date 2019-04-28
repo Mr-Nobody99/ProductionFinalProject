@@ -7,26 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public AudioMixer mixer;
+    bool moveComplete = false;
+    bool shootComplete = false;
+    bool shieldComplete = false;
 
-    /*float _audioVolume;
-    public float audioVolume
-    {
-        get
-        {
-            if (_audioVolume < 0)
-                return 0;
-            if (_audioVolume > 1)
-                return 1;
-
-            return _audioVolume;
-        }
-        set
-        {
-            _audioVolume = value;
-            mixer.SetFloat("MasterVolume", _audioVolume);
-        }
-    }*/
+    bool tutorialComplete = false;
 
     private void Awake()
     {

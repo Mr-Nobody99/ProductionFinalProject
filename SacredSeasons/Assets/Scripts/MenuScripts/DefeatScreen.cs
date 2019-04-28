@@ -6,14 +6,18 @@ public class DefeatScreen : MonoBehaviour
 {
     public void MainMenu()
     {
-        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.ShowScreen("Main Menu");
         UIManager.instance.Restart();
     }
 
+    public void Continue()
+    {
+
+        UIManager.instance.Continue();
+    }
+
     public void Quit()
     {
-        AudioManager.instance.PlaySingle(UIManager.instance.back);
         UIManager.instance.Quit();
     }
 }
