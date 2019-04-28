@@ -361,8 +361,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: 0.2605968, y: 0.5196365, z: -0.17018898, w: 0.79567766}
-  m_LocalPosition: {x: -31.36677, y: 40.205692, z: -13.772295}
+  m_LocalRotation: {x: 0.15790118, y: 0.92826194, z: -0.33217716, w: 0.95187783}
+  m_LocalPosition: {x: -23.7476, y: 40.205692, z: 19.334713}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1283982638}
-  m_PathPosition: 1.509548
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -1738,7 +1738,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400458099}
-  m_LocalRotation: {x: 0.2605968, y: 0.5196365, z: -0.17018898, w: 0.79567766}
+  m_LocalRotation: {x: 0.14464769, y: 0.85034794, z: -0.30429575, w: 0.40421483}
   m_LocalPosition: {x: -27.56, y: 14.257103, z: 46.599606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1946,11 +1946,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431195522014031120, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: musicSource
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51eb1fbdb43fb54dbe3cee5ad25886e, type: 3}
