@@ -1937,15 +1937,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 749322020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e, type: 3}
-      propertyPath: Loop
+    - target: {fileID: 9128109203792279322, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 749322020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: af366ff601072294c93148d1320b08f7,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51eb1fbdb43fb54dbe3cee5ad25886e, type: 3}
 --- !u!1 &2067262630

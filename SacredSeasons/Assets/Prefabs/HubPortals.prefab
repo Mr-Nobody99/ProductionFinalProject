@@ -937,6 +937,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: af366ff601072294c93148d1320b08f7,
+        type: 2}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: MinDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370478577669936036, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066596eddfbcbcb488c4a4a2d3a943ab, type: 3}
 --- !u!4 &9131623320276444716 stripped

@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
     {
         fxSource.clip = clip;
 
-        fxSource.Play();
+        fxSource.PlayOneShot(clip);
     }
 
     public void PlayMusic(AudioClip clip)
@@ -50,11 +50,29 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Level Loaded");
+        Debug.Log(scene.name);
+
         sceneName = SceneManager.GetActiveScene().name;
 
-        switch (sceneName)
+        switch (scene.name)
         {
-            case "Main Menu":
+            case "Main Menu Scene":
                 PlayMusic(mainMenuMusic);
                 break;
             case "HUB":
@@ -81,9 +99,4 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
