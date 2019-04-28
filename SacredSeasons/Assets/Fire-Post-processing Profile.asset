@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Post-processing Profile
+  m_Name: Fire-Post-processing Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 114766568400827548}
-  - {fileID: 114539774546919332}
-  - {fileID: 114332792100390356}
---- !u!114 &114332792100390356
+  - {fileID: 114427918127883250}
+  - {fileID: 114582141333737448}
+--- !u!114 &114427918127883250
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,7 +36,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.75
+    value: 1.75
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -55,64 +54,17 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 2.5
+    value: 1.5
   directLightingStrength:
     overrideState: 1
-    value: 0.331
+    value: 0.15
   radius:
     overrideState: 0
     value: 0.25
   quality:
     overrideState: 0
     value: 2
---- !u!114 &114539774546919332
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 2
-  threshold:
-    overrideState: 1
-    value: 1.25
-  softKnee:
-    overrideState: 1
-    value: 0.5
-  clamp:
-    overrideState: 1
-    value: 65472
-  diffusion:
-    overrideState: 1
-    value: 4.21
-  anamorphicRatio:
-    overrideState: 1
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 1.2311444, g: 1.2311444, b: 1.2311444, a: 1}
-  fastMode:
-    overrideState: 1
-    value: 0
-  dirtTexture:
-    overrideState: 1
-    value: {fileID: 0}
-    defaultState: 1
-  dirtIntensity:
-    overrideState: 1
-    value: 28
---- !u!114 &114766568400827548
+--- !u!114 &114582141333737448
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
