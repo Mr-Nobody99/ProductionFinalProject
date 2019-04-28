@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1608007275}
   - component: {fileID: 6268360301403354712}
   - component: {fileID: 1608007276}
+  - component: {fileID: 8113338139289613630}
   m_Layer: 0
   m_Name: Production_Boss-Base
   m_TagString: Untagged
@@ -68,6 +69,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterPrefab: {fileID: 262489541, guid: 030c8a3ed93e7e040933217b2941a06b, type: 3}
   smokeFX: {fileID: 1801667493}
+--- !u!136 &8113338139289613630
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608007273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.6168466
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5115192, z: 0}
 --- !u!1 &1801667490
 GameObject:
   m_ObjectHideFlags: 0
