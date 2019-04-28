@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance = null;
+
+    public AudioMixer mixer;
+
     public AudioSource fxSource;
     public AudioSource musicSource;
 
@@ -16,9 +21,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip bossMusic;
 
     string sceneName = "";
-
-    //public AudioSource uiSource;
-    public static AudioManager instance = null;
 
     private void Awake()
     {
@@ -94,6 +96,11 @@ public class AudioManager : MonoBehaviour
                 PlayMusic(hubMusic);
                 break;
         }
+    }
+
+    public void SetExposedParam()
+    {
+
     }
 
 }
