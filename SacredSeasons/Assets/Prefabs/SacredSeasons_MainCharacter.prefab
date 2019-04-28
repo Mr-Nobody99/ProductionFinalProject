@@ -1933,7 +1933,8 @@ MonoBehaviour:
   rotationSpeed: 0.5
   rotationBuildUp: 0.95
   jumpForce: 15
-  airControl: 0.5
+  airControl: 0.7
+  bounceForce: 33
   L_InputX: 0
   L_InputZ: 0
   L_inputMagnitude: 0
@@ -1954,6 +1955,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   blockRotation: 0
   isGrounded: 0
+  doBounce: 0
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0

@@ -155,6 +155,9 @@ public class PlayerController : MonoBehaviour
             if (MoveSpeed != initalSpeed) { MoveSpeed = initalSpeed; }
             if (Input.GetButtonDown("Jump") || doBounce && !isDefending)
             {
+
+                Debug.Log("Bounce: " + doBounce);
+
                 animController.SetTrigger("Jump");
                 MoveSpeed *= airControl;
                 if(doBounce)
