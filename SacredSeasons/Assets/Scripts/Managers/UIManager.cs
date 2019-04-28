@@ -66,7 +66,7 @@ public class UIManager : MonoBehaviour
 
         } else if (name.Equals("Options Menu"))
         {
-            if (currentSeason.Contains("HUb"))
+            if (currentSeason.Contains("HUB"))
             {
                 name = "Fall Options Menu";
             }
