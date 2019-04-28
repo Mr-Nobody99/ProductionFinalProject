@@ -107,38 +107,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
-        {
-            blockRotation = false;
-            isDefending = Input.GetButton("Block") ? true : false;
-            Defend(isDefending);
-
-            if (!paused)
-            {
-                isGrounded = controller.isGrounded;
-                animController.SetBool("Grounded", isGrounded);
-                CheckGrounded();
-                if (!isDefending)
-                {
-                    CalcInputMagnitude();
-                    CalcMoveAndRotation();
-                }
-                else
-                {
-                    animController.SetFloat("Input X", 0f);
-                    animController.SetFloat("Input Z", 0f);
-                }
-                ApplyMove();
-            }
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
-        print("dot = " + Vector3.Dot(cam.transform.forward, transform.forward));
         if (Input.GetButtonDown("Pause"))
         {
             if (paused)
@@ -151,13 +122,31 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (!paused && !isDefending)
+        if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
         {
-            UpdateEquippedElement();
+            blockRotation = false;
+            isDefending = Input.GetButton("Block") ? true : false;
+            Defend(isDefending);
 
-            if (Input.GetButtonDown("Shoot"))
+            if (!isDefending && !paused)
             {
-                animController.SetTrigger("Throw");
+                isGrounded = controller.isGrounded;
+                animController.SetBool("Grounded", isGrounded);
+                CheckGrounded();
+                CalcInputMagnitude();
+                CalcMoveAndRotation();
+                ApplyMove();
+                UpdateEquippedElement();
+                if (Input.GetButtonDown("Shoot"))
+                {
+                    animController.SetTrigger("Throw");
+                    //Shoot();
+                }
+            }
+            else
+            {
+                animController.SetFloat("Input X", 0f);
+                animController.SetFloat("Input Z", 0f);
             }
         }
     }
@@ -249,10 +238,6 @@ public class PlayerController : MonoBehaviour
 
     void ApplyMove()
     {
-        if(isDefending)
-        {
-            moveDirection = Vector3.zero;
-        }
         movementVector.x = moveDirection.x;
         movementVector.z = moveDirection.z;
         controller.Move(movementVector * Time.deltaTime);
@@ -260,17 +245,17 @@ public class PlayerController : MonoBehaviour
 
     void UpdateEquippedElement()
     {
-        if ((Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap) || Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetAxis("SwitchProjectile") == 1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
             equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
+        else if (Input.GetAxis("SwitchProjectile") == -1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
             equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == 0)
+        else if (Input.GetAxis("SwitchProjectile") == 0 || Input.GetKeyUp(KeyCode.Tab))
         {
             blockElementSwap = false;
         }
@@ -291,23 +276,15 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot()
     {
-        if (Vector3.Dot(cam.transform.forward, transform.forward) > 0.25f)
+        RaycastHit Hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out Hit, 100000.0f))
         {
-            RaycastHit Hit;
-            if (Physics.Raycast(cam.transform.position, cam.transform.forward, out Hit, 100000.0f))
-            {
-                shooter.LookAt(Hit.point);
-                Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
-            }
-            else
-            {
-                Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
-            }
+            shooter.LookAt(Hit.point);
+            Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
         }
         else
         {
-            shooter.LookAt(transform.forward * 10000.0f);
-            Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
+            Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
         }
     }
 
