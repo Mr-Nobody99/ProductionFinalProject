@@ -14724,12 +14724,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fxSource: {fileID: 749322020}
   musicSource: {fileID: 749322020}
-  mainMenuMusic: {fileID: 0}
-  hubMusic: {fileID: 0}
-  winterMusic: {fileID: 0}
-  springMusic: {fileID: 0}
-  summerMusic: {fileID: 0}
-  bossMusic: {fileID: 0}
+  mainMenuMusic: {fileID: 8300000, guid: ba1f6c2c06c703f43946a8d6fa4a220c, type: 3}
+  hubMusic: {fileID: 8300000, guid: 83e42131204f5e04091121fb3b451e63, type: 3}
+  winterMusic: {fileID: 8300000, guid: 149cc590bfccf0348b3e4baf16b601c4, type: 3}
+  springMusic: {fileID: 8300000, guid: cd63048ef412088498871942949770a0, type: 3}
+  summerMusic: {fileID: 8300000, guid: a6f70d7ece1e14c49809101d4bab4bb9, type: 3}
+  bossMusic: {fileID: 8300000, guid: 6a629f3f5319ccc428c55870f10286c8, type: 3}
 --- !u!1 &8409166614939259786
 GameObject:
   m_ObjectHideFlags: 0
