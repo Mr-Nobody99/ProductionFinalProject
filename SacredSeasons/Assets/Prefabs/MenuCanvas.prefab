@@ -2318,7 +2318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114c2a7e7ace08b4b8ec8113c363a1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 3263944451207798954}
+  BGM: {fileID: 3263944451207798954}
+  SFX: {fileID: 7049254729972719981}
 --- !u!1 &751832240319876280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4896,7 +4897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114c2a7e7ace08b4b8ec8113c363a1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 4367680732491636109}
+  BGM: {fileID: 0}
+  SFX: {fileID: 0}
 --- !u!1 &2615987846488802818
 GameObject:
   m_ObjectHideFlags: 0
@@ -8716,15 +8718,15 @@ MonoBehaviour:
   m_FillRect: {fileID: 1919767079100671593}
   m_HandleRect: {fileID: 6706469969933600674}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9128109202799505420}
-        m_MethodName: SetAudioVolume
+        m_MethodName: SetSFXVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12817,7 +12819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114c2a7e7ace08b4b8ec8113c363a1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 6870626873148459532}
+  BGM: {fileID: 6870626873148459532}
+  SFX: {fileID: 6538671516127698446}
 --- !u!1 &7276519935984644655
 GameObject:
   m_ObjectHideFlags: 0
@@ -16332,7 +16335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 114c2a7e7ace08b4b8ec8113c363a1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sound: {fileID: 9128109202890408264}
+  BGM: {fileID: 9128109202890408264}
+  SFX: {fileID: 8062684420336012246}
 --- !u!1 &9128109202856879744
 GameObject:
   m_ObjectHideFlags: 0
@@ -16603,7 +16607,7 @@ AudioSource:
   m_GameObject: {fileID: 9128109202864556288}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: af366ff601072294c93148d1320b08f7,
+  OutputAudioMixerGroup: {fileID: 243185534764568968, guid: af366ff601072294c93148d1320b08f7,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public Slider Sound;
+    public Slider BGM;
+    public Slider SFX;
 
     public void Back()
     {
@@ -21,9 +22,14 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetBGMVolume()
     {
-        Debug.Log("Setting BGM Volume to: " + Sound.value);
-        AudioManager.instance.mixer.SetFloat("bgmVolume", Sound.value);
+        //Debug.Log("Setting BGM Volume to: " + Sound.value);
+        AudioManager.instance.mixer.SetFloat("bgmVolume", BGM.value);
         //AudioManager.instance.PlaySingle(UIManager.instance.confirm);
+    }
+
+    public void SetSFXVolume()
+    {
+        AudioManager.instance.mixer.SetFloat("sfxVolume", SFX.value);
     }
 
     void Start()
