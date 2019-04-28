@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class McGuffin : MonoBehaviour
 {
@@ -79,6 +80,7 @@ public class McGuffin : MonoBehaviour
         if(other.tag.Equals("Player"))
         {
             LevelManager.SetLevelComplete(name, true);
+            SceneManager.LoadScene("HUB");
             Destroy(gameObject);
         }
     }
