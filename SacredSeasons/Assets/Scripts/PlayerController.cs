@@ -245,17 +245,17 @@ public class PlayerController : MonoBehaviour
 
     void UpdateEquippedElement()
     {
-        if (Input.GetAxis("SwitchProjectile") == 1 && !blockElementSwap)
+        if (Input.GetAxis("SwitchProjectile") == 1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
             equippedElementIndex = (equippedElementIndex < Projectiles.Count - 1) ? ++equippedElementIndex : 0;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == -1 && !blockElementSwap)
+        else if (Input.GetAxis("SwitchProjectile") == -1 || Input.GetKeyDown(KeyCode.Tab) && !blockElementSwap)
         {
             equippedElementIndex = (equippedElementIndex > 0) ? --equippedElementIndex : Projectiles.Count - 1;
             blockElementSwap = true;
         }
-        else if (Input.GetAxis("SwitchProjectile") == 0)
+        else if (Input.GetAxis("SwitchProjectile") == 0 || Input.GetKeyUp(KeyCode.Tab))
         {
             blockElementSwap = false;
         }
