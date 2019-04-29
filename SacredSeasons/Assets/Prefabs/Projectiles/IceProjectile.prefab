@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5766161918443312194}
   m_Layer: 0
   m_Name: IceProjectile
-  m_TagString: Projectile
+  m_TagString: Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 6545536944631818709, guid: 907a597d1918d64489921f231447e48e,
     type: 3}
-  damage: 25
+  damage: 10
 --- !u!114 &3954115178586905783
 MonoBehaviour:
   m_ObjectHideFlags: 0

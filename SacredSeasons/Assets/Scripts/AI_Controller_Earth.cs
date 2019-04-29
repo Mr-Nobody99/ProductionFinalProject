@@ -139,6 +139,7 @@ public class AI_Controller_Earth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            PlayerScore.AddToCurrentScore(100);
             Die();
         }
 

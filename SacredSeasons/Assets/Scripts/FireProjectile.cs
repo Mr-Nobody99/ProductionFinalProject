@@ -38,7 +38,7 @@ public class FireProjectile : MonoBehaviour
         }
         else if(other.tag.Equals("EarthEnemy"))
         {
-            other.gameObject.GetComponent<AI_Controller_Earth>().TakeDamage(dmg);
+            other.gameObject.GetComponent<AI_Controller_Earth>().TakeDamage(dmg*2);
         }
     }
 
@@ -46,8 +46,11 @@ public class FireProjectile : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Player"))
         {
-            print("Player shot");
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(dmg);
+        }
+        else if (collision.gameObject.tag.Equals("Monster"))
+        {
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(dmg/3);
         }
     }
 

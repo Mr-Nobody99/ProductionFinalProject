@@ -24,15 +24,20 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartCoroutine(TrasformDelay());
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    StartCoroutine(TrasformDelay());
+        //}
 
-        if(growMonster)
+        if (growMonster)
         {
             StartCoroutine(GrowDelay());
         }
+    }
+
+    public void StartTransform()
+    {
+        StartCoroutine(TrasformDelay());
     }
 
     IEnumerator TrasformDelay()

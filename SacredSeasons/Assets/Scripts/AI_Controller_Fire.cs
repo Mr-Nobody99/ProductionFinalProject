@@ -214,6 +214,7 @@ public class AI_Controller_Fire : MonoBehaviour
 
     private void Die()
     {
+        PlayerScore.AddToCurrentScore(100);
         Destroy(gameObject);
     }
 }

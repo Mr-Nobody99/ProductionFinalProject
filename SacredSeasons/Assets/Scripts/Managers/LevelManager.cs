@@ -29,13 +29,13 @@ public static class LevelManager
         switch (name)
         {
             case "fire":
-                fireLevelComplete = true;
+                fireLevelComplete = value;
                 break;
             case "water":
-                waterLevelComplete = true;
+                waterLevelComplete = value;
                 break;
             case "earth":
-                earthLevelComplete = true;
+                earthLevelComplete = value;
                 break;
         }
     }

@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8518278734674931241}
   m_Layer: 0
   m_Name: FireProjectile
-  m_TagString: Projectile
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa6f6d0d79675b48add3b048cafe135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 10
 --- !u!114 &8662897899599826538
 MonoBehaviour:
   m_ObjectHideFlags: 0

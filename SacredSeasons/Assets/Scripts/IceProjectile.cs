@@ -31,11 +31,15 @@ public class IceProjectile : MonoBehaviour
         if (collision.gameObject.tag == "FireEnemy")
         {
             collision.gameObject.GetComponent<AI_Controller_Fire>().Freeze();
-            collision.gameObject.GetComponent<AI_Controller_Fire>().TakeDamage(damage);
+            collision.gameObject.GetComponent<AI_Controller_Fire>().TakeDamage(damage*2);
         }
         else if(collision.gameObject.tag.Equals("Player"))
         {
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+        }
+        else if(collision.gameObject.tag.Equals("Monster"))
+        {
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(damage/3);
         }
     }
 

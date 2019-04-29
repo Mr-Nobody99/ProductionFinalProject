@@ -51,21 +51,21 @@ public class MonsterBossController : MonoBehaviour
         AnimController = this.GetComponent<Animator>();
         PlayerRef = GameObject.FindGameObjectWithTag("Player");
         laserScript = Laser.GetComponent<Laser>();
+        Waypoints = new List<AI_Waypoint>(FindObjectsOfType<AI_Waypoint>());
         assignWaypoint = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void TakeDamage(float dmg)
     {
-        if(collision.collider.tag.Equals("Projectile"))
-        {
-            CurrentHealth -= 1f;
+            CurrentHealth -= dmg;
             HealthBar.fillAmount = CurrentHealth / MaxHealth;
             if(CurrentHealth <= 0)
             {
                 UIManager.instance.ShowScreen("Victory Screen");
-                //Destroy(gameObject);
+                LevelManager.SetLevelComplete("fire", false);
+                LevelManager.SetLevelComplete("water", false);
+                LevelManager.SetLevelComplete("earth", false);
             }
-        }
     }
 
     // Update is called once per frame

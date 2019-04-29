@@ -1626,12 +1626,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152937498}
   m_Mesh: {fileID: 4300000, guid: 0a642e2947e15e54eb20702887d27f6f, type: 3}
---- !u!1 &171615041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2235631421241589486, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 410654471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &186394551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3304,21 +3298,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-        type: 3}
-      propertyPath: bounceForce
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-        type: 3}
-      propertyPath: shields.Array.data[1]
-      value: 
-      objectReference: {fileID: 171615041}
-    - target: {fileID: 7935316714361118024, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-        type: 3}
-      propertyPath: shields.Array.data[2]
-      value: 
-      objectReference: {fileID: 1512114893}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb86587f6eec434d8cbaa402de4cbd0, type: 3}
 --- !u!4 &410654472 stripped
@@ -3472,7 +3451,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443335632}
-  m_LocalRotation: {x: 0.025463793, y: -0.00012822168, z: 0.0000032148112, w: 0.99967575}
+  m_LocalRotation: {x: 0.025463829, y: -0.00012822713, z: 0.000003214954, w: 0.9996758}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6863,6 +6842,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694381365}
   m_Mesh: {fileID: 4300008, guid: 38fc850606d7ac34bade16b17ef2f0a5, type: 3}
+--- !u!1 &719354687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100014, guid: be33e9292c4458948975385a205c04d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 576481988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &719354688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719354687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.069232345, y: 0.22075334, z: 0.06299483}
+  m_Center: {x: -0.0012894943, y: 0.046061695, z: -0.0019074297}
 --- !u!1001 &719371054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10350,7 +10348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156491102}
-  m_LocalRotation: {x: 0.025463793, y: -0.00012822365, z: 0.0000032917342, w: 0.99967575}
+  m_LocalRotation: {x: 0.02546383, y: -0.00012819449, z: 0.0000032909973, w: 0.99967575}
   m_LocalPosition: {x: 65.03186, y: 3.5607946, z: 13.412157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11481,7 +11479,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254448931}
-  m_LocalRotation: {x: 0.025463793, y: -0.0001282342, z: 0.000003292003, w: 0.99967575}
+  m_LocalRotation: {x: 0.025463808, y: -0.0001281945, z: 0.0000032909943, w: 0.9996758}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12811,6 +12809,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1561082189684541233}
     m_Modifications:
+    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
+      propertyPath: m_Name
+      value: FirePortal_Plane
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
@@ -12858,10 +12860,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
-      propertyPath: m_Name
-      value: FirePortal_Plane
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 24ee6418445932c48b22da1c9d75fa1f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12959,12 +12957,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d0d73012cb3c954791597c3eb0ec960, type: 3}
---- !u!1 &1512114893 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6008612005605692607, guid: 2eb86587f6eec434d8cbaa402de4cbd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 410654471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1516143793
 GameObject:
   m_ObjectHideFlags: 0
@@ -16955,8 +16947,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956705078}
-  m_LocalRotation: {x: 0.16452245, y: -0.00012649143, z: 0.000021071975, w: 0.98637336}
-  m_LocalPosition: {x: 0, y: 2.4372714, z: 1.2726364}
+  m_LocalRotation: {x: 0.025463833, y: -0.00012822893, z: 0.0000032404048, w: 0.9996758}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2040114616}

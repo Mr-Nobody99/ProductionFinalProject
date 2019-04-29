@@ -160,7 +160,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
         AudioManager.instance.PlaySingle(confirm);
-        SceneManager.LoadScene("HUB");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void Quit()
@@ -175,6 +175,6 @@ public class UIManager : MonoBehaviour
         PlayerController.currentHealth = 100;
         //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
-        SceneManager.LoadScene("Boss Fight");
+        SceneManager.LoadScene("Main Menu Scene");
     }
 }

@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!menuUp && !EventSystem.current.IsPointerOverGameObject())
+        if (!menuUp)
         {
             blockRotation = false;
             isDefending = Input.GetButton("Block") ? true : false;
@@ -138,7 +138,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print("dot = " + Vector3.Dot(cam.transform.forward, transform.forward));
         if (Input.GetButtonDown("Pause"))
         {
             if (paused)

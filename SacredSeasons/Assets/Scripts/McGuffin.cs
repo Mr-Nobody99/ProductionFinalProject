@@ -79,6 +79,7 @@ public class McGuffin : MonoBehaviour
         if(other.tag.Equals("Player"))
         {
             LevelManager.SetLevelComplete(name, true);
+            PlayerScore.AddToCurrentScore(500);
             Destroy(gameObject);
         }
     }
