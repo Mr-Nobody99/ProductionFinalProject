@@ -90,6 +90,9 @@ public class PlayerController : MonoBehaviour
 
     public bool doBounce = false;
 
+    [SerializeField]
+    public static List<GameObject> spellsShot = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -281,11 +284,11 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out Hit, 100000.0f))
         {
             shooter.LookAt(Hit.point);
-            Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation);
+            spellsShot.Add(Instantiate(Projectiles[equippedElementIndex], shooter.position, shooter.rotation));
         }
         else
         {
-            Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation);
+            spellsShot.Add(Instantiate(Projectiles[equippedElementIndex], cam.transform.position + cam.transform.forward * 5.0f, cam.transform.rotation));
         }
     }
 

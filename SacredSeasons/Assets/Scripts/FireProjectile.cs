@@ -20,7 +20,7 @@ public class FireProjectile : MonoBehaviour
     {
         if(other.tag.Equals("Plant"))
         {
-            print("Hit plant");
+            //print("Hit plant");
             moveComponent.speed = 0f;
             var hitFX = Instantiate(moveComponent.Hit_FX, transform.position, Quaternion.identity);
             var hit_PS = hitFX.GetComponent<ParticleSystem>();
@@ -46,8 +46,10 @@ public class FireProjectile : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Player"))
         {
-            print("Player shot");
-            collision.gameObject.GetComponent<PlayerController>().TakeDamage(dmg);
+            if (!PlayerController.spellsShot.Contains(gameObject))
+            {
+                collision.gameObject.GetComponent<PlayerController>().TakeDamage(dmg);
+            }
         }
     }
 

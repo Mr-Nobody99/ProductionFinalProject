@@ -200,14 +200,10 @@ public class UIManager : MonoBehaviour
     {
         AudioManager.instance.PlaySingle(confirm);
         PlayerController.currentHealth = 100;
-        //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
         LevelManager.ResetProgress();
         SceneManager.LoadScene("Main Menu Scene");
     }
-
-    /*Scene curScene = SceneManager.GetActiveScene();
-    currentSeason = curScene.name;*/
 
     void OnEnable()
     {

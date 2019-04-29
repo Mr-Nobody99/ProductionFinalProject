@@ -35,7 +35,10 @@ public class IceProjectile : MonoBehaviour
         }
         else if(collision.gameObject.tag.Equals("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            if (!PlayerController.spellsShot.Contains(gameObject))
+            {
+                collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+            }
         }
     }
 
