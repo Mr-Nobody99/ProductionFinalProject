@@ -493,7 +493,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: -0.000000049076363, y: 0.999688, z: -0.024976611, w: 0.000000015977545}
+  m_LocalRotation: {x: -0.000000049936045, y: 0.999688, z: -0.024976589, w: -0.000000018431196}
   m_LocalPosition: {x: -25.22, y: -47.24, z: -121.53999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1094,7 +1094,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413168885}
-  m_LocalRotation: {x: 0.000000028488241, y: -0.9996881, z: 0.024976587, w: -0.000000016545632}
+  m_LocalRotation: {x: 0.000000029348595, y: -0.9996881, z: 0.024976607, w: 0.000000017890022}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1729,7 +1729,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: 0.0000001430053, y: -0.999688, z: 0.02497661, w: -0.000000013630787}
+  m_LocalRotation: {x: 0.00000014386498, y: -0.999688, z: 0.024976589, w: 0.000000020777952}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2524,12 +2524,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1596206370, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 306
+      propertyPath: m_AnchoredPosition.x
+      value: -693
       objectReference: {fileID: 0}
     - target: {fileID: 1596206370, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -683
+      propertyPath: m_AnchoredPosition.y
+      value: 322
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
@@ -4997,6 +4997,61 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7201141401514512909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825521539812601410, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825521539812601410, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549269974309121612, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549269974309121612, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9128109204665373433, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
         type: 3}
       propertyPath: m_IsActive
@@ -5008,11 +5063,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 535398248881022027, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7201141401514512909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5036,242 +5086,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 3900321244870114101, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 3113954477075288604, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3113954477075288604, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 9128109203264140313, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9128109203264140313, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.044995
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825521539812601410, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825521539812601410, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4779554434889201536, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549269974309121612, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1549269974309121612, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383149315846940909, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8917221894341434020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 6a907f89a4395064e9922f5b97a1d1a2,
-        type: 3}
-    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.97647065
-      objectReference: {fileID: 0}
-    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.8117648
-      objectReference: {fileID: 0}
-    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.45098042
-      objectReference: {fileID: 0}
-    - target: {fileID: 1695093473893666473, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 5059301365179370658, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6647013664308237341, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: Good, you're finally here. The situation is worse than we thought. The
-        last remaining autumn spirit sits here weakened in this jar. It's no wonder
-        the harvest has been grim this year!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3170464362064728020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084542086755245104, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8545152339528122926, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: "We must hurry! I'm using my power to keep this last spirit alive, but
-        I can't keep holding it forever, and I can't leave this room either!\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6246194226728976257, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 4324728675920031013, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090153628011658466, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: It's up to you, bring me the objects of power for each season, found
-        through their portals in the chamber beyond this door! Only then will I be
-        able to restore this spirit to its full power, and let it bring balance to
-        the world.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4099472202664003593, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 2732211352827583989, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 79320444228730284, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: "Before you go though, I must be sure you're prepared for the challenges
-        you'll face ahead...\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8159584182003326174, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 2045613374608642677, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369495931992393793, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: "Do you see that shining target ahead? Hit it with a spell! You should
-        be well versed in them, we've spent enough time together going over them.\r\n\n(Left
-        Click or Right Bumper to fire a spell. Press TAB or left/right \non the d-pad
-        to change the element)\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5387260679589048514, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 5417494528444867223, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5667072571360937676, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: "Excellent aim! Now a strong offense is important, but let's never forget
-        the benefit of a good defense. Show me your shield!\r\n\n(Hold Right click
-        or Left Bumper to raise your shield)\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1520993978204752330, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460868674347405330, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2840848951648570735, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: Fantastic! I believe you're ready. Never forget that some elements are
-        stronger against others. Ice freezes fire's savage heart, fire sets earth's
-        tranquility ablaze, and earth grounds ice's tempremantality.
-      objectReference: {fileID: 0}
-    - target: {fileID: 521669198931432454, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 12.950195
-      objectReference: {fileID: 0}
-    - target: {fileID: 8155233306555507668, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2871815118170406523, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
-        type: 3}
-      propertyPath: m_Text
-      value: Go to the doors now, and return when you've collected the objects of
-        power!
       objectReference: {fileID: 0}
     - target: {fileID: 3560637417932909816, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
         type: 3}
@@ -5323,6 +5137,192 @@ PrefabInstance:
       propertyPath: tutorialTexts.Array.data[8]
       value: 
       objectReference: {fileID: 1727667175}
+    - target: {fileID: 3900321244870114101, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113954477075288604, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113954477075288604, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695093473893666473, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 3170464362064728020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246194226728976257, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099472202664003593, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159584182003326174, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387260679589048514, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520993978204752330, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 521669198931432454, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12.950195
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128109203264140313, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128109203264140313, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.044995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8155233306555507668, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5460868674347405330, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059301365179370658, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084542086755245104, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732211352827583989, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417494528444867223, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324728675920031013, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045613374608642677, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369495931992393793, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: "Do you see that shining target ahead? Hit it with a spell! You should
+        be well versed in them, we've spent enough time together going over them.\r\n\n(Left
+        Click or Right Bumper to fire a spell. Press TAB or left/right \non the d-pad
+        to change the element)\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 79320444228730284, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: "Before you go though, I must be sure you're prepared for the challenges
+        you'll face ahead...\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090153628011658466, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: It's up to you, bring me the objects of power for each season, found
+        through their portals in the chamber beyond this door! Only then will I be
+        able to restore this spirit to its full power, and let it bring balance to
+        the world.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647013664308237341, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: Good, you're finally here. The situation is worse than we thought. The
+        last remaining autumn spirit sits here weakened in this jar. It's no wonder
+        the harvest has been grim this year!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667072571360937676, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: "Excellent aim! Now a strong offense is important, but let's never forget
+        the benefit of a good defense. Show me your shield!\r\n\n(Hold Right click
+        or Left Bumper to raise your shield)\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840848951648570735, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: Fantastic! I believe you're ready. Never forget that some elements are
+        stronger against others. Ice freezes fire's savage heart, fire sets earth's
+        tranquility ablaze, and earth grounds ice's tempremantality.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871815118170406523, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: Go to the doors now, and return when you've collected the objects of
+        power!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545152339528122926, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Text
+      value: "We must hurry! I'm using my power to keep this last spirit alive, but
+        I can't keep holding it forever, and I can't leave this room either!\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917221894341434020, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 6a907f89a4395064e9922f5b97a1d1a2,
+        type: 3}
+    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.97647065
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372589131838184553, guid: f51eb1fbdb43fb54dbe3cee5ad25886e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.45098042
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51eb1fbdb43fb54dbe3cee5ad25886e, type: 3}
 --- !u!114 &1727667174 stripped
