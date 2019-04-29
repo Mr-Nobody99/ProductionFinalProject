@@ -502,8 +502,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: -0.00000004993554, y: 0.999688, z: -0.024976593, w: -0.000000018411082}
-  m_LocalPosition: {x: -26.47, y: -47.24, z: -121.53999}
+  m_LocalRotation: {x: -0.000000049076363, y: 0.999688, z: -0.024976611, w: 0.000000015977548}
+  m_LocalPosition: {x: -25.22, y: -47.24, z: -121.53999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1738,7 +1738,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: 0.00000014386447, y: -0.999688, z: 0.02497659, w: 0.000000020757838}
+  m_LocalRotation: {x: 0.0000001430053, y: -0.999688, z: 0.02497661, w: -0.000000013630791}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2532,61 +2532,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6703573424294968824, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: m_Name
-      value: Current Spell Icon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5013091323681350105, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: m_Name
-      value: Branch Img
-      objectReference: {fileID: 0}
-    - target: {fileID: 6175807475015008490, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: SpellIcons.Array.data[1]
-      value: 
-      objectReference: {fileID: 2800000, guid: 4e913b5521e11624dae4239ea8dd2913, type: 3}
-    - target: {fileID: 6175807475015008490, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: SpellIcons.Array.data[2]
-      value: 
-      objectReference: {fileID: 2800000, guid: 758f24509b85809478808490c25c3df6, type: 3}
-    - target: {fileID: 1692998749044662726, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 206081625, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 690268963, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 206081627, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 3e64c6ac61a75284da3e4d74f7c251e1, type: 3}
-    - target: {fileID: 690268965, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 690268965, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3e64c6ac61a75284da3e4d74f7c251e1,
-        type: 3}
-    - target: {fileID: 690268965, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8966121569453460969, guid: 637c1e857d458c444aecaeed3aba35bd,
-        type: 3}
-      propertyPath: SpellIcons.Array.size
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 637c1e857d458c444aecaeed3aba35bd, type: 3}
 --- !u!1001 &722382412
@@ -2753,12 +2698,12 @@ PrefabInstance:
     - target: {fileID: 3036418883080471911, guid: 1a993e1e51f7080499f9b3c6a94d5d39,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.12
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3036418883080471911, guid: 1a993e1e51f7080499f9b3c6a94d5d39,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.28
+      value: 0.36
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 105200970, guid: 1a993e1e51f7080499f9b3c6a94d5d39, type: 3}
@@ -5976,7 +5921,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2130445070}
   m_OnClick:
     m_PersistentCalls:

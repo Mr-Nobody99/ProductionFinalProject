@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public bool shootComplete = false;
     public bool shieldComplete = false;
 
+    public bool canMove = true;
+
     public bool tutorialComplete = false;
 
     private void Awake()

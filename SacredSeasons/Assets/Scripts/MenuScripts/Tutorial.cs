@@ -27,12 +27,14 @@ public class Tutorial : MonoBehaviour
             {
                 next.gameObject.SetActive(false);
                 Time.timeScale = 1;
+                GameManager.instance.canMove = true;
                 //Cursor.visible = false;
                 //Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
                 Time.timeScale = 0;
+                GameManager.instance.canMove = false;
                 //Cursor.visible = true;
                 //Cursor.lockState = CursorLockMode.None;
             }
@@ -41,6 +43,7 @@ public class Tutorial : MonoBehaviour
         {
             panel.SetActive(false);
             Time.timeScale = 1;
+            GameManager.instance.canMove = true;
             //Cursor.visible = false;
             //Cursor.lockState = CursorLockMode.Locked;
         } 
@@ -56,15 +59,21 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonUp("Jump") && next.gameObject.activeSelf == true)
+        {
+            Next();
+        }
+
         if (GameManager.instance.moveComplete == true)
         {
             tutorialTexts[curText].gameObject.SetActive(false);
             curText = curText + 1;
             tutorialTexts[curText].gameObject.SetActive(true);
             next.gameObject.SetActive(true);
-            next.Select();
+            //next.Select();
 
             Time.timeScale = 0;
+            GameManager.instance.canMove = false;
             //Cursor.visible = true;
             //Cursor.lockState = CursorLockMode.None;
 
@@ -83,9 +92,10 @@ public class Tutorial : MonoBehaviour
             curText = curText + 1;
             tutorialTexts[curText].gameObject.SetActive(true);
             next.gameObject.SetActive(true);
-            next.Select();
+            //next.Select();
 
             Time.timeScale = 0;
+            GameManager.instance.canMove = false;
             //Cursor.visible = true;
             //Cursor.lockState = CursorLockMode.None;
 

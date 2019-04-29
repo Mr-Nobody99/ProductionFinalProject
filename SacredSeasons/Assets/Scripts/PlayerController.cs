@@ -340,11 +340,7 @@ public class PlayerController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            UIManager.instance.Play();
-            menuUp = false;
-            paused = false;
+            UIManager.instance.TutorialUnPause();
         }
         else
         {

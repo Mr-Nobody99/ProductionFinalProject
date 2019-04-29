@@ -148,6 +148,22 @@ public class UIManager : MonoBehaviour
         PlayerController.menuUp = false;
     }
 
+    public void TutorialUnPause()
+    {
+        if (GameManager.instance.canMove == true)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+        Cursor.lockState = CursorLockMode.Locked;
+        screens[curScreen].screen.SetActive(false);
+        PlayerController.paused = false;
+        PlayerController.menuUp = false;
+    }
+
     public void PlayGame()
     {
         Debug.Log("Play Button Pressed");

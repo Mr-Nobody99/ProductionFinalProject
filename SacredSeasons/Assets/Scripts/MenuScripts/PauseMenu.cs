@@ -9,11 +9,15 @@ public class PauseMenu : MonoBehaviour
     {
         AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.paused = false;
-        if (SceneManager.GetActiveScene().name.Equals("Tutorial Scene"))
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
         {
-            UIManager.instance.tutorialScreen.SetActive(true);
+            UIManager.instance.TutorialUnPause();
         }
-        UIManager.instance.Play();
+        else
+        {
+            UIManager.instance.Play();
+        }
     }
 
     public void Options()
