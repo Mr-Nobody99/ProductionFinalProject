@@ -8188,6 +8188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialTexts: []
+  curText: 0
+  next: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1 &4304857748515604357
 GameObject:
   m_ObjectHideFlags: 0
@@ -15335,6 +15338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d18c86e07c02543adbc9c1c52a31cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveComplete: 0
+  shootComplete: 0
+  shieldComplete: 0
+  canMove: 1
+  tutorialComplete: 0
 --- !u!114 &4431195522014031120
 MonoBehaviour:
   m_ObjectHideFlags: 0

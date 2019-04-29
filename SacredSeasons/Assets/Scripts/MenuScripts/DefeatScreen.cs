@@ -12,7 +12,6 @@ public class DefeatScreen : MonoBehaviour
 
     public void Continue()
     {
-
         UIManager.instance.Continue();
     }
 

@@ -182,10 +182,10 @@ public class UIManager : MonoBehaviour
         Debug.Log("Quitting Game");
     }
 
-    // FINISH CONTNIUE BY ADDING IN HEALTH RESET AND POSSIBLE CHANGES IN DefeatScreen.cs
     public void Continue()
     {
         AudioManager.instance.PlaySingle(confirm);
+        PlayerController.currentHealth = PlayerController.maxHealth;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
