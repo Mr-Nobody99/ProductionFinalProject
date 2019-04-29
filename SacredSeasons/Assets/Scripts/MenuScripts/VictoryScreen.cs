@@ -6,6 +6,7 @@ public class VictoryScreen : MonoBehaviour
 {
     public void MainMenu()
     {
+        UIManager.instance.ShowScreen("Main Menu");
         UIManager.instance.Restart();
     }
 
