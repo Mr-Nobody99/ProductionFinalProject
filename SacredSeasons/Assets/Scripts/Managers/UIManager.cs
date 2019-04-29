@@ -121,10 +121,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        if (currentSeason.Equals("Tutorial Scene"))
-        {
-            tutorialScreen.SetActive(true);
-        }
+
     }
 
     private void Awake()
@@ -159,7 +156,7 @@ public class UIManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         screens[curScreen].screen.SetActive(false);
         AudioManager.instance.PlaySingle(confirm);
-        SceneManager.LoadScene("HUB");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void Quit()
@@ -202,5 +199,4 @@ public class UIManager : MonoBehaviour
     {
         currentSeason = SceneManager.GetActiveScene().name;
     }
-
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -337,12 +338,23 @@ public class PlayerController : MonoBehaviour
 
     public void UnPause()
     {
-        Time.timeScale = 1;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        UIManager.instance.Play();
-        menuUp = false;
-        paused = false;
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            UIManager.instance.Play();
+            menuUp = false;
+            paused = false;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            UIManager.instance.Play();
+            menuUp = false;
+            paused = false;
+        }
     }
 
 }

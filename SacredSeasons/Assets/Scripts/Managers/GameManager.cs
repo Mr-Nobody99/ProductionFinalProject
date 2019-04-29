@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    bool moveComplete = false;
-    bool shootComplete = false;
-    bool shieldComplete = false;
+    public bool moveComplete = false;
+    public bool shootComplete = false;
+    public bool shieldComplete = false;
 
-    bool tutorialComplete = false;
+    public bool tutorialComplete = false;
 
     private void Awake()
     {

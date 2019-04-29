@@ -23,12 +23,12 @@ public class TutorialDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      /*if(LevelManager.GetLevelComplete("fire") && LevelManager.GetLevelComplete("water") && LevelManager.GetLevelComplete("earth"))
+        if (GameManager.instance.tutorialComplete == true)
         {
             locked = false;
         }
 
-      if(!locked && activated && !open)
+        if (!locked && activated && !open)
         {
             if (doorR.transform.localEulerAngles.y != 156 && doorL.transform.localEulerAngles.y != 204)
             {
@@ -42,8 +42,29 @@ public class TutorialDoor : MonoBehaviour
                 open = true;
                 print("finished");
             }
-        }*/
-    }
+        }
+
+            /*if(LevelManager.GetLevelComplete("fire") && LevelManager.GetLevelComplete("water") && LevelManager.GetLevelComplete("earth"))
+              {
+                  locked = false;
+              }
+
+            if(!locked && activated && !open)
+              {
+                  if (doorR.transform.localEulerAngles.y != 156 && doorL.transform.localEulerAngles.y != 204)
+                  {
+                      doorR.transform.Rotate(0, 1, 0);
+                      print("Door_R Y Rotation = " + doorR.transform.localEulerAngles.y);
+                      doorL.transform.Rotate(0, -1, 0);
+                      print("Door_L Y Rotation = " + doorL.transform.localEulerAngles.y);
+                  }
+                  else
+                  {
+                      open = true;
+                      print("finished");
+                  }
+              }*/
+        }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -58,7 +79,7 @@ public class TutorialDoor : MonoBehaviour
     {
         if(other.tag.Equals("Player") && open)
         {
-            SceneManager.LoadScene("Boss Fight");
+            SceneManager.LoadScene("HUB");
         }
     }
 }

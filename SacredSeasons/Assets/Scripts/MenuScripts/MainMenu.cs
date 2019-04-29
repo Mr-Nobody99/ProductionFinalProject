@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour
         UIManager.instance.PlayGame();
     }
 
+    public void SkipTutorial()
+    {
+        UIManager.instance.PlayGame();
+    }
+
     public void Controls()
     {
         AudioManager.instance.PlaySingle(UIManager.instance.confirm);
