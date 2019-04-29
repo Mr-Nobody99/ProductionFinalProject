@@ -361,7 +361,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: 0.99740195, y: -0.043065492, z: 0.013851633, w: 0.95187783}
+  m_LocalRotation: {x: 0.30616304, y: -0.013219407, z: 0.004251905, w: 0.95187783}
   m_LocalPosition: {x: 0.97283536, y: 40.205692, z: -35.01828}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2041,6 +2041,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2203294253897541393, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203294253897541393, guid: e4e1125062f4e1749a5cdcc73bc19626,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e1125062f4e1749a5cdcc73bc19626, type: 3}
 --- !u!23 &2043250340442563563
@@ -2389,6 +2399,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5354534396956818521, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354534396956818521, guid: 7e6f8632a73703b4aa2d546bd7958866,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6f8632a73703b4aa2d546bd7958866, type: 3}
 --- !u!1001 &7872969763072018514
@@ -2456,6 +2476,16 @@ PrefabInstance:
     - target: {fileID: 7872969762442670287, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996758729785442698, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996758729785442698, guid: 066596eddfbcbcb488c4a4a2d3a943ab,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

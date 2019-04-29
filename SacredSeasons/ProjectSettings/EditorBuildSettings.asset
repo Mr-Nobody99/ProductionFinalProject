@@ -9,14 +9,17 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Test scene.unity
-    guid: 20100a3ce6838c84080a0691b765dbe4
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Main Menu Scene.unity
     guid: 41d1974f39dad3448b6767f407239c28
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Tutorial Scene.unity
-    guid: cd2370a32102620469d29036943ed02b
+    path: Assets/Scenes/Tutorial.unity
+    guid: 264ef6b32f4ef7f49996e9e1c018bad5
   - enabled: 1
     path: Assets/Scenes/HUB.unity
     guid: 9de19c1ab1756e9499b4badf6ab911f0
