@@ -15588,6 +15588,8 @@ MonoBehaviour:
   springMusic: {fileID: 8300000, guid: cd63048ef412088498871942949770a0, type: 3}
   summerMusic: {fileID: 8300000, guid: a6f70d7ece1e14c49809101d4bab4bb9, type: 3}
   bossMusic: {fileID: 8300000, guid: 6a629f3f5319ccc428c55870f10286c8, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 45636f84889769c40ad0dbe3a7504797, type: 3}
+  victoryMusic: {fileID: 8300000, guid: ed929a14fd584454ea4b9999bfefc1e2, type: 3}
 --- !u!82 &5073054326680442173
 AudioSource:
   m_ObjectHideFlags: 0

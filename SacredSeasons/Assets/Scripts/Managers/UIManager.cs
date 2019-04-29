@@ -94,6 +94,15 @@ public class UIManager : MonoBehaviour
             paused = false;
         }
 
+        if (name == "Defeat Screen")
+        {
+            AudioManager.instance.PlayMusic(AudioManager.instance.gameOverMusic);
+        }
+        else if (name == "Victory Screen")
+        {
+            AudioManager.instance.PlayMusic(AudioManager.instance.victoryMusic);
+        }
+
         // Change previous screen to be current screen
         previousScreenName = screens[curScreen].name;
 

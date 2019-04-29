@@ -20,6 +20,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip summerMusic;
     public AudioClip bossMusic;
 
+    public AudioClip gameOverMusic;
+    public AudioClip victoryMusic;
+
     string sceneName = "";
 
     private void Awake()
