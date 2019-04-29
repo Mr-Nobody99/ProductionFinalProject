@@ -269,7 +269,6 @@ GameObject:
   m_Component:
   - component: {fileID: 78311762}
   - component: {fileID: 78311761}
-  - component: {fileID: 78311760}
   - component: {fileID: 78311759}
   - component: {fileID: 78311758}
   - component: {fileID: 78311757}
@@ -445,14 +444,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 1
       enableBigTilePrepass: 1
       isFptlEnabled: 1
---- !u!81 &78311760
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78311756}
-  m_Enabled: 1
 --- !u!20 &78311761
 Camera:
   m_ObjectHideFlags: 0
@@ -502,8 +493,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: -0.00000004993554, y: 0.999688, z: -0.024976593, w: -0.00000001841108}
-  m_LocalPosition: {x: -26.47, y: -47.24, z: -121.53999}
+  m_LocalRotation: {x: -0.000000049076363, y: 0.999688, z: -0.024976611, w: 0.000000015977545}
+  m_LocalPosition: {x: -25.22, y: -47.24, z: -121.53999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1103,7 +1094,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413168885}
-  m_LocalRotation: {x: 0.000000029348595, y: -0.9996881, z: 0.024976607, w: 0.000000017890022}
+  m_LocalRotation: {x: 0.000000028488241, y: -0.9996881, z: 0.024976587, w: -0.000000016545632}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1738,7 +1729,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: 0.00000014386447, y: -0.999688, z: 0.02497659, w: 0.000000020757836}
+  m_LocalRotation: {x: 0.0000001430053, y: -0.999688, z: 0.02497661, w: -0.000000013630787}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

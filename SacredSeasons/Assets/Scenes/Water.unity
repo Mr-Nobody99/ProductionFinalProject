@@ -10888,7 +10888,6 @@ GameObject:
   m_Component:
   - component: {fileID: 852055706}
   - component: {fileID: 852055705}
-  - component: {fileID: 852055704}
   - component: {fileID: 852055703}
   - component: {fileID: 852055702}
   - component: {fileID: 852055701}
@@ -11064,14 +11063,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 1
       enableBigTilePrepass: 1
       isFptlEnabled: 1
---- !u!81 &852055704
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852055700}
-  m_Enabled: 1
 --- !u!20 &852055705
 Camera:
   m_ObjectHideFlags: 0

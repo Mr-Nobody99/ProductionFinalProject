@@ -1913,6 +1913,7 @@ GameObject:
   - component: {fileID: 7935316714351734613}
   - component: {fileID: 7935316714361118006}
   - component: {fileID: 7935316714361118024}
+  - component: {fileID: 2825751522829888577}
   m_Layer: 0
   m_Name: SacredSeasons_MainCharacter
   m_TagString: Player
@@ -2019,6 +2020,14 @@ MonoBehaviour:
   blockRotation: 0
   isGrounded: 0
   doBounce: 0
+--- !u!81 &2825751522829888577
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7935316714361118005}
+  m_Enabled: 1
 --- !u!1 &7935316714361118007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,15 +2255,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ba266898b8dac144afb66ba563609bc, type: 3}
---- !u!1 &6008612005605692607 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5072957500558679988, guid: 2ba266898b8dac144afb66ba563609bc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1514374066691263243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9084780748761299421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7716844043468747478, guid: 2ba266898b8dac144afb66ba563609bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514374066691263243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6008612005605692607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5072957500558679988, guid: 2ba266898b8dac144afb66ba563609bc,
     type: 3}
   m_PrefabInstance: {fileID: 1514374066691263243}
   m_PrefabAsset: {fileID: 0}
@@ -2327,15 +2336,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd2003be482dc74790c9963d5711ad7, type: 3}
---- !u!4 &5180422831362588247 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8144241551863725323, guid: 4cd2003be482dc74790c9963d5711ad7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3954907679807275868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4597523233780085624 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 661757089419472932, guid: 4cd2003be482dc74790c9963d5711ad7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3954907679807275868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5180422831362588247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8144241551863725323, guid: 4cd2003be482dc74790c9963d5711ad7,
     type: 3}
   m_PrefabInstance: {fileID: 3954907679807275868}
   m_PrefabAsset: {fileID: 0}
