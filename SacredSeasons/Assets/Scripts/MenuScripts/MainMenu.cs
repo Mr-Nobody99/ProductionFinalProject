@@ -12,17 +12,10 @@ public class MainMenu : MonoBehaviour
 
     public void Quit()
     {
-        AudioManager.instance.PlaySingle(UIManager.instance.back);
         UIManager.instance.Quit();
     }
 
     public void PlayGame()
-    {
-        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
-        UIManager.instance.PlayGame();
-    }
-
-    public void SkipTutorial()
     {
         UIManager.instance.PlayGame();
     }

@@ -22,9 +22,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetBGMVolume()
     {
-        //Debug.Log("Setting BGM Volume to: " + Sound.value);
         AudioManager.instance.mixer.SetFloat("bgmVolume", BGM.value);
-        //AudioManager.instance.PlaySingle(UIManager.instance.confirm);
     }
 
     public void SetSFXVolume()
@@ -34,6 +32,6 @@ public class OptionsMenu : MonoBehaviour
 
     void Start()
     {
-        //Sound.value = 1;
+
     }
 }

@@ -7,11 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
    public void Back()
     {
-        AudioManager.instance.PlaySingle(UIManager.instance.confirm);
         UIManager.instance.paused = false;
 
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
+            AudioManager.instance.PlaySingle(UIManager.instance.confirm);
             UIManager.instance.TutorialUnPause();
         }
         else

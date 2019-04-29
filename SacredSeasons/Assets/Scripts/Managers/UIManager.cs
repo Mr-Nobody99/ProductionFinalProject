@@ -140,6 +140,7 @@ public class UIManager : MonoBehaviour
 
     public void Play()
     {
+        AudioManager.instance.PlaySingle(confirm);
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -177,7 +178,7 @@ public class UIManager : MonoBehaviour
 
     public void Quit()
     {
-        AudioManager.instance.PlaySingle(confirm);
+        AudioManager.instance.PlaySingle(back);
         Application.Quit();
         Debug.Log("Quitting Game");
     }
@@ -191,6 +192,7 @@ public class UIManager : MonoBehaviour
 
     public void Restart()
     {
+        AudioManager.instance.PlaySingle(confirm);
         PlayerController.currentHealth = 100;
         //AudioManager.instance.PlaySingle(confirm);
         UIManager.instance.ShowScreen("Main Menu");
