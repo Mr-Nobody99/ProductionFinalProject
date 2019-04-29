@@ -187,6 +187,12 @@ public class UIManager : MonoBehaviour
     {
         AudioManager.instance.PlaySingle(confirm);
         PlayerController.currentHealth = PlayerController.maxHealth;
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        screens[curScreen].screen.SetActive(false);
+        PlayerController.paused = false;
+        PlayerController.menuUp = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
