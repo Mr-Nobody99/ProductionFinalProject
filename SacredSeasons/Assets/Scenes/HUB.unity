@@ -410,7 +410,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78311756}
-  m_LocalRotation: {x: 0.024976593, y: 0.000000016553752, z: 0.000000025208491, w: 0.999688}
+  m_LocalRotation: {x: 0.024976593, y: 0.000000016553752, z: 0.00000002520847, w: 0.999688}
   m_LocalPosition: {x: -33.67, y: -29.009998, z: 62.769997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -560,7 +560,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117284538}
-  m_LocalRotation: {x: 0.024976589, y: 0.000000016533635, z: 0.000000025208998, w: 0.9996881}
+  m_LocalRotation: {x: 0.024976589, y: 0.000000016533638, z: 0.000000025208978, w: 0.9996881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -924,7 +924,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413168885}
-  m_LocalRotation: {x: 0.024976587, y: 0.000000017194306, z: -4.2958706e-10, w: 0.9996881}
+  m_LocalRotation: {x: 0.024976607, y: -0.000000017254726, z: 4.3110113e-10, w: 0.9996881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1314,7 +1314,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549571395}
-  m_LocalRotation: {x: 0.024976587, y: 0.00000001847542, z: -0.00000005170626, w: 0.9996881}
+  m_LocalRotation: {x: 0.024976587, y: 0.00000001847542, z: -0.00000005170628, w: 0.9996881}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1762,6 +1762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821166594700590977, guid: 637c1e857d458c444aecaeed3aba35bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 332356200200740051, guid: 637c1e857d458c444aecaeed3aba35bd,
         type: 3}
