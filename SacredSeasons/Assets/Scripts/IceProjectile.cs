@@ -42,7 +42,7 @@ public class IceProjectile : MonoBehaviour
         }
         else if (collision.gameObject.tag.Equals("Monster"))
         {
-            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(damage * 2);
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(damage);
         }
     }
 

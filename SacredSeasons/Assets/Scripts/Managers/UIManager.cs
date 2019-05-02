@@ -130,7 +130,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-
+        
     }
 
     private void Awake()
@@ -209,6 +209,7 @@ public class UIManager : MonoBehaviour
     {
         AudioManager.instance.PlaySingle(confirm);
         PlayerController.currentHealth = 100;
+        screens[curScreen].screen.SetActive(false);
         UIManager.instance.ShowScreen("Main Menu");
         LevelManager.ResetProgress();
         SceneManager.LoadScene("Main Menu Scene");
