@@ -51,6 +51,10 @@ public class FireProjectile : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerController>().TakeDamage(dmg);
             }
         }
+        else if (collision.gameObject.tag.Equals("Monster"))
+        {
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(dmg * 2);
+        }
     }
 
     // Update is called once per frame

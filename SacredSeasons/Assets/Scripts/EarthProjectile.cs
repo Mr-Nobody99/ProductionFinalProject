@@ -24,7 +24,7 @@ public class EarthProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag.Equals("WaterEnemy"))
+        if (collision.gameObject.tag.Equals("WaterEnemy"))
         {
             collision.gameObject.GetComponent<AI_Controller_Water>().TakeDamage(damage);
         }
@@ -34,6 +34,10 @@ public class EarthProjectile : MonoBehaviour
             {
                 collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             }
+        }
+        else if (collision.gameObject.tag.Equals("Monster"))
+        {
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(damage * 2);
         }
     }
 }
