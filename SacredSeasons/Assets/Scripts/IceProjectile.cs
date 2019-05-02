@@ -40,6 +40,10 @@ public class IceProjectile : MonoBehaviour
                 collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
             }
         }
+        else if (collision.gameObject.tag.Equals("Monster"))
+        {
+            collision.gameObject.GetComponent<MonsterBossController>().TakeDamage(damage * 2);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
